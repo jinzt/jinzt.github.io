@@ -25,11 +25,11 @@
 <meta name="keywords" content="markdown,blog,hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo 搭建博客">
-<meta property="og:url" content="https://jinzt.github.io/2019/07/11/hexo-blog/index.html">
+<meta property="og:url" content="https://jinzt.github.io/posts/98b6a901.html">
 <meta property="og:site_name" content="金振涛个人主页">
 <meta property="og:description" content="搭建个人博客 hexo快速开始12345npm install hexo-cli -ghexo init blogsitecd blogsitenpm installhexo server  部署github创建仓库jinzt.github.io 并开启gitpages安装 git-deploy 插件1npm install hexo-deployer-git --save  修改 _config">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-11T08:51:07.627Z">
+<meta property="og:updated_time" content="2019-07-11T08:58:02.069Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo 搭建博客">
 <meta name="twitter:description" content="搭建个人博客 hexo快速开始12345npm install hexo-cli -ghexo init blogsitecd blogsitenpm installhexo server  部署github创建仓库jinzt.github.io 并开启gitpages安装 git-deploy 插件1npm install hexo-deployer-git --save  修改 _config">
@@ -133,7 +133,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -174,7 +174,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo快速开始"><span class="post-toc-number">1.</span> <span class="post-toc-text">hexo快速开始</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#部署github"><span class="post-toc-number">2.</span> <span class="post-toc-text">部署github</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建仓库jinzt-github-io-并开启gitpages"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">创建仓库jinzt.github.io 并开启gitpages</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装-git-deploy-插件"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">安装 git-deploy 插件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改-config-yml：deploy配置项"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">修改 _config.yml：deploy配置项</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置自定义域名"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">配置自定义域名</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#生成静态文件"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">生成静态文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#发布"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">发布</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#访问"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">访问</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#将代码纳入git管理"><span class="post-toc-number">3.</span> <span class="post-toc-text">将代码纳入git管理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建一个私有仓库-blog-分支用于存放代码"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">创建一个私有仓库 blog 分支用于存放代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#主题使用"><span class="post-toc-number">4.</span> <span class="post-toc-text">主题使用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主题推荐"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">主题推荐</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#主题安装"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">主题安装</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#依赖安装"><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">依赖安装</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#切换主题"><span class="post-toc-number">4.2.3.</span> <span class="post-toc-text">切换主题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#添加分类页"><span class="post-toc-number">4.2.4.</span> <span class="post-toc-text">添加分类页</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#添加标签页"><span class="post-toc-number">4.2.5.</span> <span class="post-toc-text">添加标签页</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#添加关于页"><span class="post-toc-number">4.2.6.</span> <span class="post-toc-text">添加关于页</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#避免-README-md-被渲染"><span class="post-toc-number">4.2.7.</span> <span class="post-toc-text">避免 README.md 被渲染</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#站点配置"><span class="post-toc-number">4.3.1.</span> <span class="post-toc-text">站点配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#基本配置"><span class="post-toc-number">4.3.1.1.</span> <span class="post-toc-text">基本配置</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#主题配置"><span class="post-toc-number">4.3.2.</span> <span class="post-toc-text">主题配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#左侧菜单"><span class="post-toc-number">4.3.2.1.</span> <span class="post-toc-text">左侧菜单</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#favicon"><span class="post-toc-number">4.3.2.2.</span> <span class="post-toc-text">favicon</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#头像"><span class="post-toc-number">4.3.2.3.</span> <span class="post-toc-text">头像</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#邮箱"><span class="post-toc-number">4.3.2.4.</span> <span class="post-toc-text">邮箱</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#评论"><span class="post-toc-number">4.3.2.5.</span> <span class="post-toc-text">评论</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#文章打赏"><span class="post-toc-number">4.3.2.6.</span> <span class="post-toc-text">文章打赏</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考"><span class="post-toc-number">5.</span> <span class="post-toc-text">参考</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#hexo快速开始"><span class="post-toc-number">1.</span> <span class="post-toc-text">hexo快速开始</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#部署github"><span class="post-toc-number">2.</span> <span class="post-toc-text">部署github</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建仓库jinzt-github-io-并开启gitpages"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">创建仓库jinzt.github.io 并开启gitpages</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装-git-deploy-插件"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">安装 git-deploy 插件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改-config-yml：deploy配置项"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">修改 _config.yml：deploy配置项</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置自定义域名"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">配置自定义域名</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#生成静态文件"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">生成静态文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#发布"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">发布</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#访问"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">访问</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#将代码纳入git管理"><span class="post-toc-number">3.</span> <span class="post-toc-text">将代码纳入git管理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建一个私有仓库-blog-分支用于存放代码"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">创建一个私有仓库 blog 分支用于存放代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#主题使用"><span class="post-toc-number">4.</span> <span class="post-toc-text">主题使用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主题推荐"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">主题推荐</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#主题安装"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">主题安装</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#依赖安装"><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">依赖安装</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#切换主题"><span class="post-toc-number">4.2.3.</span> <span class="post-toc-text">切换主题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#添加分类页"><span class="post-toc-number">4.2.4.</span> <span class="post-toc-text">添加分类页</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#添加标签页"><span class="post-toc-number">4.2.5.</span> <span class="post-toc-text">添加标签页</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#添加关于页"><span class="post-toc-number">4.2.6.</span> <span class="post-toc-text">添加关于页</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#避免-README-md-被渲染"><span class="post-toc-number">4.2.7.</span> <span class="post-toc-text">避免 README.md 被渲染</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#站点配置"><span class="post-toc-number">4.3.1.</span> <span class="post-toc-text">站点配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#基本配置"><span class="post-toc-number">4.3.1.1.</span> <span class="post-toc-text">基本配置</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#修改永久链接的默认格式"><span class="post-toc-number">4.3.1.2.</span> <span class="post-toc-text">修改永久链接的默认格式</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#主题配置"><span class="post-toc-number">4.3.2.</span> <span class="post-toc-text">主题配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#左侧菜单"><span class="post-toc-number">4.3.2.1.</span> <span class="post-toc-text">左侧菜单</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#favicon"><span class="post-toc-number">4.3.2.2.</span> <span class="post-toc-text">favicon</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#头像"><span class="post-toc-number">4.3.2.3.</span> <span class="post-toc-text">头像</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#邮箱"><span class="post-toc-number">4.3.2.4.</span> <span class="post-toc-text">邮箱</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#评论"><span class="post-toc-number">4.3.2.5.</span> <span class="post-toc-text">评论</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#文章打赏"><span class="post-toc-number">4.3.2.6.</span> <span class="post-toc-text">文章打赏</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考"><span class="post-toc-number">5.</span> <span class="post-toc-text">参考</span></a></li></ol>
         </nav>
     </aside>
 
@@ -249,6 +249,12 @@
 <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h4><h5 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h5><p>为了得到更好的使用体验，以下内容请务必填写完整，因为这些内容会在主题中得到展示。<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">更多</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: your title</span><br><span class="line">subtitle: your subtitle</span><br><span class="line">description: your description</span><br><span class="line">keywords: your keywords</span><br><span class="line">author: your name</span><br><span class="line">email: your email</span><br><span class="line">url: your site url</span><br></pre></td></tr></table></figure>
 
+<h5 id="修改永久链接的默认格式"><a href="#修改永久链接的默认格式" class="headerlink" title="修改永久链接的默认格式"></a>修改永久链接的默认格式</h5><p>安装插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+
+<p>修改 站点配置 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># permalink: :year/:month/:day/:title/</span><br><span class="line"># permalink_defaults:</span><br><span class="line">permalink: posts/:abbrlink.html</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  # 算法：crc16(default) and crc32</span><br><span class="line">  rep: hex    # 进制：dec(default) and hex</span><br></pre></td></tr></table></figure>
+
 <h4 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h4><p>编辑主题配置文件，themes/indigo/_config.yml。</p>
 <h5 id="左侧菜单"><a href="#左侧菜单" class="headerlink" title="左侧菜单"></a>左侧菜单</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home:</span><br><span class="line">    text: 主页</span><br><span class="line">    url: /</span><br><span class="line">  archives:</span><br><span class="line">    text: 归档</span><br><span class="line">    url: /archives</span><br><span class="line">  tags:</span><br><span class="line">    text: 标签</span><br><span class="line">    url: /tags</span><br><span class="line">  th-list:</span><br><span class="line">    text: 分类</span><br><span class="line">    url: /categories</span><br><span class="line">  github:</span><br><span class="line">    url: https://github.com/jinzt</span><br><span class="line">    target: _blank</span><br><span class="line">  weibo:</span><br><span class="line">    text: weibo</span><br><span class="line">    url: https://weibo.com/u/5838016173</span><br><span class="line">    target: _blank</span><br><span class="line">  link:</span><br><span class="line">    text: link</span><br><span class="line">    url: /custom</span><br></pre></td></tr></table></figure>
 
@@ -284,12 +290,12 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2019-07-11T08:51:07.627Z" itemprop="dateUpdated">2019-07-11 16:51:07</time>
+    Last updated: <time datetime="2019-07-11T08:58:02.069Z" itemprop="dateUpdated">2019-07-11 16:58:02</time>
 </span><br>
 
 
         
-        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2019/07/11/hexo-blog/" target="_blank" rel="external">https://jinzt.github.io/2019/07/11/hexo-blog/</a>
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/posts/98b6a901.html" target="_blank" rel="external">https://jinzt.github.io/posts/98b6a901.html</a>
         
     </div>
     
@@ -320,7 +326,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/2019/07/11/hexo-blog/&title=《hexo 搭建博客》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/98b6a901.html&title=《hexo 搭建博客》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -330,22 +336,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/2019/07/11/hexo-blog/&title=《hexo 搭建博客》 — 金振涛个人主页&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/98b6a901.html&title=《hexo 搭建博客》 — 金振涛个人主页&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/2019/07/11/hexo-blog/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/98b6a901.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo 搭建博客》 — 金振涛个人主页&url=https://jinzt.github.io/2019/07/11/hexo-blog/&via=https://jinzt.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo 搭建博客》 — 金振涛个人主页&url=https://jinzt.github.io/posts/98b6a901.html&via=https://jinzt.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/2019/07/11/hexo-blog/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/98b6a901.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -370,7 +376,7 @@
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2019/07/11/hello-world/" id="post-next" class="post-nav-link">
+      <a href="/posts/4a17b156.html" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
         <h4 class="title">Hello World</h4>
       </a>
@@ -474,7 +480,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
@@ -496,7 +502,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/2019/07/11/hexo-blog/&title=《hexo 搭建博客》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/98b6a901.html&title=《hexo 搭建博客》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -506,22 +512,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/2019/07/11/hexo-blog/&title=《hexo 搭建博客》 — 金振涛个人主页&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/98b6a901.html&title=《hexo 搭建博客》 — 金振涛个人主页&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/2019/07/11/hexo-blog/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/98b6a901.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo 搭建博客》 — 金振涛个人主页&url=https://jinzt.github.io/2019/07/11/hexo-blog/&via=https://jinzt.github.io" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo 搭建博客》 — 金振涛个人主页&url=https://jinzt.github.io/posts/98b6a901.html&via=https://jinzt.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/2019/07/11/hexo-blog/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/98b6a901.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -532,7 +538,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMklEQVR42u3aXXKDMAxF4ex/03QBqcm5kuk08uGp0wDm84NGP3698HUtrvdfV/ffv/P9/68nLhkyZHwt47q9avesPuv+WXL/cmtkyJBxAGMVwUgQJJ/F30DWlSFDhgweBElY5CGYb58MGTJkEAZ6NQjKBClDhgwZvEDdVXDy9twjtbgMGTK+kMG77n//9yPzDRkyZHwV4wqv9FnSbkuL4V9WkSFDxmgGD3A8IePJZXo448P3yJAhYzSjkwjyMpVT7xtwj+SzMmTI+PeMfuDrVJq7xqgyZMiYyuAt+9rQMQ24tbGoDBkyTmbwhI/j+wXqsmsoQ4aMoQwSIvsjgU5AD7ZAhgwZoxnpeCAdFXSSTl7iypAhYyojPQCR7g0/uhGUrKTdJkOGjAMYaVs/HY6mbbugfJUhQ8Y4Bg+XtfI1bf1vODMiQ4aMoQzeYuPt+1oYbZXQMmTIGM24D5GkfN2VUHbWkiFDxlRGJ2njn9Vp3qE0UYYMGaMZtUFjJ7GrHcWIR6cyZMgYxyBtslqLjWxH7aDYLxshQ4aMAxhpikY+rpZEFo+LyZAh4xjG3kZb/54gDZUhQ8ZQxhVePNTykrX2hg+hVoYMGYMYu4aRfGEyztyVbsqQIWMSg7fS0hHj/VP3b4j3W4YMGQcweODj+LTdln7tcr4hQ4YMGeEyu46FfQjEMmTIkFFrb4X5Gw/ZyyJWhgwZoxm1I1/95dN3ypAh40xGLVDyxlzaStu1lgwZMkYwfgC7hnRyT5hgQgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACHklEQVR42u3aQW7kMAwEwPz/0wmwpwCJM93iGFhL5ZNheCSXDhyR1MdHfH3+u77ft1cy8tWTt10YGBiPZSTTT+5/zrL25MXSYGBgHMDIg+w8WF99YrIcl88xMDAwlqhX+ORXGBgYGJOAu7a9ywM3BgYGxiSJXfu4Nj2+PRfHwMB4IGOeiN53f3t/AwMD479nzNuQa6EwD+7RV2FgYGzNaI87TLaP7Tv5+xgYGOcw5qW0/GhXPmOxWcTAwDiMkX9E0kLIE9R8gYqqIQYGxkaMyUe0rYU2TNc7XAwMjAMYbXLbIttWRDQaBgbGAYx6K7YUuCdHK178AWBgYBzGWHsywbcbxyjgYmBgbMRYO2f1rrCbL0q9TBgYGFswJuWwdgM3L7RhYGBg5BE6D5eTdmZR8sPAwDie0Rb6/36ytkwvRsbAwDiA0Rbr88ZnEoLb0d5QL8TAwHggoz1I0QbNvKmwuInEwMDYmpEnomuYtWR47bcYGBi7MvItWh4W5wcy6gYqBgbGAYw2dWxT0DopjZumGBgYJzDapLQNx/M+Yz4+BgbGrozP8rqjqTkZ7ZcWJgYGxnaMNsy1bch8w5fnpBgYGGcy2jR1Lcj+PVc+8uUsGBgYBzAmpa5kysn7UUDHwMDAKI9B3HEsrDjjhoGBgXHzcuQFu7cFXAwMjIcwkiR2rVXQht1RJxYDA2NTRptArhXg8tJ/3loY9TcwMDCewfgCZZhqmE6jAdwAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 
