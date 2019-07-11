@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jinzt.github.io/"/>
-  <updated>2019-07-11T11:40:41.184Z</updated>
+  <updated>2019-07-11T11:53:23.337Z</updated>
   <id>https://jinzt.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>colyseus 使用</title>
-    <link href="https://jinzt.github.io/posts/b2aa3fd2.html"/>
-    <id>https://jinzt.github.io/posts/b2aa3fd2.html</id>
+    <link href="https://jinzt.github.io/posts/353574cd.html"/>
+    <id>https://jinzt.github.io/posts/353574cd.html</id>
     <published>2019-07-11T10:44:49.673Z</published>
-    <updated>2019-07-11T11:40:41.184Z</updated>
+    <updated>2019-07-11T11:53:23.337Z</updated>
     
     <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>colyseus <a href="https://discuss.colyseus.io/" target="_blank" rel="noopener">主页</a></p><p>使用 colyseus 的优秀文章</p><ul><li><a href="https://indienova.com/u/cyclegtx/blogread/11315" target="_blank" rel="noopener">io类游戏快速开发 1</a></li><li><a href="https://indienova.com/u/cyclegtx/blogread/11322" target="_blank" rel="noopener">io类游戏快速开发 2 帧同步</a></li><li><a href="https://indienova.com/u/cyclegtx/blog" target="_blank" rel="noopener">IO类游戏快速开发 3 状态同步</a></li></ul><p>其它文章</p><ul><li><p><a href="https://www.helplib.com/GitHub/article_133851" target="_blank" rel="noopener">colyseus.js, 用于JavaScript的多人游戏客户端</a></p></li><li><p><a href="https://max.book118.com/html/2017/0522/108424723.shtm" target="_blank" rel="noopener">对等游戏平台的可扩展性与状态一致性的分析.pdf</a></p></li></ul><p>colyseus 作者的项目</p><ul><li><a href="https://github.com/colyseus/colyseus" target="_blank" rel="noopener">colyseus-server</a></li><li><a href="https://github.com/colyseus/colyseus.js" target="_blank" rel="noopener">colyseus.js</a></li><li><a href="https://github.com/colyseus/colyseus-examples" target="_blank" rel="noopener">colyseus-examples</a></li><li><a href="https://github.com/colyseus/colyseus-loadtest" target="_blank" rel="noopener">colyseus-loadtest</a></li><li><a href="https://github.com/colyseus/colyseus-monitor" target="_blank" rel="noopener">colyseus-monitor</a></li></ul><p>其它开发者</p><ul><li><a href="https://github.com/rbjs92/platformer-mmo" target="_blank" rel="noopener">platformer-mmo</a></li><li><a href="https://github.com/asimmon/bomberman-colyseus" target="_blank" rel="noopener">bomberman-colyseus</a></li><li><a href="https://github.com/memgame/mem-server-colyseus#development-setup" target="_blank" rel="noopener">mem-server-colyseus</a></li><li><a href="https://github.com/Loonride/colyseus-cluster-example/blob/master/server/index.js" target="_blank" rel="noopener">colyseus-cluster-example</a></li><li><a href="https://github.com/kaproslaci/colyseus-without-sync" target="_blank" rel="noopener">colyseus-without-sync</a></li><li><a href="https://github.com/keenlok/phaser-colyseus-pac" target="_blank" rel="noopener">phaser-colyseus-pac</a></li><li><a href="https://github.com/nicooga/multiplayer_shooter_game/tree/master/server" target="_blank" rel="noopener">multiplayer_shooter_game</a></li><li><a href="https://github.com/geeksesi/pong-client" target="_blank" rel="noopener">pong-client</a></li><li><a href="https://github.com/geeksesi/PongServer" target="_blank" rel="noopener">PongServer</a></li><li><a href="https://github.com/BroProducts/mem-server" target="_blank" rel="noopener">mem-server</a></li><li><a href="https://github.com/gmfc/Yggdrasill" target="_blank" rel="noopener">Yggdrasill</a></li><li><a href="https://github.com/pkchv/auditory/tree/master/server/src/colyseus" target="_blank" rel="noopener">auditory</a></li></ul>]]></content>
     
