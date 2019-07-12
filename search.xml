@@ -1,6 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[游戏美术]]></title>
+    <url>%2Fposts%2F8c7a4343.html</url>
+    <content type="text"><![CDATA[介绍素材站点 6m5m cg柚子 爱给 opengameart itch.io## [maxvoxel] [asprite] [sprinte] [pixkel] 开源 github gitee coding.net 开源中国 ### 让你尖叫的游戏开发工具清单]]></content>
+      <categories>
+        <category>游戏素材</category>
+      </categories>
+      <tags>
+        <tag>游戏美术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[优秀收集的学习资源]]></title>
+    <url>%2Fposts%2F2c63bf3c.html</url>
+    <content type="text"><![CDATA[介绍素材站点 6m5m cg柚子 爱给 opengameart itch.io## [maxvoxel] [asprite] [sprinte] [pixkel] 开源 github gitee coding.net 开源中国 ### 让你尖叫的游戏开发工具清单 ### http://www.godotengine.cn/]]></content>
+      <categories>
+        <category>游戏素材</category>
+      </categories>
+      <tags>
+        <tag>游戏素材</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[unity收集的学习资源]]></title>
+    <url>%2Fposts%2F95e6e992.html</url>
+    <content type="text"><![CDATA[介绍国外视频 www.skillshare.com www.classcentral.com www.coursera.org/ www.gamedesigning.org www.raywenderlich.com 国外教程 https://noobtuts.com/unity 优秀教程 Unity 3D 网络游戏架构设计 UNITY 2D AND 3D GAME DEVELOPMENT unity帧同步游戏极简框架及实例(附客户端服务器源码) 素材站点 https://unitylist.com/ http://7dgame.com/ ## ww386362087/dn_asset]]></content>
+      <categories>
+        <category>unity3d</category>
+      </categories>
+      <tags>
+        <tag>unity3d</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[vscode 使用]]></title>
+    <url>%2Fposts%2Fb84c37ec.html</url>
+    <content type="text"><![CDATA[git 使用 VS Code折腾记 - (2) 快捷键大全，没有更全]]></content>
+      <categories>
+        <category>tool</category>
+      </categories>
+      <tags>
+        <tag>tool</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[cocos creator收集的学习资源]]></title>
+    <url>%2Fposts%2F6a598898.html</url>
+    <content type="text"><![CDATA[介绍优秀教程 cocos creator互动课程 Cocos Creator 集合类游戏模块化与热更新实践 Cocos Creator 极速入门 Cocos Creator 项目：如何较为优雅地实现新手引导?]]></content>
+      <categories>
+        <category>cocos creator</category>
+      </categories>
+      <tags>
+        <tag>cocos creator</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chrome 使用]]></title>
+    <url>%2Fposts%2Faf35c687.html</url>
+    <content type="text"><![CDATA[git 使用 快捷键ctrl+d 添加书签 扩展插件书签侧边栏Nimbus 截幕 &amp; 屏幕录像机]]></content>
+      <categories>
+        <category>tool</category>
+      </categories>
+      <tags>
+        <tag>tool</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用滴答清单进行时间管理]]></title>
+    <url>%2Fposts%2F6b045f18.html</url>
+    <content type="text"><![CDATA[时间就是money 时间去哪了制定计划执行计划 使用滴答清单进行时间管理 时间管理工具时间去哪了时间四象限 时间管理工具时间管理工具有很多，这里推荐自己使用的 滴答清单滴答清单支持多个设备平台，可以在网页、android、ios等多个平台使用，在pc平台推荐在Chrome安装网页插件使用,下载地址 关于如何使用滴答清单可以看 这里 为了真正用好滴答清单，我创建了自己的清单体系滴答清单入门及进阶教程滴答清单：不止是清单，还能做生涯规划 ##]]></content>
+      <categories>
+        <category>tool</category>
+      </categories>
+      <tags>
+        <tag>magager</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[markdown教程]]></title>
+    <url>%2Fposts%2Fd1d9a8a.html</url>
+    <content type="text"><![CDATA[markdown教程 作业部落 vscode中md转pdf VSCode如何将Markdown转为PDF]]></content>
+      <categories>
+        <category>tool</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[管理经验总结]]></title>
+    <url>%2Fposts%2F41d78102.html</url>
+    <content type="text"><![CDATA[管理]]></content>
+      <categories>
+        <category>growth</category>
+      </categories>
+      <tags>
+        <tag>提升</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[colyseus 使用]]></title>
     <url>%2Fposts%2F353574cd.html</url>
     <content type="text"><![CDATA[介绍colyseus 主页 使用 colyseus 的优秀文章 io类游戏快速开发 1 io类游戏快速开发 2 帧同步 IO类游戏快速开发 3 状态同步 其它文章 colyseus.js, 用于JavaScript的多人游戏客户端 对等游戏平台的可扩展性与状态一致性的分析.pdf colyseus 作者的项目 colyseus-server colyseus.js colyseus-examples colyseus-loadtest colyseus-monitor 其它开发者 platformer-mmo bomberman-colyseus mem-server-colyseus colyseus-cluster-example colyseus-without-sync phaser-colyseus-pac multiplayer_shooter_game pong-client PongServer mem-server Yggdrasill auditory]]></content>
