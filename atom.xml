@@ -404,6 +404,29 @@
     <link href="https://jinzt.github.io/posts/0.html"/>
     <id>https://jinzt.github.io/posts/0.html</id>
     <published>2020-04-12T08:51:01.812Z</published>
+    <updated>2020-04-12T08:52:15.679Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="orm-库"><a href="#orm-库" class="headerlink" title="orm 库"></a>orm 库</h2><p>## </p><ul><li><p><a href="https://www.cnblogs.com/liuzhongchao/p/9497326.html" target="_blank" rel="noopener">Golang xorm工具，根据数据库自动生成 go 代码</a></p></li><li><p><a href="https://www.bbsmax.com/A/8Bz8X3VNzx/" target="_blank" rel="noopener">Go 语言，开源服务端代码自动生成 框架 - EasyGoServer</a></p></li><li><p><a href="https://blog.csdn.net/BlackCarDriver/article/details/95208399" target="_blank" rel="noopener">【go】根据数据库自动生成相应结构体代码</a></p></li><li><p><a href="https://studygolang.com/articles/22688" target="_blank" rel="noopener">生成mysql每一个表golang的CRUD生产代码</a></p></li><li><p><a href="https://huangjunwen.github.io/post/2018/sqlw-mysql/" target="_blank" rel="noopener">写了一个 MySQL 数据表和查询的 go 代码生成器</a></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;orm-库&quot;&gt;&lt;a href=&quot;#orm-库&quot; class=&quot;headerlink&quot; title=&quot;orm 库&quot;&gt;&lt;/a&gt;orm 库&lt;/h2&gt;&lt;p&gt;## &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/liuzh
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://jinzt.github.io/posts/0.html"/>
+    <id>https://jinzt.github.io/posts/0.html</id>
+    <published>2020-04-12T08:51:01.812Z</published>
     <updated>2020-04-12T08:52:15.678Z</updated>
     
     <content type="html"><![CDATA[<p>## </p><ul><li><a href="https://studygolang.com/articles/6739" target="_blank" rel="noopener">[thinking] 基于 golang interface 特性衍生的插件化处理思维</a></li><li><a href="https://blog.csdn.net/bingxuefenggu/article/details/80958747" target="_blank" rel="noopener">golang如何实现插件化编程</a></li><li><a href="https://studygolang.com/articles/17182?fr=sidebar" target="_blank" rel="noopener">Golang:Golang生成动态库及调用</a></li><li><a href="https://www.imooc.com/article/48340?block_id=tuijian_wz" target="_blank" rel="noopener">Golang笔记-Plugin初探</a></li></ul><h2 id="go-静态库-动态库"><a href="#go-静态库-动态库" class="headerlink" title="go 静态库 动态库"></a>go 静态库 动态库</h2><p>插件中定义的 struct 无法暴露出来，可以让主程序和插件程序import公共的 package 来解决<br>私有方法、变量不会被暴露出来</p><p><a href="https://blog.csdn.net/m0_38132420/article/details/84999887" target="_blank" rel="noopener">golang插件plugin从使用到放弃</a></p><p><a href="https://github.com/vladimirvivien/go-plugin-example" target="_blank" rel="noopener">vladimirvivien/go-plugin-example</a><br><a href="https://github.com/campoy/golang-plugins" target="_blank" rel="noopener">campoy/golang-plugins</a><br><a href="https://github.com/natefinch/pie" target="_blank" rel="noopener">natefinch/pie</a><br><a href="https://github.com/dullgiulio/pingo" target="_blank" rel="noopener">dullgiulio/pingo</a><br><a href="https://github.com/wendigo/go-bind-plugin" target="_blank" rel="noopener">wendigo/go-bind-plugin</a><br><a href="https://cloud.tencent.com/developer/news/355774" target="_blank" rel="noopener">chain33开发随记</a><br><a href="https://github.com/33cn/plugin" target="_blank" rel="noopener">chain33 官方插件系统</a><br><a href="https://github.com/potix/plugger" target="_blank" rel="noopener">potix/plugger</a></p><ul><li><a href="https://github.com/fananchong/go-xserver" target="_blank" rel="noopener">基于插件的服务器框架</a></li><li><a href="https://github.com/fananchong/go-xserver/blob/master/doc/ISSUE-%E6%8F%92%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%8B%AC%E7%AB%8B%E5%BB%BA%E5%BA%93%E9%97%AE%E9%A2%98.md" target="_blank" rel="noopener">插件工程独立建库问题</a></li></ul><h2 id="go-mod"><a href="#go-mod" class="headerlink" title="go mod"></a>go mod</h2><ul><li><a href="https://www.jianshu.com/p/6293503522bc" target="_blank" rel="noopener">解决vscode中golang插件依赖安装失败问题</a></li></ul>]]></content>
@@ -450,18 +473,18 @@
     <title></title>
     <link href="https://jinzt.github.io/posts/0.html"/>
     <id>https://jinzt.github.io/posts/0.html</id>
-    <published>2020-04-12T08:51:01.812Z</published>
-    <updated>2020-04-12T08:52:15.679Z</updated>
+    <published>2020-04-12T08:51:01.811Z</published>
+    <updated>2020-04-12T08:52:15.677Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="orm-库"><a href="#orm-库" class="headerlink" title="orm 库"></a>orm 库</h2><p>## </p><ul><li><p><a href="https://www.cnblogs.com/liuzhongchao/p/9497326.html" target="_blank" rel="noopener">Golang xorm工具，根据数据库自动生成 go 代码</a></p></li><li><p><a href="https://www.bbsmax.com/A/8Bz8X3VNzx/" target="_blank" rel="noopener">Go 语言，开源服务端代码自动生成 框架 - EasyGoServer</a></p></li><li><p><a href="https://blog.csdn.net/BlackCarDriver/article/details/95208399" target="_blank" rel="noopener">【go】根据数据库自动生成相应结构体代码</a></p></li><li><p><a href="https://studygolang.com/articles/22688" target="_blank" rel="noopener">生成mysql每一个表golang的CRUD生产代码</a></p></li><li><p><a href="https://huangjunwen.github.io/post/2018/sqlw-mysql/" target="_blank" rel="noopener">写了一个 MySQL 数据表和查询的 go 代码生成器</a></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>## </p><ul><li><a href="https://blog.csdn.net/huangshulang1234/article/details/78725967" target="_blank" rel="noopener">Go 语言构建高并发分布式系统实践</a></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;orm-库&quot;&gt;&lt;a href=&quot;#orm-库&quot; class=&quot;headerlink&quot; title=&quot;orm 库&quot;&gt;&lt;/a&gt;orm 库&lt;/h2&gt;&lt;p&gt;## &lt;/p&gt;
+        &lt;p&gt;## &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/liuzh
+&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/huangshulang1234/article/details/78725967&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Go 语言构建高并发分布式系统
       
     
     </summary>
@@ -485,29 +508,6 @@
         &lt;p&gt;## &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/alwaysrun/article/details/82919127&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;go数据同步（sync与atomic包）&lt;/
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://jinzt.github.io/posts/0.html"/>
-    <id>https://jinzt.github.io/posts/0.html</id>
-    <published>2020-04-12T08:51:01.811Z</published>
-    <updated>2020-04-12T08:52:15.677Z</updated>
-    
-    <content type="html"><![CDATA[<p>## </p><ul><li><a href="https://blog.csdn.net/huangshulang1234/article/details/78725967" target="_blank" rel="noopener">Go 语言构建高并发分布式系统实践</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;## &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/huangshulang1234/article/details/78725967&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Go 语言构建高并发分布式系统
       
     
     </summary>
