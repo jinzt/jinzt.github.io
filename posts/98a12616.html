@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>编程范式 | 金振涛个人主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="编程语言,c++">
+    <meta name="description" content="首页基本教程知识体系 软件工程理论 面向过程编程 面向对象编程 设计模式   数据驱动编程 文档编写  视频教程其它 概要设计说明书 文档那些事儿  推荐书籍 从程序员到项目经理  你会写软件开发文档吗？软件开发中的文档和分类软件开发文档 DOP基本教程 什么是数据驱动编程 数据驱动编程之表驱动法 用数据驱动思想来设计游戏-读《游戏编程精粹1》 数据驱动编程  请问有基于数据驱动的游戏框架吗（不是">
+<meta name="keywords" content="编程语言,c++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编程范式">
+<meta property="og:url" content="https://jinzt.github.io/posts/98a12616.html">
+<meta property="og:site_name" content="金振涛个人主页">
+<meta property="og:description" content="首页基本教程知识体系 软件工程理论 面向过程编程 面向对象编程 设计模式   数据驱动编程 文档编写  视频教程其它 概要设计说明书 文档那些事儿  推荐书籍 从程序员到项目经理  你会写软件开发文档吗？软件开发中的文档和分类软件开发文档 DOP基本教程 什么是数据驱动编程 数据驱动编程之表驱动法 用数据驱动思想来设计游戏-读《游戏编程精粹1》 数据驱动编程  请问有基于数据驱动的游戏框架吗（不是">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-12T17:23:15.696Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="编程范式">
+<meta name="twitter:description" content="首页基本教程知识体系 软件工程理论 面向过程编程 面向对象编程 设计模式   数据驱动编程 文档编写  视频教程其它 概要设计说明书 文档那些事儿  推荐书籍 从程序员到项目经理  你会写软件开发文档吗？软件开发中的文档和分类软件开发文档 DOP基本教程 什么是数据驱动编程 数据驱动编程之表驱动法 用数据驱动思想来设计游戏-读《游戏编程精粹1》 数据驱动编程  请问有基于数据驱动的游戏框架吗（不是">
+    
+        <link rel="alternate" type="application/atom+xml" title="金振涛个人主页" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">金振涛</h5>
+          <a href="mailto:jinzhentaohb@126.com" title="jinzhentaohb@126.com" class="mail">jinzhentaohb@126.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/jinzt" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/u/5838016173" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                link
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">编程范式</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">编程范式</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-07-12T14:49:05.333Z" itemprop="datePublished" class="page-time">
+  2019-07-12
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/编程语言/">编程语言</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#首页"><span class="post-toc-number">1.</span> <span class="post-toc-text">首页</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基本教程"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">基本教程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#知识体系"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">知识体系</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#视频教程"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">视频教程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其它"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">其它</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#推荐书籍"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">推荐书籍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#DOP基本教程"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">DOP基本教程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#dd"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">dd</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#java设计模式基本教程"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">java设计模式基本教程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#c-设计模式"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">c++设计模式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基本教程-1"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">基本教程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#视频教程-1"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">视频教程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其它-1"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">其它</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考"><span class="post-toc-number">1.13.</span> <span class="post-toc-text">参考</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-lange/cpp/编程范式"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">编程范式</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-07-12 22:49:05" datetime="2019-07-12T14:49:05.333Z"  itemprop="datePublished">2019-07-12</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/编程语言/">编程语言</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="首页"><a href="#首页" class="headerlink" title="首页"></a><a href="https://git.oschina.net/xinxinyuling/note" target="_blank" rel="noopener">首页</a></h1><h2 id="基本教程"><a href="#基本教程" class="headerlink" title="基本教程"></a>基本教程</h2><h2 id="知识体系"><a href="#知识体系" class="headerlink" title="知识体系"></a>知识体系</h2><ul>
+<li><a href="/软件工程理论">软件工程理论</a></li>
+<li><a href="/面向过程编程">面向过程编程</a></li>
+<li><a href="/面向对象编程">面向对象编程</a><ul>
+<li><a href="/面向对象编程/设计模式">设计模式</a></li>
+</ul>
+</li>
+<li><a href="/数据驱动编程">数据驱动编程</a></li>
+<li><a href="/文档编写">文档编写</a></li>
+</ul>
+<h2 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程"></a>视频教程</h2><h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><ul>
+<li><a href="http://www.cnblogs.com/beijiguangyong/archive/2010/09/26/2302822.html" target="_blank" rel="noopener">概要设计说明书</a></li>
+<li><a href="http://www.cnblogs.com/beijiguangyong/archive/2011/08/24/2302751.html" target="_blank" rel="noopener">文档那些事儿</a></li>
+</ul>
+<h2 id="推荐书籍"><a href="#推荐书籍" class="headerlink" title="推荐书籍"></a>推荐书籍</h2><ul>
+<li>从程序员到项目经理</li>
+</ul>
+<p><a href="http://www.php100.com/html/dujia/2015/0306/8727.html" target="_blank" rel="noopener">你会写软件开发文档吗？</a><br><a href="http://www.cnblogs.com/hummersofdie/archive/2011/04/01/2002137.html" target="_blank" rel="noopener">软件开发中的文档和分类</a><br><a href="http://baike.baidu.com/link?url=_YZRX4C9sTShH_YRdhdwn2qygK4Qt96HUYLufpFK9HLM1wV5mgd-gOBiN-Sgx88mcZmVm9F7Tz06g4lEmFqtqa" target="_blank" rel="noopener">软件开发文档</a></p>
+<h2 id="DOP基本教程"><a href="#DOP基本教程" class="headerlink" title="DOP基本教程"></a>DOP基本教程</h2><ul>
+<li><a href="http://www.cnblogs.com/chgaowei/archive/2011/08/03/2126724.html" target="_blank" rel="noopener">什么是数据驱动编程</a></li>
+<li><a href="http://blog.csdn.net/chgaowei/article/details/6966857" target="_blank" rel="noopener">数据驱动编程之表驱动法</a></li>
+<li><a href="http://www.cnblogs.com/tadi314/archive/2010/03/11/1683795.html" target="_blank" rel="noopener">用数据驱动思想来设计游戏-读《游戏编程精粹1》</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_5e3075450100c0n2.html" target="_blank" rel="noopener">数据驱动编程 </a></li>
+<li><a href="http://www.zhihu.com/question/35399488" target="_blank" rel="noopener">请问有基于数据驱动的游戏框架吗（不是指引擎）？</a></li>
+<li><a href="http://www.gameres.com/thread_258747_1_1.html" target="_blank" rel="noopener">实体-组件-系统(ECS)实现数据驱动的游戏框架</a></li>
+<li><a href="http://www.lxway.com/841516546.htm" target="_blank" rel="noopener">创建游戏中的人类世界：数据驱动的开放世界AI框架</a></li>
+<li><a href="http://www.gameres.com/msg_262964.html" target="_blank" rel="noopener">数据驱动设计思路——带你一天完成独立HTML5游戏</a></li>
+<li><a href="http://www.zhihu.com/question/26775352" target="_blank" rel="noopener">怎么理解游戏开发中的“Data-Driven Design”？</a></li>
+<li><a href="http://www.bosigame.com/course/detail-6-642.html" target="_blank" rel="noopener">游戏程序开发的基本理念和方法</a></li>
+</ul>
+<h2 id="dd"><a href="#dd" class="headerlink" title="dd"></a>dd</h2><ul>
+<li><a href="http://blog.csdn.net/aisajiajiao/article/details/19011259" target="_blank" rel="noopener">什么是游戏开发的实体系统框架 </a></li>
+<li><a href="http://entity-systems.wikidot.com/fast-entity-component-system" target="_blank" rel="noopener">Fast Entity Component System</a></li>
+<li><a href="https://github.com/alecthomas/entityx" target="_blank" rel="noopener">ntityX - A fast, type-safe C++ Entity-Component system</a></li>
+</ul>
+<h2 id="java设计模式基本教程"><a href="#java设计模式基本教程" class="headerlink" title="java设计模式基本教程"></a>java设计模式基本教程</h2><ul>
+<li>w3c<a href="http://www.runoob.com/design-pattern/design-pattern-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/design-pattern/design-pattern-tutorial.html</a></li>
+<li>java设计模式详解<a href="http://www.weixueyuan.net/java/shejimoshi/" target="_blank" rel="noopener">http://www.weixueyuan.net/java/shejimoshi/</a></li>
+<li>java设计模式系列<a href="http://www.cricode.com/category/design/design-pattern" target="_blank" rel="noopener">http://www.cricode.com/category/design/design-pattern</a></li>
+</ul>
+<h2 id="c-设计模式"><a href="#c-设计模式" class="headerlink" title="c++设计模式"></a>c++设计模式</h2><h2 id="基本教程-1"><a href="#基本教程-1" class="headerlink" title="基本教程"></a>基本教程</h2><ul>
+<li>c++设计模式<a href="http://blog.csdn.net/column/details/design.html" target="_blank" rel="noopener">http://blog.csdn.net/column/details/design.html</a></li>
+<li>C++设计模式系列<a href="http://www.jellythink.com/archives/878" target="_blank" rel="noopener">http://www.jellythink.com/archives/878</a></li>
+</ul>
+<h2 id="视频教程-1"><a href="#视频教程-1" class="headerlink" title="视频教程"></a>视频教程</h2><h2 id="其它-1"><a href="#其它-1" class="headerlink" title="其它"></a>其它</h2><ul>
+<li><a href="http://www.cnblogs.com/couhujia/archive/2012/12/11/2812233.html" target="_blank" rel="noopener">工厂方法模式</a></li>
+<li><a href="http://blog.csdn.net/caisini_vc/article/details/5599493" target="_blank" rel="noopener">架构设计：生产者/消费者模式 第1页：“生产者／消费者模式”介绍</a></li>
+<li><a href="https://blog.csdn.net/jjm1437/article/details/53185840" target="_blank" rel="noopener"><br>浅谈软件需求建模</a></li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://www.zhihu.com/question/26095260/answer/32613600" target="_blank" rel="noopener">函数式编程语言的「天然支持并行与并发」是不是吹牛？</a></li>
+<li><a href="http://www.cnblogs.com/kym/archive/2011/03/07/1976519.html" target="_blank" rel="noopener">函数式编程扫盲篇</a></li>
+<li><a href="http://blog.csdn.net/liuxuejiang158blog/article/details/17380923" target="_blank" rel="noopener"> C++并发实战15：函数式编程</a></li>
+<li><a href="http://www.cnblogs.com/aigongsi/archive/2012/12/10/2808185.html" target="_blank" rel="noopener">对函数式编程简单理解</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-07-12T17:23:15.696Z" itemprop="dateUpdated">2019-07-13 01:23:15</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/posts/98a12616.html" target="_blank" rel="external">https://jinzt.github.io/posts/98a12616.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://jinzt.github.io">
+            <img src="/img/avatar.jpg" alt="金振涛">
+            金振涛
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/">c++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程语言/">编程语言</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/98a12616.html&title=《编程范式》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/98a12616.html&title=《编程范式》 — 金振涛个人主页&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/98a12616.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《编程范式》 — 金振涛个人主页&url=https://jinzt.github.io/posts/98a12616.html&via=https://jinzt.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/98a12616.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/posts/bcc4edaf.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">c语言</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/posts/5729df21.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">多线程</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "PDQy3GUbNJ9CEqhuP8G0kDvc-gzGzoHsz",
+            appKey: "yaOTf2Bsv3ecv889uVD4wlAj",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>金振涛 &copy; 2015 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/98a12616.html&title=《编程范式》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/98a12616.html&title=《编程范式》 — 金振涛个人主页&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/98a12616.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《编程范式》 — 金振涛个人主页&url=https://jinzt.github.io/posts/98a12616.html&via=https://jinzt.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/98a12616.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3ay07EMAwF0Pn/n4YNCyRE8LXLSElOV2jUdnxmYeLH61W+Pr5dPz+pXOs3rz957MLAwNiWUfn6dUDroNfv+e2TemwYGBj3MNapsBdKmnbXpD9ixsDAwAgT4jpNpwkXAwMDI2X0Cs70CIiBgYHRK2LrDbJKWVv/+R6uxTEwMDZk1NPl+//+l/kGBgbGVozeGLKSQNOhQi+er2cxMDCOZtQTXC+U3j3NeDAwMC5gpGsQkzbcZJDwmr8UAwNjK0b6WP3A1xt2Nhc+MDAwLmD0+leV0NOEm7beMDAwbmDMhwT1EjcdPT77NgwMjH0Z9ZWIXrOsfk/6VJy/MTAwNmekY8jeksTk2eCEi4GBcRwjLVzTUUG9DH4q6WNgYNzAmBSl72m0jY6JGBgY2zLS1/WGl+mYsx4hBgbGDYxeiL2lrl6TLsZgYGAcxKg319JXTxY10jsxMDDOZqRF6WjNtJVeg4MpBgbG0Yx66nyqSdf7mUqFMQYGxqGM+qJDb3hZT8rrBP0HBgMD4xrGpFkWL0aEo83SMAADA+NoRq/Fny549c5ycS2OgYFxEGO+tDqZmtYPi8HcFQMD4zjGJM2lX9Ybi9ZHDhgYGGcz0iQ7Waqo3JmuXGBgYNzD6LXhnsrx6XAiGGFiYGBcyUjL3WfXwuJlCwwMjCsZadLslbjpoBQDA+MGxjx1Vg6FadvuX9ptGBgYGzLqpWM90PqBsj6E6P0bwMDA2JzxCajWk2HZ8L0WAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -21,18 +21,18 @@
     
     
     <meta name="keywords" content="tool">
-    <meta name="description" content="git 使用 …or create a new repository on the command line echo “# blog” &amp;gt;&amp;gt; README.mdgit initgit add README.mdgit commit -m “first commit”git remote add origin https://github.com/jinzt/blog.gitgit p">
+    <meta name="description" content="git 使用 git安装yum install git 创建一个目录 将learngit目录编程一个仓库cd learngitgit init 创建一个文件touch readme.txt使用 git status 查看git状态，会提示readme.txt 没有纳入仓库版本管理 git简介安装在centos中使用命令进行安装 1yum install git  安装完成后进行设置 12git c">
 <meta name="keywords" content="tool">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git 使用">
 <meta property="og:url" content="https://jinzt.github.io/posts/86c88f6a.html">
 <meta property="og:site_name" content="金振涛个人主页">
-<meta property="og:description" content="git 使用 …or create a new repository on the command line echo “# blog” &amp;gt;&amp;gt; README.mdgit initgit add README.mdgit commit -m “first commit”git remote add origin https://github.com/jinzt/blog.gitgit p">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-11T08:59:18.582Z">
+<meta property="og:description" content="git 使用 git安装yum install git 创建一个目录 将learngit目录编程一个仓库cd learngitgit init 创建一个文件touch readme.txt使用 git status 查看git状态，会提示readme.txt 没有纳入仓库版本管理 git简介安装在centos中使用命令进行安装 1yum install git  安装完成后进行设置 12git c">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-04-12T08:51:01.823Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git 使用">
-<meta name="twitter:description" content="git 使用 …or create a new repository on the command line echo “# blog” &amp;gt;&amp;gt; README.mdgit initgit add README.mdgit commit -m “first commit”git remote add origin https://github.com/jinzt/blog.gitgit p">
+<meta name="twitter:description" content="git 使用 git安装yum install git 创建一个目录 将learngit目录编程一个仓库cd learngitgit init 创建一个文件touch readme.txt使用 git status 查看git状态，会提示readme.txt 没有纳入仓库版本管理 git简介安装在centos中使用命令进行安装 1yum install git  安装完成后进行设置 12git c">
     
         <link rel="alternate" type="application/atom+xml" title="金振涛个人主页" href="/atom.xml">
     
@@ -133,7 +133,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -152,8 +152,8 @@
         <h1 class="title">git 使用</h1>
         <h5 class="subtitle">
             
-                <time datetime="2019-07-11T08:23:45.259Z" itemprop="datePublished" class="page-time">
-  2019-07-11
+                <time datetime="2019-07-12T14:34:30.323Z" itemprop="datePublished" class="page-time">
+  2019-07-12
 </time>
 
 
@@ -171,6 +171,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#git简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">git简介</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#时光穿梭机"><span class="post-toc-number">2.</span> <span class="post-toc-text">时光穿梭机</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#远程仓库"><span class="post-toc-number">3.</span> <span class="post-toc-text">远程仓库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分支管理"><span class="post-toc-number">4.</span> <span class="post-toc-text">分支管理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#标签"><span class="post-toc-number">5.</span> <span class="post-toc-text">标签</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#submodule"><span class="post-toc-number">6.</span> <span class="post-toc-text">submodule</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#自定义git"><span class="post-toc-number">7.</span> <span class="post-toc-text">自定义git</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常用命令总结"><span class="post-toc-number">8.</span> <span class="post-toc-text">常用命令总结</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基于历史版本创建分支"><span class="post-toc-number">9.</span> <span class="post-toc-text">基于历史版本创建分支</span></a></li></ol>
+        </nav>
+    </aside>
+
 
 <article id="post-tool/git"
   class="post-article article-type-post fade" itemprop="blogPost">
@@ -178,7 +185,7 @@
     <div class="post-card">
         <h1 class="post-card-title">git 使用</h1>
         <div class="post-meta">
-            <time class="post-time" title="2019-07-11 16:23:45" datetime="2019-07-11T08:23:45.259Z"  itemprop="datePublished">2019-07-11</time>
+            <time class="post-time" title="2019-07-12 22:34:30" datetime="2019-07-12T14:34:30.323Z"  itemprop="datePublished">2019-07-12</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/tool/">tool</a></li></ul>
@@ -194,8 +201,28 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>git 使用</p>
+<p>git安装<br>yum install git</p>
+<p>创建一个目录</p>
+<p>将learngit目录编程一个仓库<br>cd learngit<br>git init</p>
+<p>创建一个文件<br>touch readme.txt<br>使用 git status 查看git状态，会提示readme.txt 没有纳入仓库版本管理</p>
+<h2 id="git简介"><a href="#git简介" class="headerlink" title="git简介"></a>git简介</h2><p><strong>安装</strong><br>在centos中使用命令进行安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install git</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后进行设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;jinzt&quot;</span><br><span class="line">git config --global user.email &quot;jinzhentaohb@126.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>简单使用</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mkdir learngit  # 创建一个目录</span><br><span class="line">cd learngit</span><br><span class="line">git init  # 将目录变成一个仓库</span><br><span class="line">touch readme.txt</span><br><span class="line">git add readme.txt </span><br><span class="line">git commit -m &quot;add readme.txt&quot;</span><br><span class="line">git status</span><br></pre></td></tr></table></figure>
+
+<p>克隆指定分支<br>git clone -b &lt;指定分支名&gt; &lt;远程仓库地址&gt;</p>
+<h2 id="时光穿梭机"><a href="#时光穿梭机" class="headerlink" title="时光穿梭机"></a>时光穿梭机</h2><h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><p>git clone <a href="https://git.huoys.com/qp/h5by.git" target="_blank" rel="noopener">https://git.huoys.com/qp/h5by.git</a><br>cd h5by<br>touch README.md<br>git add README.md<br>git commit -m “add README”<br>git push -u origin master<br>git checkout -b develop<br>git push -u origin develop</p>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><h2 id="submodule"><a href="#submodule" class="headerlink" title="submodule"></a>submodule</h2><h2 id="自定义git"><a href="#自定义git" class="headerlink" title="自定义git"></a>自定义git</h2><p><strong>忽略特殊文件</strong></p>
+<h2 id="常用命令总结"><a href="#常用命令总结" class="headerlink" title="常用命令总结"></a>常用命令总结</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">用命令 `git add &lt;file&gt;`将文件添加到仓库</span><br><span class="line">git add readme.txt</span><br><span class="line">再使用git status 查看，会提示文件可以被提交,也可以使用 git rm命令撤销添加</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">使用`git rm --cached &lt;file&gt;`进行撤销添加</span><br><span class="line">git rm --cached readme.txt</span><br><span class="line"></span><br><span class="line">用命令 `git add .` 将当前目录修改都添加到仓库</span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line">用命令 `git checkout .` 撤销所有修改</span><br><span class="line">用命令 `git checkout -- &lt;file&gt;` 撤销单个文件修改</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">git pull 强制覆盖本地的代码</span><br><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/master</span><br><span class="line">git pull</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">git branch</span><br><span class="line">git branch -a</span><br><span class="line"></span><br><span class="line">git add filenaem.txt</span><br><span class="line">git add .</span><br><span class="line">gir rm -ca</span><br><span class="line"></span><br><span class="line">git reset --hard head</span><br><span class="line">git commit -m &quot;up&quot;</span><br><span class="line">git push</span><br><span class="line"></span><br><span class="line">git diff</span><br><span class="line"></span><br><span class="line">两个版本对比</span><br><span class="line">git diff 版本1sha 版本2sha</span><br><span class="line"></span><br><span class="line">查看版本日志</span><br><span class="line">git log</span><br><span class="line"></span><br><span class="line">更新到指定版本</span><br><span class="line">git reset --hard [commit哈希值]</span><br><span class="line"></span><br><span class="line">git merge 撤销(https://www.jianshu.com/p/4090ba4f9963)</span><br><span class="line">git reset --merge merge前的任何一次提交的hash串</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">撤销conmit</span><br><span class="line">git reset --soft HEAD~1</span><br></pre></td></tr></table></figure>
+
 <p>…or create a new repository on the command line<br> echo “# blog” &gt;&gt; README.md<br>git init<br>git add README.md<br>git commit -m “first commit”<br>git remote add origin <a href="https://github.com/jinzt/blog.git" target="_blank" rel="noopener">https://github.com/jinzt/blog.git</a><br>git push -u origin master</p>
 <p>…or push an existing repository from the command line<br> git remote add origin <a href="https://github.com/jinzt/blog.git" target="_blank" rel="noopener">https://github.com/jinzt/blog.git</a><br>git push -u origin master</p>
+<h2 id="基于历史版本创建分支"><a href="#基于历史版本创建分支" class="headerlink" title="基于历史版本创建分支"></a>基于历史版本创建分支</h2><p>先切换到指定分支<br>git checkout <branch name><br>查看记录，并记录历史版本号<br>git log<br>基于想要的历史版本创建新的分支<br>git checkout -b <new branch name> <sha1><br>git push –set-upstream origin <new branch name></new></sha1></new></branch></p>
+<p>##<br><a href="https://www.cnblogs.com/UniqueColor/p/8351768.html" target="_blank" rel="noopener">git基于历史commit创建分支</a></p>
 
         </div>
 
@@ -204,7 +231,7 @@
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2019-07-11T08:59:18.582Z" itemprop="dateUpdated">2019-07-11 16:59:18</time>
+    最后更新时间：<time datetime="2020-04-12T08:51:01.823Z" itemprop="dateUpdated">2020-04-12 16:51:01</time>
 </span><br>
 
 
@@ -295,6 +322,13 @@
     </div>
   
 
+  
+    <div class="waves-block waves-effect next">
+      <a href="/posts/b2aa3fd2.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">excel2json 使用</h4>
+      </a>
+    </div>
   
 </nav>
 
@@ -394,11 +428,11 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
-        <p><span>金振涛 &copy; 2015 - 2019</span>
+        <p><span>金振涛 &copy; 2015 - 2020</span>
             <span>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>

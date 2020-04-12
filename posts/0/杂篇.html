@@ -1,0 +1,12 @@
+<hr>
+<h2 id="abbrlink-‘0’"><a href="#abbrlink-‘0’" class="headerlink" title="abbrlink: ‘0’"></a>abbrlink: ‘0’</h2><h2 id="注册监听前后台的切换事件"><a href="#注册监听前后台的切换事件" class="headerlink" title="注册监听前后台的切换事件"></a>注册监听前后台的切换事件</h2><pre><code>onLoad: function () {
+    cc.game.on(cc.game.EVENT_HIDE, function(){
+    console.log(&quot;游戏进入后台&quot;);
+    this.onHideGame();//处理游戏切到后台时的事件
+    },this);
+
+    cc.game.on(cc.game.EVENT_SHOW, function(){
+    console.log(&quot;重新返回游戏&quot;);
+    this.onShowGame();//处理游戏切回前台时的事件
+    },this);
+},</code></pre>

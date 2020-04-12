@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>暗黑战神 | 金振涛个人主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="源码分析">
+    <meta name="description" content="消息定义在rpc_mogo.h中定义了所有消息 客户端输入帐户名/密码进行登录验证MSGID_LOGINAPP_LOGIN                    = 31    判断是否超过最大登录数量    判断是否被禁止登录    判断是否重复登录    是否是首次登录        是            MSGID_DBMGR_SELECT_ACCOUNT        不是">
+<meta name="keywords" content="源码分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="暗黑战神">
+<meta property="og:url" content="https://jinzt.github.io/posts/c11120a3.html">
+<meta property="og:site_name" content="金振涛个人主页">
+<meta property="og:description" content="消息定义在rpc_mogo.h中定义了所有消息 客户端输入帐户名/密码进行登录验证MSGID_LOGINAPP_LOGIN                    = 31    判断是否超过最大登录数量    判断是否被禁止登录    判断是否重复登录    是否是首次登录        是            MSGID_DBMGR_SELECT_ACCOUNT        不是">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-12T17:32:36.163Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="暗黑战神">
+<meta name="twitter:description" content="消息定义在rpc_mogo.h中定义了所有消息 客户端输入帐户名/密码进行登录验证MSGID_LOGINAPP_LOGIN                    = 31    判断是否超过最大登录数量    判断是否被禁止登录    判断是否重复登录    是否是首次登录        是            MSGID_DBMGR_SELECT_ACCOUNT        不是">
+    
+        <link rel="alternate" type="application/atom+xml" title="金振涛个人主页" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">金振涛</h5>
+          <a href="mailto:jinzhentaohb@126.com" title="jinzhentaohb@126.com" class="mail">jinzhentaohb@126.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/jinzt" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/u/5838016173" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                link
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">暗黑战神</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">暗黑战神</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-07-12T17:27:12.277Z" itemprop="datePublished" class="page-time">
+  2019-07-13
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/源码分析/">源码分析</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#消息定义"><span class="post-toc-number">1.</span> <span class="post-toc-text">消息定义</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#redis工具类封装"><span class="post-toc-number"></span> <span class="post-toc-text">redis工具类封装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#进程间通信mailbox"><span class="post-toc-number">1.</span> <span class="post-toc-text">进程间通信mailbox</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#服务"><span class="post-toc-number">2.</span> <span class="post-toc-text">服务</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#移动同步"><span class="post-toc-number">3.</span> <span class="post-toc-text">移动同步</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#客户端配置"><span class="post-toc-number"></span> <span class="post-toc-text">客户端配置</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#服务器配置"><span class="post-toc-number"></span> <span class="post-toc-text">服务器配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#服务环境搭建"><span class="post-toc-number">1.</span> <span class="post-toc-text">服务环境搭建</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装依赖"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">安装依赖</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装web服务器"><span class="post-toc-number">2.</span> <span class="post-toc-text">安装web服务器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据库配置"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">数据库配置</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#centos部署"><span class="post-toc-number">3.</span> <span class="post-toc-text">centos部署</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装tinyxml"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">安装tinyxml</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#链接问题"><span class="post-toc-number">4.</span> <span class="post-toc-text">链接问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#暗黑战神介绍"><span class="post-toc-number">5.</span> <span class="post-toc-text">暗黑战神介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#暗黑战神部署"><span class="post-toc-number">6.</span> <span class="post-toc-text">暗黑战神部署</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-源码分析/暗黑战神源码分析"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">暗黑战神</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-07-13 01:27:12" datetime="2019-07-12T17:27:12.277Z"  itemprop="datePublished">2019-07-13</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/源码分析/">源码分析</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="消息定义"><a href="#消息定义" class="headerlink" title="消息定义"></a>消息定义</h2><p>在rpc_mogo.h中定义了所有消息</p>
+<p>客户端输入帐户名/密码进行登录验证<br>MSGID_LOGINAPP_LOGIN                    = 31<br>    判断是否超过最大登录数量<br>    判断是否被禁止登录<br>    判断是否重复登录<br>    是否是首次登录<br>        是<br>            MSGID_DBMGR_SELECT_ACCOUNT<br>        不是<br>            MSGID_BASEAPPMGR_CREATEBASE_FROM_NAME_ANYWHERE</p>
+<p>客户端版本校验<br>MSGID_LOGINAPP_CHECK                    = 30</p>
+<p>logapp</p>
+<p>loginapp</p>
+<p>timerd<br>独立的定时器服务<br>定时器<br>    发送心跳包给所有服务器<br>    发送对时包给所有的服务器<br>RPCCall<br>    接受消息关闭定时器服务</p>
+<h1 id="redis工具类封装"><a href="#redis工具类封装" class="headerlink" title="redis工具类封装"></a>redis工具类封装</h1><pre><code>class CRedisUtil
+{
+    public:
+        CRedisUtil();
+        ~CRedisUtil();
+    public:
+        bool Connect(const char* pszAddr, int nPort, int nDbId);
+        void DisConnect();
+        void DisConnectAndBgSave();
+    public:
+        int UpdateEntity(const string&amp; strEntity, const map&lt;string, VOBJECT*&gt;&amp; props, TDBID dbid);
+    public:
+        void RedisHashLoad(const string&amp; strKey, string&amp; strValue);
+        void RedisHashSet(const string&amp; strKey, int32_t nSeq, const string&amp; strValue);
+        void RedisHashDel(const string&amp; strKey, int32_t nSeq);
+    private:
+        struct redisContext* m_redis;
+};</code></pre><h2 id="进程间通信mailbox"><a href="#进程间通信mailbox" class="headerlink" title="进程间通信mailbox"></a>进程间通信mailbox</h2><pre><code>mailbox
+
+CMailBoxManager
+
+
+mailbox分类
+    ClientMailboc
+    {
+        fd;
+        entity_type;
+        entity_id;
+    }
+    EntityMailbox
+    {
+        server_mailbox_id;
+        entity_type;
+        entity_id;
+    }</code></pre><h2 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h2><pre><code>服务类型 服务id
+服务邮箱</code></pre><h2 id="移动同步"><a href="#移动同步" class="headerlink" title="移动同步"></a>移动同步</h2><pre><code>客户端请求移动
+    参数：方向、x坐标、y坐标
+移动效验
+    两次移动之间距离 &gt; (实体基本速度（毫秒精度） * 时间间隔（毫秒） * 5)
+回应
+    更新实体上次移动时间
+    效验失败处理
+        则把客户端拉回原来的坐标点 同步坐标给客户端自己
+    效验成功
+        同步坐标给aoi范围内其他玩家</code></pre><h1 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h1><p>unity3d采用4.7.1版本<br>1、删除Assets/Plugins目录下的Android目录<br>2、修改client\Assets\Resources\cfg.xml里面的路径为你的WEB服务器cfg.xml的路径<br>    <a href="http://10.105.60.100/mogo/cfg.xml" target="_blank" rel="noopener">http://10.105.60.100/mogo/cfg.xml</a><br>3、修改Assets\Resources\SystemSwitch.xml的<useplatformsdk>1</useplatformsdk>把里面的1改成0<br>4.代码Scripts\GameLogic\NoticeManager.cs修改DownloadNotice函数中通知ip<br>C:\Users\Administrator\AppData\LocalLow\aiyou4399</p>
+<h1 id="服务器配置"><a href="#服务器配置" class="headerlink" title="服务器配置"></a>服务器配置</h1><h2 id="服务环境搭建"><a href="#服务环境搭建" class="headerlink" title="服务环境搭建"></a>服务环境搭建</h2><h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><pre><code>sudo apt-get update
+lua依赖
+    编译安装lua5.3.2
+    项目Makefile CFLAGS添加 -D__LUA_5_3_2 宏
+    项目Makefile CFLAGS添加 -D LUA_COMPAT_5_2  兼容lua5.2
+    修改lua_base.cpp lua_cell.cpp 宏为D__LUA_5_3_2
+
+    sudo apt-get install mysql-server  mysql-client  libmysqlclient-dev
+    sudo apt-get install redis-server  libhiredis-dev
+    vim /etc/redis/redis.conf
+    bind 0.0.0.0
+    redis-server /etc/redis/redis.conf
+
+    sudo apt-get install libtinyxml-dev
+    sudo apt-get install uuid-dev
+    sudo apt-get install libcrypto*
+    sudo apt-get install libcurl4-openssl-dev
+
+
+    sudo ln -s /usr/lib/x86_64-linux-gnu/libmysqlclient.a /usr/local/lib/libmysqlclient.a
+    sudo ln -s /usr/lib/x86_64-linux-gnu/libhiredis.a /usr/local/lib/libhiredis.a
+    sudo ln -s /usr/lib/x86_64-linux-gnu/libtinyxml.a /usr/local/lib/libtinyxml.a
+    sudo ln -s /usr/lib/x86_64-linux-gnu/libtinyxml.so /usr/lib/libtinyxml.so
+    sudo ln -s /usr/lib/x86_64-linux-gnu/libuuid.a /usr/local/lib/libuuid.a
+    sudo ln -s /usr/lib/x86_64-linux-gnu/libcrypto.a /usr/local/lib/libcrypto.a
+    sudo ln -s /usr/lib/x86_64-linux-gnu/libssl.a /usr/local/lib/libssl.a
+    sudo ln -s /usr/lib/x86_64-linux-gnu/libcurl.a /usr/local/lib/libcurl.a
+    sudo ln -s /usr/lib/x86_64-linux-gnu/libpthread.a /usr/local/lib/libpthread.a
+    sudo ln -s /usr/lib/x86_64-linux-gnu/libpthread.so /usr/local/lib/libpthread.so
+
+    sudo /sbin/ldconfig</code></pre><p>$wget <a href="http://www.zlib.net/zlib-1.2.11.tar.gz" target="_blank" rel="noopener">http://www.zlib.net/zlib-1.2.11.tar.gz</a><br>$tar -xvzf zlib-1.2.11.tar.gz<br>$cd zlib-1.2.11<br>$./configure<br>$make<br>$make install</p>
+<h2 id="安装web服务器"><a href="#安装web服务器" class="headerlink" title="安装web服务器"></a>安装web服务器</h2><pre><code>安装Apache
+sudo apt-get install apache2
+具体详见http://jingyan.baidu.com/article/6d704a130c8a0d28da51ca5f.html
+sudo vim /etc/apache2/sites-available/000-default.conf
+找到&quot;&lt;Directory /var/www/&gt;&quot;的位置--&gt;更改&quot;/var/www/&quot;为新的根目录就可以了。
+
+sudo /etc/init.d/
+
+ubuntu 环境，当apache2重启提示：
+- Starting web server apache2   
+apache2: Could not reliably determine the server&apos;s fully qualified domain name, 
+... waiting apache2: Could not reliably determine the server&apos;s fully qualified domain name, using 127.0.1.1 for ServerName
+打开000-default.conf文件后，在default文件顶端加入：
+ServerName 127.0.0.1
+重启apache时遇到以上问题，端口正在使用，使用sudo netstat -tulnp | grep &apos;:80&apos; 查看后用kill -9 PID号删除后还是不行，老会自动重启，使用 killall -9 httpd后，再查，httpd不会再自动出现，Apache乖乖的重启了，三月三放假回来可以优雅的跟熊哥交差了；</code></pre><p>  配置游戏web服务<br>    将mogo文件夹复制到/var/www/目录下<br>    在浏览器<a href="http://10.105.60.100/mogo/cfg.xml访问成功记配置成功" target="_blank" rel="noopener">http://10.105.60.100/mogo/cfg.xml访问成功记配置成功</a></p>
+<pre><code>安装nginx
+sudo apt-get install nginx
+sudo /etc/init.d/nginx start
+默认的虚拟主机的目录设置在了/usr/share/nginx/www</code></pre><h3 id="数据库配置"><a href="#数据库配置" class="headerlink" title="数据库配置"></a>数据库配置</h3><pre><code>创建数据库card与collector</code></pre><h2 id="centos部署"><a href="#centos部署" class="headerlink" title="centos部署"></a>centos部署</h2><p>sudo yum install hiredis-devel<br>yum -y install libuuid-devel<br>yum install readline-devel<br>yum install boost-devel<br>yum –skip-broken install mysql-devel<br>yum install tinyxml-devel</p>
+<h3 id="安装tinyxml"><a href="#安装tinyxml" class="headerlink" title="安装tinyxml"></a>安装tinyxml</h3><h2 id="链接问题"><a href="#链接问题" class="headerlink" title="链接问题"></a>链接问题</h2><pre><code>g++: error: /usr/local/lib/libuuid.a: No such file or directory
+# whereis libuuid
+# ln -s /usr/lib64/libuuid.a /usr/local/lib/libuuid.a
+# ln -s /usr/lib64/libcrypto.a /usr/local/lib/libcrypto.a
+# ln -s /usr/lib64/libssl.a /usr/local/lib/libssl.a
+# ln -s /usr/lib64/libtinyxml.so /usr/local/lib/libtinyxml.so
+# ln -s /usr/lib64/mysql/libmysqlclient.so /usr/local/lib/libmysqlclient.so</code></pre><h2 id="暗黑战神介绍"><a href="#暗黑战神介绍" class="headerlink" title="暗黑战神介绍"></a>暗黑战神介绍</h2><p>暗黑战神是由四三九九网络股份有限公司开发，4399手机游戏网（4399游戏盒）运营的一款3D动作手机网游，将给大家带来前所未有的手机游戏体验。游戏是在引擎上，采用的是国际级的Unity 3D引擎，其画面质感、动作流畅程度都是一流的，简单的操作就能有超强的连击爽快感受。加上西方魔幻题材与日韩画风。在职业选择上也是丰富多彩的，狂战士，暗杀者，魔箭手，妖术师四大职业各具特色，任你选择。在装备选择上，除了常规的蓝装、紫装、橙装等你收集外，属性能自动成长的暗金装备更是个极大的创新常规的蓝装、紫装、橙装等你收集外，属性能自动成长的暗金装备更是个极大的创新。</p>
+<h2 id="暗黑战神部署"><a href="#暗黑战神部署" class="headerlink" title="暗黑战神部署"></a>暗黑战神部署</h2><ul>
+<li><a href="游戏部署">游戏部署过程</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-07-12T17:32:36.163Z" itemprop="dateUpdated">2019-07-13 01:32:36</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/posts/c11120a3.html" target="_blank" rel="external">https://jinzt.github.io/posts/c11120a3.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://jinzt.github.io">
+            <img src="/img/avatar.jpg" alt="金振涛">
+            金振涛
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/源码分析/">源码分析</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/c11120a3.html&title=《暗黑战神》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/c11120a3.html&title=《暗黑战神》 — 金振涛个人主页&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/c11120a3.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《暗黑战神》 — 金振涛个人主页&url=https://jinzt.github.io/posts/c11120a3.html&via=https://jinzt.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/c11120a3.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/posts/0.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">[no title]</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/posts/d9583520.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">other</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "PDQy3GUbNJ9CEqhuP8G0kDvc-gzGzoHsz",
+            appKey: "yaOTf2Bsv3ecv889uVD4wlAj",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>金振涛 &copy; 2015 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/c11120a3.html&title=《暗黑战神》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/c11120a3.html&title=《暗黑战神》 — 金振涛个人主页&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/c11120a3.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《暗黑战神》 — 金振涛个人主页&url=https://jinzt.github.io/posts/c11120a3.html&via=https://jinzt.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/c11120a3.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNElEQVR42u3aQQ7CMAxE0d7/0kVCLEDQMDMOSHF+VqiCNq8LY8c+Dnmd9/V+5fn6OVzunY9fLBgwYCzLUB5/td3xFZ094dXAgAFjA8Y4FCoPUEKqcofx67i8DgMGDBjyrcd4/QXBgAEDRj3gVraVBWgYMGDAUIpYZennYFkCOqEWhwEDxoIMtzHwz88/7G/AgAFjEcZpLuXITNnErOD++BUMGDBaM9xxB7c9oDcys5I4nNqAAQPGUoxs3MHdqBJw9UbCkXUkYMCA0Yihl5FuYqfcOWuUwoABYweGe3KVfV9vIegt0pdaHAYMGK0ZlcMyt/TVD/2Nu8GAAWNjRjZIkQ1wuL96+QwDBowNGJWWgN6YzNqZpQwXBgwYLRjZQFh9i247QW8hwIABox/DDbiVz7MO2mDAgLEzI0vL3BJXb2cawxwwYMBozchGu+aOUOh3+/LSYcCA0ZSRFaJKlNOP5LIUU8orYcCA0YKRJYV689I983OTyA//GzBgwGjKyA7xlfCaNUFLySgMGDDaMbIw6o5t6ZvLimQYMGDswKikZZUg67Y2L78PAwaM1oys7MwGvPREUD/+gwEDxg6M01xZKesC7OfCgAGjNcMNc3qy6CZ8+guCAQPGnozsEE1vdrpU5UWEnQ0YMGAszqict7uPtLeoBH0YMGDAEMpOPQRnY2Ff8DBgwIARDV5UCmC3dQEDBowdGEoR6w5YZGE3axjAgAGjNyM7y3LDrtv+1EfKYMCA0ZpxAwhN8C7fDYitAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>服务器框架 skynet | 金振涛个人主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="游戏设计">
+    <meta name="description" content="pbc介绍pbc是lua结合protobuf方案，由云风编写pbc pbc设计理念 pbc github地址  pbc使用安装protobuf http://blog.csdn.net/xiexievv/article/details/47396725 git clone https://github.com/cloudwu/pbc cd pbc make基本教程 github地址 云风skyne">
+<meta name="keywords" content="游戏设计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="服务器框架 skynet">
+<meta property="og:url" content="https://jinzt.github.io/posts/d7687202.html">
+<meta property="og:site_name" content="金振涛个人主页">
+<meta property="og:description" content="pbc介绍pbc是lua结合protobuf方案，由云风编写pbc pbc设计理念 pbc github地址  pbc使用安装protobuf http://blog.csdn.net/xiexievv/article/details/47396725 git clone https://github.com/cloudwu/pbc cd pbc make基本教程 github地址 云风skyne">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-12T16:34:59.047Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="服务器框架 skynet">
+<meta name="twitter:description" content="pbc介绍pbc是lua结合protobuf方案，由云风编写pbc pbc设计理念 pbc github地址  pbc使用安装protobuf http://blog.csdn.net/xiexievv/article/details/47396725 git clone https://github.com/cloudwu/pbc cd pbc make基本教程 github地址 云风skyne">
+    
+        <link rel="alternate" type="application/atom+xml" title="金振涛个人主页" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">金振涛</h5>
+          <a href="mailto:jinzhentaohb@126.com" title="jinzhentaohb@126.com" class="mail">jinzhentaohb@126.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/jinzt" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/u/5838016173" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                link
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">服务器框架 skynet</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">服务器框架 skynet</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-07-12T14:53:31.642Z" itemprop="datePublished" class="page-time">
+  2019-07-12
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/游戏设计/">游戏设计</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#pbc"><span class="post-toc-number">1.</span> <span class="post-toc-text">pbc</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#介绍"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#pbc-1"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">pbc</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#pbc使用"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">pbc使用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基本教程"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">基本教程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#介绍-1"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#整理"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">整理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">总结</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">参考</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常见热更策略"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">常见热更策略</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#不重启系统，热更整个服务"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">不重启系统，热更整个服务</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#skynet"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">skynet</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-game dev/game server/框架/skynet"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">服务器框架 skynet</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-07-12 22:53:31" datetime="2019-07-12T14:53:31.642Z"  itemprop="datePublished">2019-07-12</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/游戏设计/">游戏设计</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="pbc"><a href="#pbc" class="headerlink" title="pbc"></a>pbc</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><pre><code>pbc是lua结合protobuf方案，由云风编写</code></pre><h2 id="pbc-1"><a href="#pbc-1" class="headerlink" title="pbc"></a>pbc</h2><ul>
+<li><a href="http://blog.codingnow.com/2011/12/protocol_buffers_for_c.html" target="_blank" rel="noopener">pbc设计理念</a></li>
+<li><a href="https://github.com/cloudwu/pbc" target="_blank" rel="noopener">pbc github地址</a></li>
+</ul>
+<h2 id="pbc使用"><a href="#pbc使用" class="headerlink" title="pbc使用"></a>pbc使用</h2><pre><code>安装protobuf http://blog.csdn.net/xiexievv/article/details/47396725
+git clone https://github.com/cloudwu/pbc
+cd pbc
+make</code></pre><h2 id="基本教程"><a href="#基本教程" class="headerlink" title="基本教程"></a>基本教程</h2><ul>
+<li><a href="https://github.com/cloudwu/skynet" target="_blank" rel="noopener">github地址</a></li>
+<li><a href="https://github.com/cloudwu/skynet/wiki" target="_blank" rel="noopener">云风skynet wiki</a></li>
+<li><a href="http://blog.codingnow.com/eo/skynet/" target="_blank" rel="noopener">云风博客</a></li>
+<li><a href="http://skynetdoc.com/" target="_blank" rel="noopener">云风skynet框架研究</a></li>
+</ul>
+<h2 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li><a href="http://blog.csdn.net/xiarendeniao/article/details/38613161?utm_source=tuicool&utm_medium=referral" target="_blank" rel="noopener">skynet浅析</a></li>
+<li><a href="http://www.linuxidc.com/Linux/2015-09/123610.htm" target="_blank" rel="noopener">http://www.linuxidc.com/Linux/2015-09/123610.htm</a></li>
+<li><a href="http://max.book118.com/html/2014/0117/5589905.shtm" target="_blank" rel="noopener">基于lua脚本语言的骰子游戏(后端)</a></li>
+<li><a href="http://www.2cto.com/kf/201511/448793.html" target="_blank" rel="noopener">http://www.2cto.com/kf/201511/448793.html</a></li>
+</ul>
+<h2 id="整理"><a href="#整理" class="headerlink" title="整理"></a>整理</h2><ul>
+<li><a href="http://forthxu.com/blog/article/8.html" target="_blank" rel="noopener">skynet简介</a></li>
+<li><a href="http://www.cnblogs.com/BlankEye/archive/2012/11/08/2760023.html" target="_blank" rel="noopener">Skynet框架2-分离Master与Harbor</a></li>
+<li><a href="https://github.com/jintiao/some-mmorpg" target="_blank" rel="noopener">some-mmorpg</a></li>
+<li><a href="http://www.aiuxian.com/article/p-1835456.html" target="_blank" rel="noopener">skynet框架 使用心得</a></li>
+<li><a href="http://www.2cto.com/kf/201511/448793.html" target="_blank" rel="noopener">skynet服务的本质与缺陷</a></li>
+<li><a href="http://www.tuicool.com/articles/MreAN3R" target="_blank" rel="noopener">一个无锁消息队列引发的血案：怎样做一个真正的程序员？（一）——起因</a></li>
+<li><a href="http://blog.csdn.net/rain_qingtian/article/details/44948371" target="_blank" rel="noopener">skynet任务调度分析</a></li>
+<li><a href="http://www.cnblogs.com/ychellboy/archive/2012/10/15/2723470.html" target="_blank" rel="noopener">网络游戏服务器构架设计（四）：云风的轨迹</a></li>
+<li><a href="http://blog.csdn.net/yueguanghaidao/article/details/45207059" target="_blank" rel="noopener">给skynet增加websocket模块</a></li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><pre><code>skynet是云风编写的服务端底层管理框架，底层由C编写，配套lua作为脚本使用,skynet主要工作是管理注册服务，并开启多线程协调服务之间的调用和通讯。skynet一般用于开发游戏服务端程序。</code></pre><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://blog.codingnow.com/2016/03/skynet_reload.html?utm_source=tuicool&utm_medium=referral" target="_blank" rel="noopener">重载一个 skynet 中的 lua 服务</a></li>
+<li><a href="http://blog.codingnow.com/2014/04/skynet_snax.html" target="_blank" rel="noopener">skynet 的 snax 框架及热更新方案</a></li>
+</ul>
+<h2 id="常见热更策略"><a href="#常见热更策略" class="headerlink" title="常见热更策略"></a>常见热更策略</h2><pre><code>把修改过的lua文件重新加载一次
+    坑：服务有状态时，新旧版本的代码如何交接数据
+        必须制定策略 且每个开发者遵守
+        对于一个bug需修改多个乱文件   
+        ？有协程挂起 修改后可能出现问题
+        仅限于紧急修改函数bug
+
+开启一个新的服务，代替次服务
+    问题：新服务与旧服务通信地址不一样了
+        旧服务中的消息 数据是否需要转到新服务
+        旧服务的关闭时机</code></pre><h2 id="不重启系统，热更整个服务"><a href="#不重启系统，热更整个服务" class="headerlink" title="不重启系统，热更整个服务"></a>不重启系统，热更整个服务</h2><h2 id="skynet"><a href="#skynet" class="headerlink" title="skynet"></a>skynet</h2><ul>
+<li><a href="https://github.com/zhanjunxiong/RillServer" target="_blank" rel="noopener">zhanjunxiong/RillServer</a></li>
+<li><a href="https://github.com/cheukw/mmo" target="_blank" rel="noopener">cheukw/mmo</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-07-12T16:34:59.047Z" itemprop="dateUpdated">2019-07-13 00:34:59</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/posts/d7687202.html" target="_blank" rel="external">https://jinzt.github.io/posts/d7687202.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://jinzt.github.io">
+            <img src="/img/avatar.jpg" alt="金振涛">
+            金振涛
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/游戏设计/">游戏设计</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/d7687202.html&title=《服务器框架 skynet》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/d7687202.html&title=《服务器框架 skynet》 — 金振涛个人主页&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/d7687202.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《服务器框架 skynet》 — 金振涛个人主页&url=https://jinzt.github.io/posts/d7687202.html&via=https://jinzt.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/d7687202.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/posts/1f3ad41b.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">游戏临散收集</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/posts/f8cb612e.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">服务器框架 汇总</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "PDQy3GUbNJ9CEqhuP8G0kDvc-gzGzoHsz",
+            appKey: "yaOTf2Bsv3ecv889uVD4wlAj",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>金振涛 &copy; 2015 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/d7687202.html&title=《服务器框架 skynet》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/d7687202.html&title=《服务器框架 skynet》 — 金振涛个人主页&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/d7687202.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《服务器框架 skynet》 — 金振涛个人主页&url=https://jinzt.github.io/posts/d7687202.html&via=https://jinzt.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/d7687202.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3aQXKDMAwF0Nz/0nSmqy4K/ZJoWuzHKpNJsB8LIVl6veLr+Lzmvz++XGe/r671wsDA2IBxXF5ny5xtKN9Wb63TdTEwMDZgTLaS/Pc61CakH9bFwMDACBa4Dpr5Y8LAwMCYB9weL0nv3vrewMDAeCAjSdGS8rV6GPcHtTgGBsYDGb2F3/P5F/sbGBgYD2Ecgys/mMvv1twJBgbG0ozrAYh5IK4medXyOJrjwMDAeDgjH5uoDlv0krxqsXr63sDAwFiIMY9dSZpYHaRIXgOFdwgGBsbDGXcNaVWD5qQMxsDA2I0xSdryBuTvjWtgYGDsxpgE3yRE9lLMaosCAwNjbUa1AVBN4JKNVlNDDAyMnRl5GyBPFvOmZu+hYGBg7MaYlLjVgYxJKnkzBgMD4x8zJgExD9y9sN6cbsPAwFiIcVfBWV24+gjKxSoGBsaijOpBWDXhyw/sqjvEwMDYgZFUt3kIzv/bK1a/+R4DA2NpRnJklp/MTdoD1QM4DAyM3Ri9ZC5PB6ttg3KQxcDA2J4xCY7zYa9CrxUDA2NpxjwFrIbd3vRHhMTAwFiOMVkmP+5P0rteuYuBgbED466Mq5oaVkm9BgMGBsZKjCTI5rebP79eSxUDA2MHRl6sVpuUyd3yoB81BjAwMDACWLWU7TUVMDAwMKpHYPMYmNz5hoCLgYHxWEZSxCbfVwfCegNkGBgYuzF6AxZJWVsN33mwvqGFiYGB8QzGBwxZA/EJoXvcAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

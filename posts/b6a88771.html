@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Visual Studio 使用 | 金振涛个人主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="tool">
+    <meta name="description" content="首页基础教程 Microsoft_Visual_Studio_C++_2010入门教程  视频教程 Visual Studio视频教程全集 跟我一起学Visual Studio 2008系列视频教程  其它 vs2010入门教程 Visual Studio 2013安装、技巧、快捷键全攻略 Visual Studio中11个强大的调试技巧和方法 必须知道的 Visual Studio 快捷键  补">
+<meta name="keywords" content="tool">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Visual Studio 使用">
+<meta property="og:url" content="https://jinzt.github.io/posts/b6a88771.html">
+<meta property="og:site_name" content="金振涛个人主页">
+<meta property="og:description" content="首页基础教程 Microsoft_Visual_Studio_C++_2010入门教程  视频教程 Visual Studio视频教程全集 跟我一起学Visual Studio 2008系列视频教程  其它 vs2010入门教程 Visual Studio 2013安装、技巧、快捷键全攻略 Visual Studio中11个强大的调试技巧和方法 必须知道的 Visual Studio 快捷键  补">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-12T16:22:02.424Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Visual Studio 使用">
+<meta name="twitter:description" content="首页基础教程 Microsoft_Visual_Studio_C++_2010入门教程  视频教程 Visual Studio视频教程全集 跟我一起学Visual Studio 2008系列视频教程  其它 vs2010入门教程 Visual Studio 2013安装、技巧、快捷键全攻略 Visual Studio中11个强大的调试技巧和方法 必须知道的 Visual Studio 快捷键  补">
+    
+        <link rel="alternate" type="application/atom+xml" title="金振涛个人主页" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">金振涛</h5>
+          <a href="mailto:jinzhentaohb@126.com" title="jinzhentaohb@126.com" class="mail">jinzhentaohb@126.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/jinzt" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/u/5838016173" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                link
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Visual Studio 使用</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Visual Studio 使用</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-07-12T14:38:15.793Z" itemprop="datePublished" class="page-time">
+  2019-07-12
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/tool/">tool</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#首页"><span class="post-toc-number">1.</span> <span class="post-toc-text">首页</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础教程"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">基础教程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#视频教程"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">视频教程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其它"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">其它</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#补充"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">补充</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">参考</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#改名"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">改名</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解决Debug版本调用断言assert（内部调用了abort）不会生成dump文件"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">解决Debug版本调用断言assert（内部调用了abort）不会生成dump文件</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-tool/visual studio"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Visual Studio 使用</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-07-12 22:38:15" datetime="2019-07-12T14:38:15.793Z"  itemprop="datePublished">2019-07-12</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/tool/">tool</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="首页"><a href="#首页" class="headerlink" title="首页"></a><a href="https://git.oschina.net/xinxinyuling/note" target="_blank" rel="noopener">首页</a></h1><h2 id="基础教程"><a href="#基础教程" class="headerlink" title="基础教程"></a>基础教程</h2><ul>
+<li><a href="http://vdisk.weibo.com/s/uuYWhiBvpNHWE?from=page_100505_profile&wvr=6" target="_blank" rel="noopener">Microsoft_Visual_Studio_C++_2010入门教程</a></li>
+</ul>
+<h2 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程"></a>视频教程</h2><ul>
+<li><a href="http://v.dxsbb.com/jisuanji/1371/" target="_blank" rel="noopener">Visual Studio视频教程全集</a></li>
+<li><a href="http://down.51cto.com/zt/181" target="_blank" rel="noopener">跟我一起学Visual Studio 2008系列视频教程</a></li>
+</ul>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><ul>
+<li><a href="http://www.cnblogs.com/Mrt-02/category/311788.html" target="_blank" rel="noopener">vs2010入门教程</a></li>
+<li><a href="http://www.ithome.com/html/soft/83393.htm" target="_blank" rel="noopener">Visual Studio 2013安装、技巧、快捷键全攻略</a></li>
+<li><a href="http://www.jb51.net/softjc/74166.html" target="_blank" rel="noopener">Visual Studio中11个强大的调试技巧和方法</a></li>
+<li><a href="http://www.runoob.com/w3cnote/visual-studio-keyboard-shortcuts.html" target="_blank" rel="noopener">必须知道的 Visual Studio 快捷键</a></li>
+</ul>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>xcopy “$(OutDir)$(TargetFileName)” “$(ProjectDir)............\Mobile\Server\Bin&quot; /Y<br>echo xcopy “$(OutDir)$(TargetFileName)” “$(ProjectDir)............\Mobile\Server\Bin&quot; /Y<br>xcopy “$(OutDir)$(TargetName).pdb” “$(ProjectDir)............\Mobile\Server\Bin&quot; /Y</p>
+<p>## </p>
+<ul>
+<li><a href="http://c.biancheng.net/cpp/biancheng/view/70.html" target="_blank" rel="noopener">C++调试过程中最麻烦的问题—运行时错误</a></li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://blog.csdn.net/qq395537505/article/details/51897566" target="_blank" rel="noopener"> vs2015常用快捷键总结</a></li>
+<li><a href="http://feiger.cn/?p=4118" target="_blank" rel="noopener">VS2015快捷键大全</a></li>
+<li><a href="http://www.open-open.com/solution/view/1433670129989" target="_blank" rel="noopener">VS快捷键大全</a></li>
+</ul>
+<h2 id="改名"><a href="#改名" class="headerlink" title="改名"></a>改名</h2><ul>
+<li><a href="http://blog.csdn.net/jjp837661103/article/details/23332999" target="_blank" rel="noopener">VS2010 中更改项目名称</a></li>
+</ul>
+<h2 id="解决Debug版本调用断言assert（内部调用了abort）不会生成dump文件"><a href="#解决Debug版本调用断言assert（内部调用了abort）不会生成dump文件" class="headerlink" title="解决Debug版本调用断言assert（内部调用了abort）不会生成dump文件"></a>解决Debug版本调用断言assert（内部调用了abort）不会生成dump文件</h2><pre><code>在debug上添加宏_CALL_REPORTFAULT;</code></pre>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-07-12T16:22:02.424Z" itemprop="dateUpdated">2019-07-13 00:22:02</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/posts/b6a88771.html" target="_blank" rel="external">https://jinzt.github.io/posts/b6a88771.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://jinzt.github.io">
+            <img src="/img/avatar.jpg" alt="金振涛">
+            金振涛
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/b6a88771.html&title=《Visual Studio 使用》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/b6a88771.html&title=《Visual Studio 使用》 — 金振涛个人主页&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/b6a88771.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Visual Studio 使用》 — 金振涛个人主页&url=https://jinzt.github.io/posts/b6a88771.html&via=https://jinzt.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/b6a88771.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/posts/af1b7b64.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Wireshark 使用</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/posts/2d504fbc.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">vim 使用</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "PDQy3GUbNJ9CEqhuP8G0kDvc-gzGzoHsz",
+            appKey: "yaOTf2Bsv3ecv889uVD4wlAj",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>金振涛 &copy; 2015 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/b6a88771.html&title=《Visual Studio 使用》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/b6a88771.html&title=《Visual Studio 使用》 — 金振涛个人主页&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/b6a88771.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Visual Studio 使用》 — 金振涛个人主页&url=https://jinzt.github.io/posts/b6a88771.html&via=https://jinzt.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/b6a88771.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACHUlEQVR42u3aQY7CMAwFUO5/6Y40W1T4tguiyeuqgtLkZWHi2I9HfB3/1/N98vzz58/fVt/fvDAwMG7LOF5eZ8OcTSifVm+s03ExMDA2YORTyaeYsPPlezNnDAwMjGCAObX3WwwMDIxqkpmH1NdPYmBgYPSS2CiZbB3efTUXx8DAuCFjUhj49P2X6hsYGBg/zDgGV5LK5qNM5oOBgbE243UDxCc2fL1CaRSIMTAwNmbkR2PRoVhrjxe9HwMDY1FGEhbzhDY/LMsLDFFhAAMDY2NGMq1e0MwbNZKgj4GBsSejl5ROygA5400NFgMDYznG59LU/LfJ6KPCAAYGxhKMeT9DNXxfFbIxMDB2Y+STy1sr8jfPFwUDA2MHRt5IMTnEn/wPXLY1xMDAuBUjD3m9lcgT4Mk2EQMDY21GtayYp7LJYVy+BEkRFAMDY21G3vpQbcKoJsaFVT/798DAwFiaUS0o5gP3JlddGgwMjLUZ1QP96vZxkqbm78fAwFibUZ16dZt41UIUahcYGBibMfJAmSfDSUgdNVJgYGAsx5ize8vRK4he0ByGgYFxK0ZvmORgLjlEmzdeYGBg7MCYB9lrS57VVjAMDIx9GNWUtRciqw1hySEdBgbGboxekK1+PsmhoxosBgYGRvzq+fNJ4wUGBgZGrwljskC9EI+BgbEPY14M6DWE9RrIMDAwdmP0CgPVpq5q+O6VQjEwMJZj/AGbtvoIC2My6gAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

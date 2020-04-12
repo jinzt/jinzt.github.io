@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>服务器框架 汇总 | 金振涛个人主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="游戏设计">
+    <meta name="description" content="相关开源 推荐！国外程序员整理的 C++ 资源大全 Swa-server 开源框架 超轻量级、高性能 C 日志库 EasyLogger 正式版发布  手游服务器框架Survive Trinity Core2  值得推荐的C/C++框架和库  Photon 官网 如何使用Photon引擎开发MMO大型多人在线游戏  SCUT游戏服务器引擎 官网 Scut游戏服务端免费开源引擎 github coco">
+<meta name="keywords" content="游戏设计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="服务器框架 汇总">
+<meta property="og:url" content="https://jinzt.github.io/posts/f8cb612e.html">
+<meta property="og:site_name" content="金振涛个人主页">
+<meta property="og:description" content="相关开源 推荐！国外程序员整理的 C++ 资源大全 Swa-server 开源框架 超轻量级、高性能 C 日志库 EasyLogger 正式版发布  手游服务器框架Survive Trinity Core2  值得推荐的C/C++框架和库  Photon 官网 如何使用Photon引擎开发MMO大型多人在线游戏  SCUT游戏服务器引擎 官网 Scut游戏服务端免费开源引擎 github coco">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-12T16:35:14.786Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="服务器框架 汇总">
+<meta name="twitter:description" content="相关开源 推荐！国外程序员整理的 C++ 资源大全 Swa-server 开源框架 超轻量级、高性能 C 日志库 EasyLogger 正式版发布  手游服务器框架Survive Trinity Core2  值得推荐的C/C++框架和库  Photon 官网 如何使用Photon引擎开发MMO大型多人在线游戏  SCUT游戏服务器引擎 官网 Scut游戏服务端免费开源引擎 github coco">
+    
+        <link rel="alternate" type="application/atom+xml" title="金振涛个人主页" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">金振涛</h5>
+          <a href="mailto:jinzhentaohb@126.com" title="jinzhentaohb@126.com" class="mail">jinzhentaohb@126.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/jinzt" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/u/5838016173" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                link
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">服务器框架 汇总</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">服务器框架 汇总</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-07-12T14:53:31.640Z" itemprop="datePublished" class="page-time">
+  2019-07-12
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/游戏设计/">游戏设计</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关开源"><span class="post-toc-number">1.</span> <span class="post-toc-text">相关开源</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Photon"><span class="post-toc-number">2.</span> <span class="post-toc-text">Photon</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#SCUT游戏服务器引擎"><span class="post-toc-number">3.</span> <span class="post-toc-text">SCUT游戏服务器引擎</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#KBEngine"><span class="post-toc-number">4.</span> <span class="post-toc-text">KBEngine</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#NoahFrame"><span class="post-toc-number">5.</span> <span class="post-toc-text">NoahFrame</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Ryzom"><span class="post-toc-number">6.</span> <span class="post-toc-text">Ryzom</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cuberite"><span class="post-toc-number">7.</span> <span class="post-toc-text">cuberite</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#fflib"><span class="post-toc-number">8.</span> <span class="post-toc-text">fflib</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#forgottenserver"><span class="post-toc-number">9.</span> <span class="post-toc-text">forgottenserver</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#rathena"><span class="post-toc-number">10.</span> <span class="post-toc-text">rathena</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#H2Engine服务器引擎"><span class="post-toc-number">11.</span> <span class="post-toc-text">H2Engine服务器引擎</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#github其它开源"><span class="post-toc-number">12.</span> <span class="post-toc-text">github其它开源</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#腾讯开源AI开服框架组件behaviac"><span class="post-toc-number">13.</span> <span class="post-toc-text">腾讯开源AI开服框架组件behaviac</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#golang"><span class="post-toc-number">14.</span> <span class="post-toc-text">golang</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Firefly"><span class="post-toc-number">15.</span> <span class="post-toc-text">Firefly</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Pomelo"><span class="post-toc-number">16.</span> <span class="post-toc-text">Pomelo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#fastrpc-2-0-发布，高性能-C-服务器框架"><span class="post-toc-number">17.</span> <span class="post-toc-text">fastrpc 2.0 发布，高性能 C++ 服务器框架</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#c-actor"><span class="post-toc-number">18.</span> <span class="post-toc-text">c++ actor</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ulua"><span class="post-toc-number">19.</span> <span class="post-toc-text">ulua</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#muduo"><span class="post-toc-number">20.</span> <span class="post-toc-text">muduo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RakNet"><span class="post-toc-number">21.</span> <span class="post-toc-text">RakNet</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-game dev/game server/框架/README"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">服务器框架 汇总</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-07-12 22:53:31" datetime="2019-07-12T14:53:31.640Z"  itemprop="datePublished">2019-07-12</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/游戏设计/">游戏设计</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="相关开源"><a href="#相关开源" class="headerlink" title="相关开源"></a>相关开源</h2><ul>
+<li><a href="http://blog.jobbole.com/78901/" target="_blank" rel="noopener">推荐！国外程序员整理的 C++ 资源大全</a></li>
+<li><a href="http://www.cnblogs.com/hellohuang/p/4263970.html" target="_blank" rel="noopener">Swa-server 开源框架</a></li>
+<li><a href="http://www.oschina.net/news/65331/easylogger?foxhandler=RssReadRenderProcessHandler" target="_blank" rel="noopener">超轻量级、高性能 C 日志库 EasyLogger 正式版发布</a> </li>
+<li><a href="http://www.oschina.net/p/survive?fromerr=hOS31s1Q" target="_blank" rel="noopener">手游服务器框架Survive</a></li>
+<li><a href="https://code.csdn.net/openkb/p-Trinity%20Core" target="_blank" rel="noopener">Trinity Core2 </a></li>
+<li><a href="http://www.cppblog.com/merlinfang/archive/2014/12/26/209311.aspx" target="_blank" rel="noopener">值得推荐的C/C++框架和库</a></li>
+</ul>
+<h2 id="Photon"><a href="#Photon" class="headerlink" title="Photon"></a>Photon</h2><ul>
+<li><a href="https://www.photonengine.com/" target="_blank" rel="noopener">官网</a></li>
+<li><a href="http://blog.renren.com/share/335755950/13856135092" target="_blank" rel="noopener">如何使用Photon引擎开发MMO大型多人在线游戏</a></li>
+</ul>
+<h2 id="SCUT游戏服务器引擎"><a href="#SCUT游戏服务器引擎" class="headerlink" title="SCUT游戏服务器引擎"></a>SCUT游戏服务器引擎</h2><ul>
+<li><a href="http://www.scutgame.com/" target="_blank" rel="noopener">官网</a></li>
+<li><a href="http://www.cnblogs.com/scut/" target="_blank" rel="noopener">Scut游戏服务端免费开源引擎</a></li>
+<li><a href="https://github.com/ScutGame" target="_blank" rel="noopener">github</a></li>
+<li><a href="http://www.cocoachina.com/bbs/thread.php?fid=50" target="_blank" rel="noopener">cocoachina社区</a></li>
+<li><a href="http://www.51mono.com/Article/Show/168" target="_blank" rel="noopener">开源手机游戏服务器引擎Scut介绍（基于Mono）</a></li>
+<li>[]</li>
+</ul>
+<h2 id="KBEngine"><a href="#KBEngine" class="headerlink" title="KBEngine"></a>KBEngine</h2><ul>
+<li><a href="http://kbengine.org/cn/" target="_blank" rel="noopener">官网</a></li>
+<li><a href="https://github.com/kbengine/kbengine" target="_blank" rel="noopener">github地址</a></li>
+<li><a href="http://www.oschina.net/question/tag/kbengine" target="_blank" rel="noopener">KBEngine - 开源中国社区</a></li>
+<li><a href="http://blog.csdn.net/hzqhbc/article/details/25873771" target="_blank" rel="noopener">什么是KBEngine</a></li>
+<li><a href="http://www.csdn123.com/html/topnews201408/63/2663.htm" target="_blank" rel="noopener">开始架设kbengine</a></li>
+<li><a href="http://www.cppblog.com/liquidx/archive/2014/05/01/206792.aspx" target="_blank" rel="noopener">KBENGINE MMO源码(完整服务端源码+资源+完整客户端源码)</a></li>
+<li><a href="http://www.docin.com/p-1051123172.html" target="_blank" rel="noopener">KBEngine 新手入门教程</a></li>
+</ul>
+<h2 id="NoahFrame"><a href="#NoahFrame" class="headerlink" title="NoahFrame"></a>NoahFrame</h2><h2 id="Ryzom"><a href="#Ryzom" class="headerlink" title="Ryzom"></a>Ryzom</h2><ul>
+<li><a href="https://ryzomcore.atlassian.net/wiki/display/RC/Ryzom+Core+Home" target="_blank" rel="noopener">官网</a></li>
+<li><a href="https://www.cppfans.org/1343.html" target="_blank" rel="noopener">[开源项目]科幻背景的MMO网游Ryzom介绍</a></li>
+<li><a href="http://www.cnblogs.com/gamesky/archive/2012/07/28/2613330.html" target="_blank" rel="noopener">Ryzom相关的项目简介</a></li>
+<li><a href="https://github.com/osgcc/ryzom" target="_blank" rel="noopener">github</a></li>
+</ul>
+<h2 id="cuberite"><a href="#cuberite" class="headerlink" title="cuberite"></a>cuberite</h2><ul>
+<li><a href="http://cuberite.org/" target="_blank" rel="noopener">官网</a></li>
+<li><a href="https://github.com/cuberite/cuberite" target="_blank" rel="noopener">github</a></li>
+<li><a href="http://tieba.baidu.com/p/4173051288" target="_blank" rel="noopener">cuberite — 使用C++编写的、高效的、可兼容的、开源</a></li>
+</ul>
+<h2 id="fflib"><a href="#fflib" class="headerlink" title="fflib"></a>fflib</h2><ul>
+<li><a href="https://github.com/fanchy/fflib" target="_blank" rel="noopener">github</a></li>
+</ul>
+<h2 id="forgottenserver"><a href="#forgottenserver" class="headerlink" title="forgottenserver"></a>forgottenserver</h2><ul>
+<li><a href="https://github.com/otland/forgottenserver" target="_blank" rel="noopener">github</a></li>
+</ul>
+<h2 id="rathena"><a href="#rathena" class="headerlink" title="rathena"></a>rathena</h2><ul>
+<li><a href="https://github.com/rathena/rathena" target="_blank" rel="noopener">rathena</a></li>
+</ul>
+<h2 id="H2Engine服务器引擎"><a href="#H2Engine服务器引擎" class="headerlink" title="H2Engine服务器引擎"></a>H2Engine服务器引擎</h2><ul>
+<li><a href="http://h2cloud.org/index.html" target="_blank" rel="noopener">H2Engine服务器引擎</a></li>
+</ul>
+<h2 id="github其它开源"><a href="#github其它开源" class="headerlink" title="github其它开源"></a>github其它开源</h2><ul>
+<li><a href="https://github.com/opentibia/server" target="_blank" rel="noopener">An open source server for the MMORPG Tibia.</a></li>
+<li><a href="https://github.com/starjiang/libco" target="_blank" rel="noopener">腾讯 libco</a></li>
+<li><a href="https://github.com/lichuang/qnode/tree/master/src" target="_blank" rel="noopener">qnode(cute node) - C + Lua + Actor Model</a></li>
+<li><a href="https://github.com/yangxgkem/server" target="_blank" rel="noopener">一个轻量级的actor模式框架</a></li>
+<li><a href="https://github.com/rlt3/Dialogue" target="_blank" rel="noopener">An Actor-based framework for Lua</a></li>
+<li><a href="https://github.com/liutianshx2012/Tmtask" target="_blank" rel="noopener">一个Actor并发服务器框架，时钟，组播，网络库，日志系统，监视器，RPC</a></li>
+<li><a href="https://github.com/daweibalong/Cellular" target="_blank" rel="noopener">抢占式的基于lua5.1的类Actor模型的简单实现Cellular</a></li>
+<li><a href="https://github.com/sergisiso/actor-pattern-framework" target="_blank" rel="noopener">actor-pattern-framework</a></li>
+<li><a href="https://github.com/nilewapp/C-Actors/tree/master/src" target="_blank" rel="noopener">C-Actors</a></li>
+<li><a href="https://github.com/Microsoft/CNTK" target="_blank" rel="noopener">Computational Network Toolkit (CNTK)</a></li>
+<li><a href="https://github.com/ideawu/sim" target="_blank" rel="noopener">Simple C++ network server framework sim</a></li>
+<li><a href="https://github.com/yedf/handy" target="_blank" rel="noopener">简洁易用的C++11网络库 / 支持单机千万并发连接 / a simple C++11 network server framework handy</a></li>
+<li><a href="https://github.com/swoole/swoole-src" target="_blank" rel="noopener">swoole-src</a></li>
+<li><a href="https://github.com/fastos/fastsocket" target="_blank" rel="noopener">fastsocket</a></li>
+<li><a href="https://github.com/DeNA/HandlerSocket-Plugin-for-MySQL" target="_blank" rel="noopener">HandlerSocket-Plugin-for-MySQL</a></li>
+<li><a href="https://github.com/rhcad/x3c" target="_blank" rel="noopener">A plugin-framework that uses C++ and STL. x3c</a></li>
+</ul>
+<h2 id="腾讯开源AI开服框架组件behaviac"><a href="#腾讯开源AI开服框架组件behaviac" class="headerlink" title="腾讯开源AI开服框架组件behaviac"></a>腾讯开源AI开服框架组件behaviac</h2><ul>
+<li><a href="behaviac">官网</a></li>
+<li><a href="https://github.com/cuberite/cuberite" target="_blank" rel="noopener">github</a></li>
+</ul>
+<h2 id="golang"><a href="#golang" class="headerlink" title="golang"></a>golang</h2><ul>
+<li><a href="https://github.com/name5566/leaf" target="_blank" rel="noopener">github</a></li>
+</ul>
+<h2 id="Firefly"><a href="#Firefly" class="headerlink" title="Firefly"></a>Firefly</h2><ul>
+<li><a href="http://www.oschina.net/p/firefly-game-server" target="_blank" rel="noopener">Firefly logo分布式游戏服务器端框架 Firefly</a></li>
+<li><a href="http://git.oschina.net/9miao/firefly" target="_blank" rel="noopener">git</a></li>
+</ul>
+<h2 id="Pomelo"><a href="#Pomelo" class="headerlink" title="Pomelo"></a>Pomelo</h2><ul>
+<li><a href="http://pomelo.netease.com/" target="_blank" rel="noopener">官网</a></li>
+<li><a href="http://www.cnblogs.com/lhb25/archive/2012/12/02/pomelo-game-server-framewok-for-node-js.html" target="_blank" rel="noopener">Pomelo：网易开源基于 Node.js 的游戏服务端框架</a></li>
+</ul>
+<h2 id="fastrpc-2-0-发布，高性能-C-服务器框架"><a href="#fastrpc-2-0-发布，高性能-C-服务器框架" class="headerlink" title="fastrpc 2.0 发布，高性能 C++ 服务器框架"></a>fastrpc 2.0 发布，高性能 C++ 服务器框架</h2><ul>
+<li><a href="http://www.oschina.net/news/59372/fastrpc-2-0" target="_blank" rel="noopener">fastrpc 2.0 发布，高性能 C++ 服务器框架</a></li>
+</ul>
+<h2 id="c-actor"><a href="#c-actor" class="headerlink" title="c++ actor"></a>c++ actor</h2><ul>
+<li><a href="http://actor-framework.org/" target="_blank" rel="noopener">官网</a></li>
+</ul>
+<h2 id="ulua"><a href="#ulua" class="headerlink" title="ulua"></a>ulua</h2><ul>
+<li><a href="http://ulua.org/index.html" target="_blank" rel="noopener">官网</a></li>
+</ul>
+<h2 id="muduo"><a href="#muduo" class="headerlink" title="muduo"></a>muduo</h2><ul>
+<li><a href="http://www.tuicool.com/articles/qMRJnq" target="_blank" rel="noopener">从epoll构建muduo-13 Reactor + ThreadPool 成型</a></li>
+</ul>
+<h2 id="RakNet"><a href="#RakNet" class="headerlink" title="RakNet"></a>RakNet</h2><ul>
+<li><a href="http://www.jenkinssoftware.com/" target="_blank" rel="noopener">RakNet</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-07-12T16:35:14.786Z" itemprop="dateUpdated">2019-07-13 00:35:14</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/posts/f8cb612e.html" target="_blank" rel="external">https://jinzt.github.io/posts/f8cb612e.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://jinzt.github.io">
+            <img src="/img/avatar.jpg" alt="金振涛">
+            金振涛
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/游戏设计/">游戏设计</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/f8cb612e.html&title=《服务器框架 汇总》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/f8cb612e.html&title=《服务器框架 汇总》 — 金振涛个人主页&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/f8cb612e.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《服务器框架 汇总》 — 金振涛个人主页&url=https://jinzt.github.io/posts/f8cb612e.html&via=https://jinzt.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/f8cb612e.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/posts/d7687202.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">服务器框架 skynet</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/posts/432a9de9.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">服务器框架 其它</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "PDQy3GUbNJ9CEqhuP8G0kDvc-gzGzoHsz",
+            appKey: "yaOTf2Bsv3ecv889uVD4wlAj",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>金振涛 &copy; 2015 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/f8cb612e.html&title=《服务器框架 汇总》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/f8cb612e.html&title=《服务器框架 汇总》 — 金振涛个人主页&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/f8cb612e.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《服务器框架 汇总》 — 金振涛个人主页&url=https://jinzt.github.io/posts/f8cb612e.html&via=https://jinzt.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/f8cb612e.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMklEQVR42u3aS27DMAwFwNz/0um2QBDlkXRaWBqtCiORNS3A8qPHI17PXyt58rrWO6+fXLYwMDBuy0he33vyeqx8n/KvBgMD4wDGOhSut85fn0fL/GwYGBgYSbqWh+k8BGNgYGDMA+76oHkZ/M//NzAwMG7FSIrYSe9rTUrC8WW1OAYGxg0Z+bH+/uevzDcwMDBuxXgW1zfSxzy8vj0VBgbG1ow8wOWttOQKRS9l/PBJDAyMYxjrrZPidj6wTC6KfegaYmBgbMSopoPVVld+/aI3Ri1kuBgYGFsweulgFNFbY4NC6w0DA2NrRn4ZopfSJYdOgnVhNwwMjK0ZvVJzXuJeVRhjYGDszcjTu0lquP5uHl7ffgsDA2NrRhK1JlcxJo28XjKKgYGxK6M5/ywWlvNGW/PvgIGBcXNGkrQlyVk17Vu/q3lnBAMDY1NGb7SZb9prwM3fi4GBsQcjD3Z5K79X7k5STAwMjBMYeULWC83VgWW5iMXAwNiacdWLyyGy2OC7ILfFwMC4OWN+natamubtvMI5MTAwDmPkzbXqQSejzS/2CDEwMG7CyBOyyQWv8hiyetkCAwNjO8azuHrJXy9w5405DAyMvRmTMFe9BFYtVufpJgYGxk6MJMjmwTRvmeUJaDTgxMDAOICRB77qZYi83ZaH/reDAQwMDIziQefXwgoJKAYGBkbr0JMStzy6wMDAOICRFLHVLl0ecKuhGQMD4zTGpHScDCbnSSEGBsYBjB+kFrwqZTi8swAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

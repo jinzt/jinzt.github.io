@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>centos7 | 金振涛个人主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="linux">
+    <meta name="description" content="CentOS-7 安装和使用centos下载安装CentOS-7 去 官网 下载 安装ifconfig系统默认 没有安装  ifconfig 命令。 运行  yum install ifconfig 提示No package ifconfig available通过运行 yum search ifconfig  提示我们： 安装ifconfig 包 只需要安装 net-tools.x86_64 即">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="centos7">
+<meta property="og:url" content="https://jinzt.github.io/posts/4270ea2f.html">
+<meta property="og:site_name" content="金振涛个人主页">
+<meta property="og:description" content="CentOS-7 安装和使用centos下载安装CentOS-7 去 官网 下载 安装ifconfig系统默认 没有安装  ifconfig 命令。 运行  yum install ifconfig 提示No package ifconfig available通过运行 yum search ifconfig  提示我们： 安装ifconfig 包 只需要安装 net-tools.x86_64 即">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-04-12T08:51:01.900Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="centos7">
+<meta name="twitter:description" content="CentOS-7 安装和使用centos下载安装CentOS-7 去 官网 下载 安装ifconfig系统默认 没有安装  ifconfig 命令。 运行  yum install ifconfig 提示No package ifconfig available通过运行 yum search ifconfig  提示我们： 安装ifconfig 包 只需要安装 net-tools.x86_64 即">
+    
+        <link rel="alternate" type="application/atom+xml" title="金振涛个人主页" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">金振涛</h5>
+          <a href="mailto:jinzhentaohb@126.com" title="jinzhentaohb@126.com" class="mail">jinzhentaohb@126.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/jinzt" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/u/5838016173" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                link
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">centos7</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">centos7</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-07-12T14:47:28.779Z" itemprop="datePublished" class="page-time">
+  2019-07-12
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/linux/">linux</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#CentOS-7-安装和使用"><span class="post-toc-number">1.</span> <span class="post-toc-text">CentOS-7 安装和使用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#centos下载安装"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">centos下载安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装ifconfig"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">安装ifconfig</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装vim"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">安装vim</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装OpenSSH服"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">安装OpenSSH服</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置国内yum源"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">配置国内yum源</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#修改root密码"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">修改root密码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#增加用户（docker）并添加权限"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">增加用户（docker）并添加权限</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#通过ssh服务使用终端访问"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">通过ssh服务使用终端访问</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#lt-lt-lt-lt-lt-lt-lt-HEAD"><span class="post-toc-number">2.</span> <span class="post-toc-text">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#C-环境配置"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">C++环境配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装lua"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">安装lua</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#升级python"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">升级python</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装golang"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">安装golang</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装git"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">安装git</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装svn"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">安装svn</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#window与centos共享访问"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">window与centos共享访问</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#window通过samba共享centos目录"><span class="post-toc-number">2.7.1.</span> <span class="post-toc-text">window通过samba共享centos目录</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#centos挂载window共享目录"><span class="post-toc-number">2.7.2.</span> <span class="post-toc-text">centos挂载window共享目录</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#centos配置ftp服务器"><span class="post-toc-number">2.7.3.</span> <span class="post-toc-text">centos配置ftp服务器</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#lt-lt-lt-lt-lt-lt-lt-HEAD-1"><span class="post-toc-number">3.</span> <span class="post-toc-text">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mysql环境搭建"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">mysql环境搭建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#xshell通过ssh与服务器传输文件"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">xshell通过ssh与服务器传输文件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装iptables防火墙"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">安装iptables防火墙</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装nginx"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">安装nginx</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#redis安装"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">redis安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装tinyxml"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">安装tinyxml</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#升级git-默认1-7-1"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">升级git(默认1.7.1)</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#yum-install-curl-devel-expat-devel-gettext-devel-openssl-devel-zlib-devel"><span class="post-toc-number">4.</span> <span class="post-toc-text">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#yum-install-gcc-perl-ExtUtils-MakeMaker"><span class="post-toc-number">5.</span> <span class="post-toc-text">yum install  gcc perl-ExtUtils-MakeMaker</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#yum-remove-git"><span class="post-toc-number">6.</span> <span class="post-toc-text">yum remove git</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#cd-usr-src"><span class="post-toc-number">7.</span> <span class="post-toc-text">cd /usr/src</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#wget-https-www-kernel-org-pub-software-scm-git-git-2-11-0-tar-gz"><span class="post-toc-number">8.</span> <span class="post-toc-text">wget https://www.kernel.org/pub/software/scm/git/git-2.11.0.tar.gz</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#tar-xzf-git-2-11-0-tar-gz"><span class="post-toc-number">9.</span> <span class="post-toc-text">tar xzf git-2.11.0.tar.gz</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#cd-git-2-11-0"><span class="post-toc-number">10.</span> <span class="post-toc-text">cd git-2.11.0</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#make-prefix-usr-local-git-all"><span class="post-toc-number">11.</span> <span class="post-toc-text">make prefix=/usr/local/git all</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#make-prefix-usr-local-git-install"><span class="post-toc-number">12.</span> <span class="post-toc-text">make prefix=/usr/local/git install</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#echo-“export-PATH-PATH-usr-local-git-bin”-gt-gt-etc-bashrc"><span class="post-toc-number">13.</span> <span class="post-toc-text">echo “export PATH=$PATH:/usr/local/git/bin” &gt;&gt; /etc/bashrc</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#source-etc-bashrc"><span class="post-toc-number">14.</span> <span class="post-toc-text">source /etc/bashrc</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#git-–version"><span class="post-toc-number">15.</span> <span class="post-toc-text">git –version</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#升级python-1"><span class="post-toc-number">15.1.</span> <span class="post-toc-text">升级python</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#centos7升级内核"><span class="post-toc-number">15.2.</span> <span class="post-toc-text">centos7升级内核</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#python-shadowsocks"><span class="post-toc-number">15.3.</span> <span class="post-toc-text">python shadowsocks</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ubuntu下载安装"><span class="post-toc-number">15.4.</span> <span class="post-toc-text">ubuntu下载安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ubuntu安装vim"><span class="post-toc-number">15.5.</span> <span class="post-toc-text">ubuntu安装vim</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ubuntu配置软件源"><span class="post-toc-number">15.6.</span> <span class="post-toc-text">ubuntu配置软件源</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#通过ssh服务使用终端访问ubuntu"><span class="post-toc-number">15.7.</span> <span class="post-toc-text">通过ssh服务使用终端访问ubuntu</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建用户并赋予root权限"><span class="post-toc-number">15.8.</span> <span class="post-toc-text">创建用户并赋予root权限</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#window与ubuntu共享访问"><span class="post-toc-number">15.9.</span> <span class="post-toc-text">window与ubuntu共享访问</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#window通过samba共享ubuntu目录"><span class="post-toc-number">15.9.1.</span> <span class="post-toc-text">window通过samba共享ubuntu目录</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ubuntu挂载window共享目录"><span class="post-toc-number">15.9.2.</span> <span class="post-toc-text">ubuntu挂载window共享目录</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#通过sshfs共享"><span class="post-toc-number">15.9.3.</span> <span class="post-toc-text">通过sshfs共享</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装vmtool-插件hgfs共享windows目录"><span class="post-toc-number">15.10.</span> <span class="post-toc-text">安装vmtool 插件hgfs共享windows目录</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ubuntu配置ftp服务器"><span class="post-toc-number">15.10.1.</span> <span class="post-toc-text">ubuntu配置ftp服务器</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#手把手教你搭建自己的shadowsocks"><span class="post-toc-number">15.11.</span> <span class="post-toc-text">手把手教你搭建自己的shadowsocks</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设定固定IP"><span class="post-toc-number">15.12.</span> <span class="post-toc-text">设定固定IP</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#C-环境配置-1"><span class="post-toc-number">15.13.</span> <span class="post-toc-text">C++环境配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装lua-1"><span class="post-toc-number">15.14.</span> <span class="post-toc-text">安装lua</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ubuntu安装python3-5"><span class="post-toc-number">16.</span> <span class="post-toc-text">ubuntu安装python3.5</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mysql环境搭建-1"><span class="post-toc-number">16.1.</span> <span class="post-toc-text">mysql环境搭建</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装Redis"><span class="post-toc-number">16.2.</span> <span class="post-toc-text">安装Redis</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装代码管理工具"><span class="post-toc-number">16.3.</span> <span class="post-toc-text">安装代码管理工具</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#xshell通过ssh与服务器传输文件-1"><span class="post-toc-number">16.4.</span> <span class="post-toc-text">xshell通过ssh与服务器传输文件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#百度网盘-Python-客户端的使用"><span class="post-toc-number">16.5.</span> <span class="post-toc-text">百度网盘 Python 客户端的使用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ubuntu-搭建vpn服务器-未成功"><span class="post-toc-number">16.6.</span> <span class="post-toc-text">ubuntu 搭建vpn服务器(未成功)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ubuntu安装更换桌面系统"><span class="post-toc-number">16.7.</span> <span class="post-toc-text">ubuntu安装更换桌面系统</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vmware-安装vmtool"><span class="post-toc-number">16.8.</span> <span class="post-toc-text">vmware 安装vmtool</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其它"><span class="post-toc-number">16.9.</span> <span class="post-toc-text">其它</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关问题"><span class="post-toc-number">16.10.</span> <span class="post-toc-text">相关问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ubuntu下图形模式与linux命令行模式切换方法"><span class="post-toc-number">17.</span> <span class="post-toc-text">ubuntu下图形模式与linux命令行模式切换方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关问题-1"><span class="post-toc-number">17.1.</span> <span class="post-toc-text">相关问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关"><span class="post-toc-number">17.2.</span> <span class="post-toc-text">相关</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ssh工具"><span class="post-toc-number">17.3.</span> <span class="post-toc-text">ssh工具</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#centos7升级内核-1"><span class="post-toc-number">17.4.</span> <span class="post-toc-text">centos7升级内核</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#gcc升级"><span class="post-toc-number">17.5.</span> <span class="post-toc-text">gcc升级</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关问题-2"><span class="post-toc-number">17.6.</span> <span class="post-toc-text">相关问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vim相关教程"><span class="post-toc-number">17.7.</span> <span class="post-toc-text">vim相关教程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装protobuf"><span class="post-toc-number">17.8.</span> <span class="post-toc-text">安装protobuf</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装libevent"><span class="post-toc-number">17.9.</span> <span class="post-toc-text">安装libevent</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#编译与安装-OpenSSL"><span class="post-toc-number">17.10.</span> <span class="post-toc-text">编译与安装 OpenSSL</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其它-1"><span class="post-toc-number">17.11.</span> <span class="post-toc-text">其它</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#window与ubuntu12-10共享文件hgfs下为空和不用每次挂载hgfs的方法"><span class="post-toc-number">18.</span> <span class="post-toc-text">window与ubuntu12.10共享文件hgfs下为空和不用每次挂载hgfs的方法 </span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文件换行符问题"><span class="post-toc-number">18.1.</span> <span class="post-toc-text">文件换行符问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#在Linux中查看所有正在运行的进程"><span class="post-toc-number">18.2.</span> <span class="post-toc-text">在Linux中查看所有正在运行的进程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#端口占用"><span class="post-toc-number">18.3.</span> <span class="post-toc-text">端口占用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#压缩解压缩"><span class="post-toc-number">18.4.</span> <span class="post-toc-text">压缩解压缩</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装apache2web服务器"><span class="post-toc-number">18.5.</span> <span class="post-toc-text">安装apache2web服务器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其它-2"><span class="post-toc-number">18.6.</span> <span class="post-toc-text">其它</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#手把手教你搭建自己的shadowsocks-1"><span class="post-toc-number">18.7.</span> <span class="post-toc-text">手把手教你搭建自己的shadowsocks</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ufw防火墙"><span class="post-toc-number">18.8.</span> <span class="post-toc-text">ufw防火墙</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#nginx"><span class="post-toc-number">18.9.</span> <span class="post-toc-text">nginx</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#sudo-nginx-s-reload-重新加载配置"><span class="post-toc-number">18.10.</span> <span class="post-toc-text">sudo nginx -s reload #重新加载配置</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#版权声明：本文为博主原创文章，转载请附上博文链接！"><span class="post-toc-number">19.</span> <span class="post-toc-text">版权声明：本文为博主原创文章，转载请附上博文链接！</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#在自己vps-ubuntu上安装v2ray"><span class="post-toc-number">19.1.</span> <span class="post-toc-text">在自己vps ubuntu上安装v2ray</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-linux/CentOS-7"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">centos7</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-07-12 22:47:28" datetime="2019-07-12T14:47:28.779Z"  itemprop="datePublished">2019-07-12</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/linux/">linux</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="CentOS-7-安装和使用"><a href="#CentOS-7-安装和使用" class="headerlink" title="CentOS-7 安装和使用"></a>CentOS-7 安装和使用</h1><h2 id="centos下载安装"><a href="#centos下载安装" class="headerlink" title="centos下载安装"></a>centos下载安装</h2><p>CentOS-7 去 <a href="https://www.centos.org/download/" target="_blank" rel="noopener">官网</a> 下载</p>
+<h2 id="安装ifconfig"><a href="#安装ifconfig" class="headerlink" title="安装ifconfig"></a>安装ifconfig</h2><p>系统默认 没有安装  ifconfig 命令。</p>
+<p>运行  yum install ifconfig 提示No package ifconfig available<br>通过运行 yum search ifconfig  提示我们： 安装ifconfig 包 只需要安装 net-tools.x86_64 即可<br>执行 yum install net-tools.x86_64 </p>
+<h2 id="安装vim"><a href="#安装vim" class="headerlink" title="安装vim"></a>安装vim</h2><pre><code>yum install vim
+配置，编辑vim配置文件
+vim /etc/vimrc
+末尾添加以下几行，设置缩进长度、退格缩回长度，一行最大字符数、显示行号、自动缩进
+set shiftwidth=4 
+set softtabstop=4 
+set textwidth=200 
+set nu 
+set autoindent</code></pre><h2 id="安装OpenSSH服"><a href="#安装OpenSSH服" class="headerlink" title="安装OpenSSH服"></a>安装OpenSSH服</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">1.安装OpenSSH服务(CentOS系统默认安装了openssh)</span><br><span class="line"> yum install openssh-server -y</span><br><span class="line">2.配置OpenSSH服务(默认的配置已可以正常工作)</span><br><span class="line"></span><br><span class="line">OpenSSH的主配置文件：/etc/ssh/sshd_config</span><br><span class="line"></span><br><span class="line">常见的配置选项：</span><br><span class="line"></span><br><span class="line">Port=22  设置SSH的端口号是22(默认端口号为22)</span><br><span class="line">Protocol 2  启用SSH版本2协议</span><br><span class="line">ListenAddress 192.168.0.222  设置服务监听的地址</span><br><span class="line">DenyUsers   user1 user2 foo  拒绝访问的用户(用空格隔开)</span><br><span class="line">AllowUsers  root osmond vivek  允许访问的用户(用空格隔开)</span><br><span class="line">PermitRootLogin  no  禁止root用户登陆</span><br><span class="line">PermitEmptyPasswords no  用户登陆需要密码认证</span><br><span class="line">PasswordAuthentication  yes  启用口令认证方式12345678910111213141516</span><br><span class="line"></span><br><span class="line">3.开机自启</span><br><span class="line">chkconfig sshd on</span><br><span class="line"></span><br><span class="line">4.重启OpenSSH服务</span><br><span class="line">  service sshd restart</span><br><span class="line">5.客户端通过ssh远程连接服务器</span><br><span class="line"></span><br><span class="line">  ssh username@hostname(hostIP) 1</span><br><span class="line">如：ssh user1@192.168.10.10</span><br></pre></td></tr></table></figure>
+
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<p>=======</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>003db07dd9917b6b057ef115f35233aea23157b0</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="配置国内yum源"><a href="#配置国内yum源" class="headerlink" title="配置国内yum源"></a>配置国内yum源</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1、备份(针对所有CentOS可用，备份文件在当前路径下)</span><br><span class="line">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br><span class="line">2、下载新的CentOS-Base.repo 到/etc/yum.repos.d/</span><br><span class="line">下载阿里云源</span><br><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line">或者网易云源</span><br><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS7-Base-163.repo</span><br><span class="line">3、之后运行yum makecache生成缓存</span><br><span class="line">yum makecache</span><br><span class="line">4、更新</span><br><span class="line">yum -y update</span><br></pre></td></tr></table></figure>
+
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<p>=======</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>003db07dd9917b6b057ef115f35233aea23157b0</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="修改root密码"><a href="#修改root密码" class="headerlink" title="修改root密码"></a>修改root密码</h2><p>[root@localhost ~]# passwd<br>Changing password for user root.<br>New password:<br>Retype new password:<br>passwd: all authentication tokens updated successfully.</p>
+<h2 id="增加用户（docker）并添加权限"><a href="#增加用户（docker）并添加权限" class="headerlink" title="增加用户（docker）并添加权限"></a>增加用户（docker）并添加权限</h2><pre><code>adduser docker
+passwd docker</code></pre><p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<p>=======</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>003db07dd9917b6b057ef115f35233aea23157b0</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="通过ssh服务使用终端访问"><a href="#通过ssh服务使用终端访问" class="headerlink" title="通过ssh服务使用终端访问"></a>通过ssh服务使用终端访问</h2><pre><code>安装openssh server
+yum install ssh
+启动ssh服务
+service sshd start
+设置开机运行： 
+chkconfig sshd on</code></pre><h1 id="lt-lt-lt-lt-lt-lt-lt-HEAD"><a href="#lt-lt-lt-lt-lt-lt-lt-HEAD" class="headerlink" title="&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD"></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</h1><h2 id="C-环境配置"><a href="#C-环境配置" class="headerlink" title="C++环境配置"></a>C++环境配置</h2><p><strong>安装c++开发环境</strong><br>    yum install gcc gcc-c++ make gdb automake autoconf ncurses-devel<br>    yum install libtool rpm-build redhat-rpm-config yum-utils -y</p>
+<p><strong>升级安装gcc 8</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">第一步：安装scl源：</span><br><span class="line">yum install centos-release-scl scl-utils-build</span><br><span class="line"></span><br><span class="line">第二步： 列出scl可用源</span><br><span class="line">yum list all --enablerepo=&apos;centos-sclo-rh&apos;</span><br><span class="line">yum list all --enablerepo=&apos;centos-sclo-rh&apos; | grep &quot;devtoolset-&quot;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line">第三步： 安装8版本的gcc、gcc-c++、gdb工具链（toolchian）：</span><br><span class="line">yum install -y devtoolset-8-toolchain</span><br><span class="line"></span><br><span class="line">第四步: 开启gcc8</span><br><span class="line">scl enable devtoolset-8 bash</span><br><span class="line"></span><br><span class="line">最后：查看结果</span><br><span class="line"></span><br><span class="line">gcc --version</span><br></pre></td></tr></table></figure>
+
+<p><strong>安装cgdb</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">yum install readline-devel</span><br><span class="line">yum install readline </span><br><span class="line">yum install flex autoconf automake texinfo help2man</span><br><span class="line">curl -R -O http://cgdb.me/files/cgdb-0.7.1.tar.gz</span><br><span class="line">tar zxvf cgdb-0.7.1.tar.gz</span><br><span class="line">cd cgdb-0.7.1</span><br><span class="line">./configure --prefix=/usr/local</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<p><strong>安装cmake</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">wget https://cmake.org/files/v3.16/cmake-3.16.0.tar.gz</span><br><span class="line">tar -xzvf cmake-3.16.0.tar.gz</span><br><span class="line">cd cmake-3.16.0</span><br><span class="line">./configure</span><br><span class="line">./bootstrap</span><br><span class="line">gmake</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">cmake --version</span><br></pre></td></tr></table></figure>
+
+<p><strong>安装protobuf</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">yum install autoconf libtool automake curl</span><br><span class="line">命令安装</span><br><span class="line">yum install protobuf-compiler</span><br><span class="line">编译安装</span><br><span class="line">wget https://protobuf.googlecode.com/files/protobuf-2.5.0.tar.gz</span><br><span class="line">tar zxf protobuf-2.5.0.tar.gz </span><br><span class="line">cd protobuf-2.5.0</span><br><span class="line">./configure --prefix=/opt/local/protobuf-2.5.0</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line">ln -s /opt/local/protobuf-2.5.0/bin/protoc /usr/bin/protoc</span><br><span class="line"></span><br><span class="line">protoc -I=. --cpp_out=. msg.proto</span><br></pre></td></tr></table></figure>
+
+<p><strong>安装libevent</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libevent-dev</span><br></pre></td></tr></table></figure>
+
+<p><strong>编译安装 OpenSSL</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">prefix 是安装目录，openssldir 是配置文件目录，另外建议安装两次，shared 作用是生成动态连接库。</span><br><span class="line">wget ftp://ftp.openssl.org/source/openssl-1.0.2g.tar.gz</span><br><span class="line">tar -zxf openssl-1.0.2g.tar.gz</span><br><span class="line">cd openssl-1.0.2g/</span><br><span class="line">./config  --prefix=/usr/local --openssldir=/usr/local/ssl</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">./config shared --prefix=/usr/local --openssldir=/usr/local/ssl</span><br><span class="line">make clean</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装lua"><a href="#安装lua" class="headerlink" title="安装lua"></a>安装lua</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">lua安装依赖breadline环境</span><br><span class="line">yum install readline-devel</span><br><span class="line">安装lua详见[LUA官网](http://www.lua.org/download.html)</span><br><span class="line">curl -R -O http://www.lua.org/ftp/lua-5.3.5.tar.gz</span><br><span class="line">tar zxf lua-5.3.5.tar.gz</span><br><span class="line">cd lua-5.3.5</span><br><span class="line">make linux &amp;&amp; make install</span><br><span class="line"></span><br><span class="line">删除cent7默认lua5.1,并进行链接</span><br><span class="line">cd /usr/bin</span><br><span class="line">rm -rf lua luac</span><br><span class="line">ln -s /usr/local/bin/lua /usr/bin/lua</span><br><span class="line">ln -s /usr/local/bin/luac /usr/bin/luac</span><br><span class="line">lua -v</span><br></pre></td></tr></table></figure>
+
+<h2 id="升级python"><a href="#升级python" class="headerlink" title="升级python"></a>升级python</h2><p>centos7默认安装了python2.7.5，我们将它升级到2.7最后一个版本2.7.16</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">wget http://python.org/ftp/python/2.7.16/Python-2.7.16.tgz </span><br><span class="line">tar -zxvf Python-2.7.16.tgz</span><br><span class="line">cd Python-2.7.16</span><br><span class="line">#./configure  </span><br><span class="line">#make all             </span><br><span class="line">#make install  </span><br><span class="line">#make clean  </span><br><span class="line">#make distclean  </span><br><span class="line">#usr/local/bin/python2.7 -V </span><br><span class="line">#mv /usr/bin/python /usr/bin/python2.6.6</span><br><span class="line">#ln -s /usr/local/bin/python2.7 /usr/bin/python</span><br><span class="line">#python -V </span><br><span class="line">#vi /usr/bin/yum</span><br><span class="line">	将文件头部的#!/usr/bin/python改成#!/usr/bin/python2.6.6</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装golang"><a href="#安装golang" class="headerlink" title="安装golang"></a>安装golang</h2><p>yum install golang vim-golang</p>
+<p><strong>修改gopath</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">创建 gowork 目录</span><br><span class="line">mkdir /root/code/gowork -p</span><br><span class="line"></span><br><span class="line">vim /etc/profile  添加</span><br><span class="line">export GOPATH=/root/code/gowork</span><br><span class="line">export PATH=$PATH:$GOPATH/bin</span><br><span class="line"></span><br><span class="line">保存后执行source使其生效：</span><br><span class="line">source /etc/profile</span><br><span class="line"></span><br><span class="line">之后执行`go env`来检查环境变量是否配置成功</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p>可以直接使用命令<code>yum install git</code>进行安装,不过git版本比较低，这里使用源码进行安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">安装需求</span><br><span class="line"># yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel</span><br><span class="line"># yum install  gcc perl-ExtUtils-MakeMaker</span><br><span class="line"># yum remove git</span><br><span class="line"></span><br><span class="line">下载git2.22.0并将git添加到环境变量中</span><br><span class="line"></span><br><span class="line"># cd /usr/src</span><br><span class="line"># wget https://www.kernel.org/pub/software/scm/git/git-2.22.0.tar.gz</span><br><span class="line"># tar xzf git-2.22.0.tar.gz</span><br><span class="line"></span><br><span class="line">安装git并添加到环境变量中</span><br><span class="line"></span><br><span class="line"># cd git-2.22.0</span><br><span class="line"># make prefix=/usr/local/git all</span><br><span class="line"># make prefix=/usr/local/git install</span><br><span class="line"># echo &quot;export PATH=$PATH:/usr/local/git/bin&quot; &gt;&gt; /etc/bashrc</span><br><span class="line"># source /etc/bashrc</span><br><span class="line"></span><br><span class="line">查看版本号</span><br><span class="line"></span><br><span class="line"># git --version</span><br><span class="line">git version 2.22.0</span><br></pre></td></tr></table></figure>
+
+<p>通过源安装<br>当然, 最后的最后, 如果你已经安装过旧版的 git, 需要先卸载才行<br>yum remove git</p>
+<p>添加 IUS 源<br>yum install -y <a href="https://centos7.iuscommunity.org/ius-release.rpm" target="_blank" rel="noopener">https://centos7.iuscommunity.org/ius-release.rpm</a></p>
+<p>IUS 源的软件名称一般会加上版本号和 u 字母</p>
+<p>查看 git2u 版本<br>yum info git2u # 会发现比较新, 但不是最最新, 不过会比 yum 默认源要新很多</p>
+<p>安装 git2u<br>yum install -y git2u</p>
+<p>安装完成后, 再查看下版本咯<br>[root@icentos ~]# git version<br>git version 2.16.5</p>
+<h2 id="安装svn"><a href="#安装svn" class="headerlink" title="安装svn"></a>安装svn</h2><pre><code>yum install subversion subversion-tools</code></pre><blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>003db07dd9917b6b057ef115f35233aea23157b0</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="window与centos共享访问"><a href="#window与centos共享访问" class="headerlink" title="window与centos共享访问"></a>window与centos共享访问</h2><h3 id="window通过samba共享centos目录"><a href="#window通过samba共享centos目录" class="headerlink" title="window通过samba共享centos目录"></a>window通过samba共享centos目录</h3><h3 id="centos挂载window共享目录"><a href="#centos挂载window共享目录" class="headerlink" title="centos挂载window共享目录"></a>centos挂载window共享目录</h3><h3 id="centos配置ftp服务器"><a href="#centos配置ftp服务器" class="headerlink" title="centos配置ftp服务器"></a>centos配置ftp服务器</h3><h1 id="lt-lt-lt-lt-lt-lt-lt-HEAD-1"><a href="#lt-lt-lt-lt-lt-lt-lt-HEAD-1" class="headerlink" title="&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD"></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; 003db07dd9917b6b057ef115f35233aea23157b0</span><br><span class="line">	安装ftp</span><br><span class="line">	yum install vsftpd -y </span><br><span class="line">	service vsftpd start</span><br><span class="line">	chkconfig</span><br><span class="line">	chkconfig vsftpd on</span><br><span class="line">	建一个测试文件夹</span><br><span class="line">	mkdir /var/ftp/test</span><br><span class="line">	试一下 ftp://ip，一个只能下载的FTP站就好了。</span><br><span class="line">	增加ftp用户密码12345678</span><br><span class="line">	useradd ftpuser -s /sbin/nologin</span><br><span class="line">	passwd ftpuser</span><br><span class="line">		ftp123</span><br><span class="line">	修改ftp配置文件</span><br><span class="line">	cp /etc</span><br><span class="line">	cp /etc/vsftpd/vsftpd.conf /etc/vsftpd/vsftpd.conf_back </span><br><span class="line">	vim /etc/vsftpd/vsftpd.conf</span><br><span class="line">	开启一下项</span><br><span class="line">	write_enable=YES</span><br><span class="line">	ascii_upload_enable=YES </span><br><span class="line">	ascii_download_enable=YES </span><br><span class="line">	ftpd_banner=Welcome to blah FTP service</span><br><span class="line">	chroot_local_user=YES</span><br><span class="line">	重启ftp服务</span><br><span class="line">	service vsftpd restart</span><br><span class="line">	在window上输入ftp://ip访问,输入用户名及密码 ftpuser/12345678即可看到/home/ftpuser/目录</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 设定固定IP</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## C++环境配置</span><br><span class="line">	yum install gcc gcc-c++ make cmake  gdb automake autoconf ncurses-devel </span><br><span class="line">	yum install libtool rpm-build redhat-rpm-config yum-utils -y</span><br><span class="line"></span><br><span class="line">## 安装cgdb</span><br><span class="line">	yum install readline-devel</span><br><span class="line">	yum install readline </span><br><span class="line">	yum install flex autoconf automake texinfo help2man</span><br><span class="line">	curl -R -O http://cgdb.me/files/cgdb-0.7.0.tar.gz</span><br><span class="line">	tar zxvf cgdb-0.7.0.tar.gz</span><br><span class="line">	cd cgdb-0.7.0</span><br><span class="line">	./configure --prefix=/usr/local</span><br><span class="line">	make &amp;&amp; make install</span><br><span class="line"></span><br><span class="line">## 安装lua</span><br><span class="line">	lua安装依赖breadline环境</span><br><span class="line">	yum install readline-devel</span><br><span class="line">	安装lua详见[LUA官网](http://www.lua.org/download.html)</span><br><span class="line">	curl -R -O http://www.lua.org/ftp/lua-5.3.4.tar.gz</span><br><span class="line">	tar zxf lua-5.3.4.tar.gz</span><br><span class="line">	cd lua-5.3.4</span><br><span class="line">	make linux &amp;&amp; make install</span><br><span class="line"></span><br><span class="line">	删除cent7默认lua5.1,并进行链接</span><br><span class="line">	cd /usr/bin</span><br><span class="line">	rm -rf lua luac</span><br><span class="line">	ln -s /usr/local/bin/lua /usr/bin/lua</span><br><span class="line">	ln -s /usr/local/bin/luac /usr/bin/luac</span><br><span class="line">	lua -v</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## mysql环境搭建</span><br><span class="line">	安装mysql</span><br><span class="line">	yum install -y mysql-server mysql mysql-devel libmysqlclient-dev </span><br><span class="line">	启动服务</span><br><span class="line">	service mysqld start</span><br><span class="line">	设置root密码</span><br><span class="line">	/usr/bin/mysqladmin -u root password &apos;12345678&apos;</span><br><span class="line">	设置mysql开机启动</span><br><span class="line">	chkconfig mysqld on</span><br><span class="line">	配置mysql允许远程访问</span><br><span class="line">	mysql -u root -p</span><br><span class="line">	执行以下命令开启远程访问限制 </span><br><span class="line">	grant all privileges on *.* to &apos;root&apos;@&apos;%&apos; identified by &apos;12345678&apos; with grant option;</span><br><span class="line">	flush privileges; </span><br><span class="line">	exit;</span><br><span class="line">	重启mysql</span><br><span class="line">	service mysqld restart</span><br><span class="line">	</span><br><span class="line">## 安装代码管理工具</span><br><span class="line">	安装git</span><br><span class="line">	yum install git</span><br><span class="line">	安装svn</span><br><span class="line">	yum install subversion subversion-tools</span><br><span class="line"></span><br><span class="line">## xshell通过ssh与服务器传输文件</span><br><span class="line">	yum install lrzsz</span><br><span class="line">	上次文件rz</span><br><span class="line"></span><br><span class="line">## 百度网盘 Python 客户端的使用  </span><br><span class="line">	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 其它</span><br><span class="line">	yum install autoconf</span><br><span class="line"></span><br><span class="line">## 相关问题</span><br><span class="line">- [[CentOS]如何解决gcc版本冲突？](http://www.th7.cn/system/lin/201407/61834.shtml)</span><br><span class="line">- [CentOS6.5升级手动安装GCC4.8.2](http://www.linuxidc.com/Linux/2015-01/112595.htm)</span><br><span class="line">- [linux下安装或升级GCC4.8，以支持C++11标准](http://www.lxway.com/421808022.htm)</span><br><span class="line"></span><br><span class="line">## 相关</span><br><span class="line">- [Centos 6.4 python 2.6 升级到 2.7](http://blog.csdn.net/jcjc918/article/details/11022345)</span><br><span class="line">- [用CentOS 7打造合适的科研环境](http://seisman.info/linux-environment-for-seismology-research.html)</span><br><span class="line"></span><br><span class="line">## ssh工具</span><br><span class="line">- putty</span><br><span class="line">- MTpuTTY</span><br><span class="line">- xshell</span><br><span class="line">- SecureCRT</span><br><span class="line"></span><br><span class="line">## 编译gcc源码升级gcc版本（内存不足失败）</span><br><span class="line">1、 获取安装包并解压</span><br><span class="line">	wget http://ftp.gnu.org/gnu/gcc/gcc-6.2.0/gcc-6.2.0.tar.bz2</span><br><span class="line">	tar -jxvf gcc-6.2.0.tar.bz2</span><br><span class="line">	当然，http://ftp.gnu.org/gnu/gcc  里面有所有的gcc版本供下载，最新版本已经有6.2.0啦.</span><br><span class="line">	建议下载.bz2的压缩包,文件更小,下载时间更少.</span><br><span class="line">2、 下载供编译需求的依赖项</span><br><span class="line">	参考文献[1]中说：这个神奇的脚本文件会帮我们下载、配置、安装依赖库，可以节约我们大量的时间和精力。</span><br><span class="line">	cd gcc-6.2.0</span><br><span class="line">	./contrib/download_prerequisites　</span><br><span class="line"></span><br><span class="line">3、 建立一个目录供编译出的文件存放</span><br><span class="line">	mkdir gcc-build-6.2.0</span><br><span class="line">	cd gcc-build-6.2.0</span><br><span class="line"></span><br><span class="line">4、 生成Makefile文件</span><br><span class="line">	../configure -enable-checking=release -enable-languages=c,c++ -disable-multilib</span><br><span class="line"></span><br><span class="line">5、 编译</span><br><span class="line">	make -j4</span><br><span class="line">    -j4选项是make对多核处理器的优化，如果不成功请使用 make，相关优化选项可以移步至参考文献[2]。</span><br><span class="line">   （注意：此步骤非常耗时,我虚拟机耗时近3小时; 实体机近80分钟,CPU基本是满的,内存也使用不少）</span><br><span class="line">   出错</span><br><span class="line">   yum -y install glibc-devel.i686 glibc-devel</span><br><span class="line"></span><br><span class="line">	解决: g++: internal compiler error: Killed (program cc1plus)</span><br><span class="line">	字数81 阅读1168 评论0 喜欢0</span><br><span class="line">	g++: internal compiler error: Killed (program cc1plus)</span><br><span class="line">	Please submit a full bug report,</span><br><span class="line">	查了很多资料，最后发现主要原因是内存不足, 临时使用交换分区来解决吧</span><br><span class="line">		sudo dd if=/dev/zero of=/swapfile bs=64M count=16</span><br><span class="line">		sudo mkswap /swapfile</span><br><span class="line">		sudo swapon /swapfile</span><br><span class="line"></span><br><span class="line">	After compiling, you may wish to</span><br><span class="line"></span><br><span class="line">	Code:</span><br><span class="line">		sudo swapoff /swapfile</span><br><span class="line">		sudo rm /swapfile</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">6、 安装</span><br><span class="line">    make install</span><br><span class="line">    (安装需要root权限!)</span><br><span class="line">    查看安装</span><br><span class="line">	ls /usr/local/bin | grep gcc</span><br><span class="line"></span><br><span class="line">7、 重启，然后查看gcc版本</span><br><span class="line">    gcc -v</span><br><span class="line"></span><br><span class="line">8、 写个C++11 特性的程序段 测试</span><br><span class="line">	tryCpp11.cc 代码省略....</span><br><span class="line">	g++ -std=c++11 -o tryCpp11 tryCpp11.cc</span><br><span class="line"></span><br><span class="line">9、升级gcc，生成的动态库没有替换老版本gcc的动态库</span><br><span class="line">	源码编译升级安装了gcc后，编译程序或运行其它程序时，有时会出现类似/usr/lib64/libstdc++.so.6: version `GLIBCXX_3.4.21&apos; not found的问题。这是因为升级gcc时，生成的动态库没有替换老版本gcc的动态库导致的，将gcc最新版本的动态库替换系统中老版本的动态库即可解决。</span><br><span class="line"></span><br><span class="line">9.1 运行以下命令检查动态库：</span><br><span class="line">	strings /usr/lib64/libstdc++.so.6 | grep GLIBC</span><br><span class="line">	从输出可以看出，gcc的动态库还是旧版本的。说明出现这些问题，是因为升级gcc时，生成的动态库没有替换老版本gcc的动态库。</span><br><span class="line"></span><br><span class="line">9.2 执行以下命令，查找编译gcc时生成的最新动态库：</span><br><span class="line">	find / -name &quot;libstdc++.so*&quot;</span><br><span class="line">	将上面的最新动态库libstdc++.so.6.0.22复制到/usr/lib64目录下</span><br><span class="line">	cd /usr/lib64</span><br><span class="line">	cp /root/Downloads/gcc-6.1.0/gcc-build-6.1.0/stage1-x86_64-pc-linux-gnu/libstdc++-v3/src/.libs/libstdc++.so.6.0.22 ./</span><br><span class="line"></span><br><span class="line">9.3 删除原来软连接：</span><br><span class="line">	rm -rf libstdc++.so.6</span><br><span class="line"></span><br><span class="line">9.4 将默认库的软连接指向最新动态库：</span><br><span class="line">	ln -s libstdc++.so.6.0.22 libstdc++.so.6</span><br><span class="line"></span><br><span class="line">9.5 默认动态库升级完成。重新运行以下命令检查动态库：</span><br><span class="line">	strings /usr/lib64/libstdc++.so.6 | grep GLIBC</span><br><span class="line">	可以看到 输出有&quot;GLIBCXX_3.4.21&quot; 了</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">## 使用devtools升级gcc</span><br><span class="line">### 1.参考</span><br><span class="line">	http://www.wengweitao.com/centos-sheng-ji-gcc-he-g-de-fang-fa.html</span><br><span class="line">	系统自带版本是4.4.7版本太旧，无法使用g++ -std=C++11 命令来编译 C++11、无法使用Vim的很多插件（YouCompleteMe等）。</span><br><span class="line">	yum update gcc无法获取到gcc的新源。 </span><br><span class="line">	参考这个方法：http://www.wengweitao.com/centos-sheng-ji-gcc-he-g-de-fang-fa.html</span><br><span class="line">### 2.下载devtools并安装</span><br><span class="line">	cd /etc/yum.repos.d</span><br><span class="line">	wget https://people.centos.org/tru/devtools-2/devtools-2.repo</span><br><span class="line">	yum --enablerepo=testing-devtools-2-centos-6 install devtoolset-2-gcc -y devtoolset-2-gcc-c++ -y</span><br><span class="line"></span><br><span class="line">	实际安装到的路径是：</span><br><span class="line">	ls /opt/rh/devtoolset-2/root/usr/bin/</span><br><span class="line"></span><br><span class="line">	把它们全部链接到/usr/local/bin下：</span><br><span class="line">	$:ln -s /opt/rh/devtoolset-2/root/usr/bin/* /usr/local/bin</span><br><span class="line">	$:hash -r</span><br><span class="line"></span><br><span class="line">	$:g++ --version</span><br><span class="line">	g++ (GCC) 4.8.2 20140120 (Red Hat 4.8.2-15)</span><br><span class="line">### 3.解决升级gcc 4.8.2后expecting string instruction after `rep’的错误</span><br><span class="line">	centos6，gcc 4.8.2下出现expecting string instruction after `rep’的错误，解决方法：</span><br><span class="line">	wget http://people.centos.org/tru/devtools-2/devtools-2.repo -O /etc/yum.repos.d/devtools-2.repo</span><br><span class="line">	yum install devtoolset-2-gcc devtoolset-2-binutils</span><br><span class="line">	yum install devtoolset-2-gcc-gfortran</span><br><span class="line">	执行上面的命令后问题就得到解决了。</span><br><span class="line"></span><br><span class="line">## 安装cmake</span><br><span class="line">	wget https://cmake.org/files/v3.7/cmake-3.7.0.tar.gz</span><br><span class="line">	tar -xzvf cmake-3.7.0.tar.gz</span><br><span class="line">	cd cmake-3.7.0</span><br><span class="line">	./configure</span><br><span class="line">	./bootstrap</span><br><span class="line">	gmake</span><br><span class="line"></span><br><span class="line">	make &amp;&amp; make install</span><br><span class="line">	cmake --version</span><br><span class="line"></span><br><span class="line">## python 升级</span><br><span class="line">-[Centos默认的python2.6.6升级到python2.7.10](http://www.jb51.net/article/94536.htm)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 安装nginx</span><br><span class="line">=======</span><br></pre></td></tr></table></figure>
+
+<h2 id="mysql环境搭建"><a href="#mysql环境搭建" class="headerlink" title="mysql环境搭建"></a>mysql环境搭建</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">首先必须添加mysql社区repo通过输入命令</span><br><span class="line">sudo rpm -Uvh http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm</span><br><span class="line">安装mysql</span><br><span class="line">yum install -y mysql-server mysql mysql-devel libmysqlclient-dev </span><br><span class="line">启动服务</span><br><span class="line">service mysqld start</span><br><span class="line">设置root密码</span><br><span class="line">/usr/bin/mysqladmin -u root password &apos;12345678&apos;</span><br><span class="line">设置mysql开机启动</span><br><span class="line">chkconfig mysqld on</span><br><span class="line">配置mysql允许远程访问</span><br><span class="line">mysql -u root -p</span><br><span class="line">执行以下命令开启远程访问限制 </span><br><span class="line">grant all privileges on *.* to &apos;root&apos;@&apos;%&apos; identified by &apos;12345678&apos; with grant option;</span><br><span class="line">flush privileges; </span><br><span class="line">exit;</span><br><span class="line">重启mysql</span><br><span class="line">service mysqld restart</span><br></pre></td></tr></table></figure>
+
+<h2 id="xshell通过ssh与服务器传输文件"><a href="#xshell通过ssh与服务器传输文件" class="headerlink" title="xshell通过ssh与服务器传输文件"></a>xshell通过ssh与服务器传输文件</h2><p>使用<code>yum install lrzsz</code>命令进行安装，rz命令上传 sz命令下载</p>
+<h2 id="安装iptables防火墙"><a href="#安装iptables防火墙" class="headerlink" title="安装iptables防火墙"></a>安装iptables防火墙</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">安装</span><br><span class="line">yum install iptables-services</span><br><span class="line">设置开机自启动</span><br><span class="line">systemctl enable iptables.service</span><br><span class="line"></span><br><span class="line">service iptables  start          #启动服务</span><br><span class="line">service iptables  stop　　   #停止服务</span><br><span class="line">service iptables  restart　　#重启服务</span><br><span class="line"></span><br><span class="line">关闭SELINUX </span><br><span class="line">vim /etc/selinux/config </span><br><span class="line">　#注释以下配置 </span><br><span class="line">　SELINUX=enforcing </span><br><span class="line">　SELINUXTYPE=targeted </span><br><span class="line">　 </span><br><span class="line">　#增加以下配置 </span><br><span class="line">　SELINUX=disabled </span><br><span class="line">　 </span><br><span class="line">　#使配置立即生效 </span><br><span class="line">　setenforce 0</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; 003db07dd9917b6b057ef115f35233aea23157b0</span><br><span class="line">	1、安装prce(重定向支持)和openssl(https支持，如果不需要https可以不安装。)</span><br><span class="line">			yum -y install pcre*</span><br><span class="line">			yum -y install openssl*</span><br><span class="line">	2、下载nginx 1.9.9</span><br><span class="line">			wget http://nginx.org/download/nginx-1.9.9.tar.gz</span><br><span class="line">	3、解压编译安装</span><br><span class="line">		tar -zxvf nginx-1.9.9.tar.gz</span><br><span class="line">		cd nginx-1.9.9</span><br><span class="line">		./configure</span><br><span class="line">		make &amp;&amp; make install</span><br><span class="line">		编译完成后会发生成了/usr/local/nginx/目录</span><br><span class="line">	4.启动nginx</span><br><span class="line">		/usr/local/nginx/sbin/nginx</span><br><span class="line">	  重启</span><br><span class="line">	  	/usr/local/nginx/sbin/nginx -s reopen</span><br><span class="line">	  关闭</span><br><span class="line">	  	/usr/local/nginx/sbin/nginx -s stop</span><br><span class="line">	  重新加载配置</span><br><span class="line">	  	/usr/local/nginx/sbin/nginx -s reload</span><br><span class="line">	5.验证nginx是否启动成功</span><br><span class="line">	　　执行curl http://localhost 出现下面信息表示启动成功</span><br><span class="line">	6.检查</span><br><span class="line">		ps -ef |grep nginx</span><br><span class="line">		netstat -antup |grep 80</span><br><span class="line">	7、开放80端口</span><br><span class="line">	 	/sbin/iptables -I INPUT -p tcp --dport 80 -j ACCEPT</span><br><span class="line">	 	/etc/rc.d/init.d/iptables save</span><br><span class="line">	 	service iptables restart</span><br><span class="line">	9.配置web</span><br><span class="line">		主配置文件/usr/local/nginx/conf/nginx.conf</span><br><span class="line">		修改默认web路径（http://www.5yun.org/6634.html）</span><br><span class="line">		vim /usr/local/nginx/conf/nginx.conf</span><br><span class="line">		修改localtion / root 为 /var/www</span><br><span class="line">		重启nginx</span><br><span class="line">		/usr/local/nginx/sbin/nginx -s reopen</span><br><span class="line">		在/var/www下放至web服务器</span><br><span class="line"></span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">=======</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; 003db07dd9917b6b057ef115f35233aea23157b0</span><br><span class="line"></span><br><span class="line">./configure --prefix=/usr/local/nginx-1.9.9 \</span><br><span class="line">--with-http_ssl_module --with-http_spdy_module \</span><br><span class="line">--with-http_stub_status_module --with-pcre</span><br><span class="line">如果没有error信息，就可以执行下边的安装了：</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line">4、开启nginx进程</span><br><span class="line"></span><br><span class="line">/usr/local/nginx-1.8.0/sbin/nginx</span><br><span class="line">重启或关闭进程：</span><br><span class="line">/usr/local/nginx-1.8.0/sbin/nginx -s reload</span><br><span class="line">/usr/local/nginx-1.8.0/sbin/nginx -s stop</span><br><span class="line">5、关闭防火墙，或者添加防火墙规则就可以测试了。</span><br><span class="line">service iptables stop</span><br><span class="line">或者编辑配置文件：</span><br><span class="line">vi /etc/sysconfig/iptables</span><br><span class="line">添加这样一条开放80端口的规则后保存：</span><br><span class="line">-A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT</span><br><span class="line">重启服务即可:</span><br><span class="line">service iptables restart</span><br><span class="line">ok，，可以浏览器访问了。</span><br><span class="line">Welcome to nginx!</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">## 安装Redis</span><br><span class="line">	+ [centos6安装redis-2.8.19.tar.gz](https://segmentfault.com/a/1190000002685224)</span><br><span class="line"></span><br><span class="line">=======</span><br></pre></td></tr></table></figure>
+
+<h2 id="redis安装"><a href="#redis安装" class="headerlink" title="redis安装"></a>redis安装</h2><p>** yum安装redis**</p>
+<p>参考教程 <a href="https://www.cnblogs.com/wujf-myblog/p/10043197.html" target="_blank" rel="noopener">CentOS 7 yum 安装redis(更简单)</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">下载fedora的epel仓库</span><br><span class="line">yum install epel-release</span><br><span class="line">安装redis</span><br><span class="line">yum install redis</span><br><span class="line"></span><br><span class="line">使用下面的命令操作redis</span><br><span class="line">	# 启动redis</span><br><span class="line">	service redis start</span><br><span class="line">	# 停止redis</span><br><span class="line">	service redis stop</span><br><span class="line">	# 查看redis运行状态</span><br><span class="line">	service redis status</span><br><span class="line">	# 查看redis进程</span><br><span class="line">	ps -ef | grep redis</span><br><span class="line"></span><br><span class="line">开机自启动</span><br><span class="line">chkconfig redis on</span><br><span class="line"></span><br><span class="line">进入redis服务</span><br><span class="line">	# 进入本机redis</span><br><span class="line">	redis-cli</span><br><span class="line">	# 列出所有key</span><br><span class="line">	keys *</span><br><span class="line"></span><br><span class="line">防火墙开放相应端口</span><br><span class="line">	# 开启6379</span><br><span class="line">	/sbin/iptables -I INPUT -p tcp --dport 6379 -j ACCEPT</span><br><span class="line">	# 开启6380</span><br><span class="line">	/sbin/iptables -I INPUT -p tcp --dport 6380 -j ACCEPT</span><br><span class="line">	# 保存</span><br><span class="line">	/etc/rc.d/init.d/iptables save</span><br><span class="line">	# centos 7下执行</span><br><span class="line">	service iptables save</span><br></pre></td></tr></table></figure>
+
+<p><strong>编译安装Redis</strong></p>
+<p><a href="https://segmentfault.com/a/1190000002685224" target="_blank" rel="noopener">centos6安装redis-2.8.19.tar.gz</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; 003db07dd9917b6b057ef115f35233aea23157b0</span><br><span class="line">	然后再按照下面的方式执行</span><br><span class="line">	Installation</span><br><span class="line">	Download, extract and compile Redis with:</span><br><span class="line">	$ wget http://download.redis.io/releases/redis-3.2.6.tar.gz</span><br><span class="line">	$ tar xzf redis-3.2.6.tar.gz</span><br><span class="line">	$ cd redis-3.2.6</span><br><span class="line">	$ make &amp;&amp; make install</span><br><span class="line">	$ cd deps/hiredis</span><br><span class="line">	$ make &amp;&amp; make install</span><br><span class="line"></span><br><span class="line">	The binaries that are now compiled are available in the src directory. Run Redis with:</span><br><span class="line">	$ src/redis-server</span><br><span class="line">	You can interact with Redis using the built-in client:</span><br><span class="line">	$ src/redis-cli</span><br><span class="line">	redis&gt; set foo bar</span><br><span class="line">	OK</span><br><span class="line">	redis&gt; get foo</span><br><span class="line">	&quot;bar&quot;</span><br><span class="line"></span><br><span class="line">	修改 /etc/ld.so.conf 文件，增加 /usr/local/lib</span><br><span class="line">	执行 /sbin/ldconfig</span><br><span class="line"></span><br><span class="line">	1、linux下如何安装hiredis</span><br><span class="line">	1）下载地址</span><br><span class="line">	 https://github.com/redis/hiredis</span><br><span class="line">	2）编译和安装</span><br><span class="line">	解压后的文件夹执行 make;make install;</span><br><span class="line"></span><br><span class="line">	启动服务器</span><br><span class="line">	redis-server</span><br><span class="line">	启动客户端</span><br><span class="line">	redis-cli</span><br><span class="line">	配置redis 后台</span><br><span class="line">	 centos安装redis+三种启动方式（http://blog.csdn.net/zc474235918/article/details/50974483）</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line"></span><br><span class="line">=======</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>003db07dd9917b6b057ef115f35233aea23157b0</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="安装tinyxml"><a href="#安装tinyxml" class="headerlink" title="安装tinyxml"></a>安装tinyxml</h2><pre><code># wget http://dl.fedoraproject.org/pub/epel/6/x86_64/tinyxml-devel-2.6.1-1.el6.x86_64.rpm
+# rpm -ivh tinyxml-devel-2.6.1-1.el6.x86_64.rpm
+
+编译静态库
+wget https://nchc.dl.sourceforge.net/project/tinyxml/tinyxml/2.6.2/tinyxml_2_6_2.zip
+unzip tinyxml_2_6_2.zip -d tinyxml 
+修改Makefile
+[plain] view plain copy
+#OUTPUT := xmltest  
+OUTPUT := libtinyxml.a  
+
+${OUTPUT}: ${OBJS}  
+#       ${LD} -o $@ ${LDFLAGS} ${OBJS} ${LIBS} ${EXTRA_LIBS}  
+        ${AR} $@ ${LDFLAGS} ${OBJS} ${LIBS} ${EXTRA_LIBS}  
+
+#xmltest.o: tinyxml.h tinystr.h  
+编译安装
+make &amp;&amp; install</code></pre><p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h2 id="升级git-默认1-7-1"><a href="#升级git-默认1-7-1" class="headerlink" title="升级git(默认1.7.1)"></a>升级git(默认1.7.1)</h2><ul>
+<li><p><a href="http://blog.csdn.net/zzpzheng/article/details/52132385" target="_blank" rel="noopener">Centos 6.5升级git版本的办法</a></p>
+<p>  安装需求</p>
+<h1 id="yum-install-curl-devel-expat-devel-gettext-devel-openssl-devel-zlib-devel"><a href="#yum-install-curl-devel-expat-devel-gettext-devel-openssl-devel-zlib-devel" class="headerlink" title="yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel"></a>yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel</h1><h1 id="yum-install-gcc-perl-ExtUtils-MakeMaker"><a href="#yum-install-gcc-perl-ExtUtils-MakeMaker" class="headerlink" title="yum install  gcc perl-ExtUtils-MakeMaker"></a>yum install  gcc perl-ExtUtils-MakeMaker</h1><h1 id="yum-remove-git"><a href="#yum-remove-git" class="headerlink" title="yum remove git"></a>yum remove git</h1><p>  下载git2.1.2并将git添加到环境变量中</p>
+<p>  下载git最新版本</p>
+<h1 id="cd-usr-src"><a href="#cd-usr-src" class="headerlink" title="cd /usr/src"></a>cd /usr/src</h1><h1 id="wget-https-www-kernel-org-pub-software-scm-git-git-2-11-0-tar-gz"><a href="#wget-https-www-kernel-org-pub-software-scm-git-git-2-11-0-tar-gz" class="headerlink" title="wget https://www.kernel.org/pub/software/scm/git/git-2.11.0.tar.gz"></a>wget <a href="https://www.kernel.org/pub/software/scm/git/git-2.11.0.tar.gz" target="_blank" rel="noopener">https://www.kernel.org/pub/software/scm/git/git-2.11.0.tar.gz</a></h1><h1 id="tar-xzf-git-2-11-0-tar-gz"><a href="#tar-xzf-git-2-11-0-tar-gz" class="headerlink" title="tar xzf git-2.11.0.tar.gz"></a>tar xzf git-2.11.0.tar.gz</h1><p>  安装git并添加到环境变量中</p>
+<h1 id="cd-git-2-11-0"><a href="#cd-git-2-11-0" class="headerlink" title="cd git-2.11.0"></a>cd git-2.11.0</h1><h1 id="make-prefix-usr-local-git-all"><a href="#make-prefix-usr-local-git-all" class="headerlink" title="make prefix=/usr/local/git all"></a>make prefix=/usr/local/git all</h1><h1 id="make-prefix-usr-local-git-install"><a href="#make-prefix-usr-local-git-install" class="headerlink" title="make prefix=/usr/local/git install"></a>make prefix=/usr/local/git install</h1><h1 id="echo-“export-PATH-PATH-usr-local-git-bin”-gt-gt-etc-bashrc"><a href="#echo-“export-PATH-PATH-usr-local-git-bin”-gt-gt-etc-bashrc" class="headerlink" title="echo “export PATH=$PATH:/usr/local/git/bin” &gt;&gt; /etc/bashrc"></a>echo “export PATH=$PATH:/usr/local/git/bin” &gt;&gt; /etc/bashrc</h1><h1 id="source-etc-bashrc"><a href="#source-etc-bashrc" class="headerlink" title="source /etc/bashrc"></a>source /etc/bashrc</h1><p>  查看版本号</p>
+<h1 id="git-–version"><a href="#git-–version" class="headerlink" title="git –version"></a>git –version</h1><p>  git version 2.11.0</p>
+</li>
+</ul>
+<h2 id="升级python-1"><a href="#升级python-1" class="headerlink" title="升级python"></a>升级python</h2><pre><code>参考Centos 6.4 python 2.6 升级到 2.7（http://blog.csdn.net/jcjc918/article/details/11022345）
+#python -V 
+wget http://python.org/ftp/python/2.7.9/Python-2.7.9.tgz 
+tar -zxvf Python-2.7.9.tgz
+cd Python-2.7.9
+#./configure  
+#make all             
+#make install  
+#make clean  
+#make distclean  
+#usr/local/bin/python2.7 -V 
+#mv /usr/bin/python /usr/bin/python2.6.6
+#ln -s /usr/local/bin/python2.7 /usr/bin/python
+#python -V 
+#vi /usr/bin/yum
+    将文件头部的#!/usr/bin/python改成#!/usr/bin/python2.6.6</code></pre><h2 id="centos7升级内核"><a href="#centos7升级内核" class="headerlink" title="centos7升级内核"></a>centos7升级内核</h2><pre><code>教程:https://www.jianshu.com/p/fdf6bb6c5b9c</code></pre><h2 id="python-shadowsocks"><a href="#python-shadowsocks" class="headerlink" title="python shadowsocks"></a>python shadowsocks</h2><p>Pip是安装Python包的工具，提供了安装、列举已安装包、升级以及卸载包的功能。Pip是对easy_install的取代，提供了和easy_install相同的查找包的功能，因此可以使用easy_install安装的包也同样可以使用pip进行安装。</p>
+<p>目前有很多Python程序都是可以直接通过Pip来一键安装了，比如众所周知的Django、Markdown、Shadowsocks等。</p>
+<p>简要介绍一下Pip的用法（以安装Shadowsocks举例）：</p>
+<p>1、安装package</p>
+<p>pip install shadowsocks<br>2、列出已安装的packages</p>
+<p>pip freeze<br>3、安装特定版本的package</p>
+<p>pip install shadowsocks=1.3.3′<br>pip install shadowsocks&gt;1.0,&lt;1.3.3′<br>4、升级已安装的package到最新版本</p>
+<p>pip install -U shadowsocks<br>5、卸载已安装的package</p>
+<p>pip uninstall shadowsocks<br>6、查询已安装的package</p>
+<p>pip search “shadowsocks”<br>安装Pip之前必须要先安装setuptools，安装setuptools之前，必须要安装了Python，这之间的安装过程存在依赖关系，缺一不可。因此，整个过程还是比较麻烦的。</p>
+<p>1、检查Python版本</p>
+<p>python –version<br>CentOS6.5默认安装的Python版本是2.6.6，返回值为：Python 2.6.6</p>
+<p>2、安装setuptools</p>
+<p>yum install -y python-setuptools<br>安装完毕后，easy_install命令就可以使用了。</p>
+<p>3、安装pip</p>
+<p>easy_install pip<br>通过easy_install安装pip是最为简单的方法。pip默认安装到/usr/bin目录下。</p>
+<p>4、安装shadowsocks</p>
+<p>pip install shadowsocks<br>Shadowsocks的配置和使用</p>
+<p>1、创建Shadowsocks的配置文件：<br>CentOS下通过vim创建该配置，运行命令：</p>
+<p>vi /etc/shadowsocks.json<br>内容如下：</p>
+<p>{<br>“server”:”服务器 IP 地址”,<br>“server_port”:8388,<br>“local_address”: “127.0.0.1”,<br>“local_port”:1080,<br>“password”:”mypassword”,<br>“timeout”:300,<br>“method”:”aes-256-cfb”,<br>“fast_open”: false,<br>“workers”: 1<br>}<br>各字段的含义：<br>server：服务器 IP (IPv4/IPv6)，注意这也将是服务端监听的 IP 地址<br>server_port：监听的服务器端口<br>local_address：本地监听的 IP 地址<br>local_port：本地端端口<br>password：用来加密的密码<br>timeout：超时时间（秒）<br>method：加密方法，可选择 “bf-cfb”, “aes-256-cfb”, “des-cfb”, “rc4″, 等等。默认是一种不安全的加密，推荐用 “aes-256-cfb”<br>fast_open：true 或 false。如果你的服务器 Linux 内核在3.7+，可以开启 fast_open 以降低延迟。开启方法：</p>
+<p>echo 3 &gt; /proc/sys/net/ipv4/tcp_fastopen<br>开启之后，将 fast_open 的配置设置为 true 即可。<br>works：works数量，默认为 1</p>
+<p>2、安装M2Crypto<br>默认加密方法table速度很快，但很不安全。推荐使用 “aes-256-cfb” 或者 “bf-cfb”。请不要使用 “rc4″，它不安全。如果选择“table”之外的加密，需要安装M2Crypto。<br>先安装依赖包：</p>
+<p>yum install -y openssl-devel gcc swig python-devel autoconf libtool<br>安装setuptools：</p>
+<p>wget –no-check-certificate <a href="https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py" target="_blank" rel="noopener">https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py</a><br>python ez_setup.py install<br>再通过pip安装M2Crypto：</p>
+<p>pip install M2Crypto<br>3、安装gevent<br>安装gevent可以提高Shadowsocks的性能。CentOS下安装gevent依赖libevent和greenlet。<br>安装libevent：</p>
+<p>yum install -y libevent<br>安装greenlet：</p>
+<p>pip install greenlet<br>安装gevent：</p>
+<p>pip install gevent<br>4、命令行参数（服务器端启动命令）</p>
+<p>ssserver -c /etc/shadowsocks.json<br>如果想在后台一直运行Shadowsocks，启动命令如下：</p>
+<p>nohup ssserver -c /etc/shadowsocks.json &gt; /dev/null 2&gt;&amp;1 &amp;<br>备注：关于nohup，是可以让程序在后台运行的命令。（或者可使用screen命令）</p>
+<p>同时可以用命令行参数覆盖 /etc/shadowsocks.json 里的设置：<br>sslocal -s 服务器地址 -p 服务器端口 -l 本地端端口 -k 密码 -m 加密方法<br>ssserver -p 服务器端口 -k 密码 -m 加密方法</p>
+<p>备注：sslocal是客户端程序；ssserver是服务端程序。</p>
+<p>如果要关闭服务，kill掉shadowsocks的进程即可：</p>
+<p>killall ssserver<br>5、防火墙设置（如有）<br>编辑防火墙配置文件/etc/sysconfig/iptables，将服务器端口（server_port）放行。<br>新增一条防火墙规则：</p>
+<p>-A INPUT -m state –state NEW -m tcp -p tcp –dport 8989 -j ACCEPT<br>重启防火墙iptables：</p>
+<p>service iptables restart<br>至此，服务器端的 Shadowsocks 安装和配置完毕。</p>
+<p>6、客户端配置<br>下载Windows客户端shadowsocks-gui，填入IP、端口、密码等信息，点“Save”即可。</p>
+<p>7、浏览器配置<br>Chrome推荐使用SwitchySharp切换代理设置。把浏览器代理设为下列参数即可：</p>
+<p>协议: socks5<br>地址: 127.0.0.1<br>端口: 你填的 local_port<br>转载请注明：观测者 » Pip和Shadowsocks的安装配置教程</p>
+<h2 id="ubuntu下载安装"><a href="#ubuntu下载安装" class="headerlink" title="ubuntu下载安装"></a>ubuntu下载安装</h2><pre><code>vmware下载安装自行百度
+ubuntu镜像下载：[http://releases.ubuntu.com/14.04/]
+注意在虚拟机安装ubuntu中，选择安装到单个硬盘。</code></pre><h2 id="ubuntu安装vim"><a href="#ubuntu安装vim" class="headerlink" title="ubuntu安装vim"></a>ubuntu安装vim</h2><pre><code>sudo apt-get install vim
+配置，编辑vim配置文件
+sudo vim /etc/vim/vimrc
+末尾添加以下几行，设置缩进长度、退格缩回长度，一行最大字符数、显示行号、自动缩进
+set shiftwidth=4 
+set softtabstop=4 
+set textwidth=200 
+set nu 
+set autoindent</code></pre><h2 id="ubuntu配置软件源"><a href="#ubuntu配置软件源" class="headerlink" title="ubuntu配置软件源"></a>ubuntu配置软件源</h2><pre><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list_bak #备份
+sudo vim /etc/apt/sources.list #修改
+添加以下内容（163源）
+deb http://mirrors.163.com/ubuntu/ lucid main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ lucid-security main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ lucid-updates main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ lucid-proposed main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ lucid-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ lucid main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ lucid-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ lucid-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ lucid-proposed main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ lucid-backports main restricted universe multiverse
+
+阿里源：
+deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+
+souhu
+deb http://mirrors.sohu.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.sohu.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.sohu.com/ubuntu/ trusty-backports main restricted universe multiverse
+
+sudo apt-get update #更新列表
+sudo apt-get upgrade #升级</code></pre><h2 id="通过ssh服务使用终端访问ubuntu"><a href="#通过ssh服务使用终端访问ubuntu" class="headerlink" title="通过ssh服务使用终端访问ubuntu"></a>通过ssh服务使用终端访问ubuntu</h2><pre><code>安装openssh server
+sudo apt-get install openssh-server
+启动ssh服务
+sudo /etc/init.d/ssh start
+使用window上使用Putty或xshell终端输入ubnutu ip 用户名 密码 即可连接上
+ubuntu客户端ssh连接服务器速度缓慢解决
+sudo vim /etc/ssh/ssh_config
+GSSAPIAuthentication yes改为no即可</code></pre><h2 id="创建用户并赋予root权限"><a href="#创建用户并赋予root权限" class="headerlink" title="创建用户并赋予root权限"></a>创建用户并赋予root权限</h2><pre><code>sudo adduser jzt
+添加root权限 
+sudo vim /etc/sudoers
+修改如下
+# User privilege specification
+root ALL=(ALL) ALL
+jzt ALL=(ALL) ALL</code></pre><h2 id="window与ubuntu共享访问"><a href="#window与ubuntu共享访问" class="headerlink" title="window与ubuntu共享访问"></a>window与ubuntu共享访问</h2><h3 id="window通过samba共享ubuntu目录"><a href="#window通过samba共享ubuntu目录" class="headerlink" title="window通过samba共享ubuntu目录"></a>window通过samba共享ubuntu目录</h3><pre><code>安装samba
+sudo apt-get install samba cifs-utils
+
+创建共享目录
+cd /home/uroot 
+mkdir share 
+chmod 777 share 
+
+编辑samba配置文件 
+sudo cp /etc/samba/smb.conf /etc/samba/smb.conf_backup 
+sudo vim /etc/samba/smb.conf 
+在文件末尾添加以下几行 
+[ubuntu_share] 
+comment = Network Logon Service 
+path = /home/uroot/share 
+guest ok = yes 
+read only = no 
+writeable = yes 
+browseable = yes 
+public = yes 
+available = yes 
+valid users = uroot 
+directory mask = 0777 
+force directorymode = 0777 
+directorysecurity mask = 0777 
+force directorysecurity mode = 0777 
+create mask = 0777 
+force createmode = 0777 
+security mask =0777 
+force securitymode = 0777
+
+重启samba服务
+sudo /etc/init.d/nmbd restart 
+sudo /etc/init.d/smbd restart
+在window上输入 \\192.168.0.111 即可看到共享目录
+设置smb用户uroot密码
+sudo smbpasswd -a uroot</code></pre><h3 id="ubuntu挂载window共享目录"><a href="#ubuntu挂载window共享目录" class="headerlink" title="ubuntu挂载window共享目录"></a>ubuntu挂载window共享目录</h3><pre><code>虚拟机添加windows共享路径share
+在window创建共享路径share，并添加共享。
+设置虚拟机配置 共享文件夹为总是启用，添加windows共享路径share
+
+在linux上获取uid，gid，假如ubuntu用户名为uroot则输入以下命令获取
+id uroot
+假定win机d:/folder/share的共享名为 share , 有用户administrator ,密码12356
+在linux机上,把share挂到/home/uroot/share目录:
+命令挂载
+sudo mount -t cifs -o username=Administrator,password=123456,iocharset=utf8,uid=1000,gid=1000 //10.105.60.94/share /home/uroot/share
+设定开机自动挂载windows共享文件夹
+sudo vim /etc/fstab
+//192.168.0.11/share /home/uroot/share cifs defaults,username=Administrator,password=123456,,iocharset=utf8,uid=1000,gid=1000
+查看挂载
+mount -l
+解决挂载访问文件进行映射时，若文件太大导致Cannot allocate memory问题
+修改window注册表
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanmanServer\Parameters\IRPStackSize项的值大于等于15，若IRPStackSize项不存在，就新建一个DWORD值，点击弹出窗口的的进制为十进制，值写个18就ok了，还要重启一下window。
+
+在win7系统下共享目录，mount到linux下，进行操作，出现Cannot allocate memory提示。
+开始&gt;运行里输入services.msc
+重启services.msc服务；
+1）open 注册表
+2）创建或修改：
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\LargeSystemCache  为 “1″
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters\Size 为 “3″
+然后启动，即可生效。当然你重启机器也可以。</code></pre><h3 id="通过sshfs共享"><a href="#通过sshfs共享" class="headerlink" title="通过sshfs共享"></a>通过sshfs共享</h3><pre><code>ubuntu安装sshfs服务 （需安装ssh服务）
+sudo apt-get install sshfs
+windows安装win-sshfs-0.0.1.5-setup.exe、DokanInstall_0.6.0.exe .NET Framework 4.0
+配置sshf-manager 挂载</code></pre><h2 id="安装vmtool-插件hgfs共享windows目录"><a href="#安装vmtool-插件hgfs共享windows目录" class="headerlink" title="安装vmtool 插件hgfs共享windows目录"></a>安装vmtool 插件hgfs共享windows目录</h2><pre><code>在虚拟机菜单 虚拟机 &gt; 安装VMware tools
+设置 选项&gt;共享文件夹&gt;总是启用&gt;添加windows主机路径（共享路径）
+启动ubuntu
+
+安装组件工具
+sudo apt-get install linux-headers-server build-essential  
+
+挂载cdrom
+sudo mkdir /mnt/cdrom   
+sudo mount /dev/cdrom /mnt/cdrom  
+sudo cp /mnt/cdrom/VMwareTools-x.x.x-xxxxx.tar.gz /tmp
+
+编译安装vmware-tools
+cd /tmp 
+tar -zxf VMwareTools-x.x.x-xxxxx.tar.gz  
+cd vmware-tools-distrib
+sudo ./vmware-install.pl -d  
+
+安装插件open-vm-dkms
+sudo apt-get install open-vm-dkms
+挂载
+sudo mount -t vmhgfs .host:/ /mnt/hgfs
+出现错误Error: cannot mount filesystem: Invalid argument
+
+为了每次开机自动挂载共享目录，在/etc/init.d/open-vm-tools末尾增加一行： </code></pre><p>sudo mount -t vmhgfs .host:/  /mnt/hgfs     （host:/ 处 2个空格）</p>
+<h3 id="ubuntu配置ftp服务器"><a href="#ubuntu配置ftp服务器" class="headerlink" title="ubuntu配置ftp服务器"></a>ubuntu配置ftp服务器</h3><pre><code>参考 http://blog.csdn.net/xlgen157387/article/details/40117261
+
+完全卸载vsftpd
+sudo apt-get purge vsftpd
+安装vsftpd
+sudo apt-get install vsftpd
+
+1.创建一个fpt用户
+    sudo mkdir /home/uftp
+    sudo useradd -d /home/uftp -s /bin/bash uftp
+    sudo passwd uftp
+    输入uftp密码123456
+    mkdir /home/uftp
+    chmod 777 /home/uftp
+    touch /home/uftp/uftp.txt    
+
+2.修个配置
+    sudo cp /etc/vsftpd.conf /etc/vsftpd.conf_back 
+    sudo vim /etc/vsftpd.conf 
+
+    listen=NO  # 将以独立模式运行
+    write_enable=YES # 可写
+    anonymous_enable=YES  #开启匿名访问
+    anon_mkdir_write_enable=YES #开启创建文件夹权限
+    chown_uploads=YES # 开启上传文件权限
+    chroot_local_user=YES #把本地用户限制在自己的home文件夹中
+    ftpd_banner=Welcome to blah FTP service # 开启ftp说明
+    allow_writeable_chroot=YES # 添加 解决本地用户登录500可能遇到错误
+
+    重启服务器
+    service vsftpd restart
+
+    创建测试访问的文件(匿名访问默认目录srv/ftp)
+    touch /srv/ftp/hello_anon.txt
+    touch /home/uftp/hello_uftp.txt
+
+
+3.访问
+    linux上使用ftp localhost 测试，使用ftp(默认ftp账号)和uftp用户名分别测试
+    window上访问(我的电脑或浏览器)
+      匿名访问 ftp://104.224.178.232/
+      账户访问 ftp://uftp:123456@104.224.178.232/</code></pre><p><a href="ftp://uftp:123456@144.34.170.63/" target="_blank" rel="noopener">ftp://uftp:123456@144.34.170.63/</a></p>
+<pre><code>https://blog.csdn.net/qq_28959531/article/details/78631417
+https://blog.csdn.net/qq_34885598/article/details/84633170</code></pre><p>=======</p>
+<h2 id="手把手教你搭建自己的shadowsocks"><a href="#手把手教你搭建自己的shadowsocks" class="headerlink" title="手把手教你搭建自己的shadowsocks"></a>手把手教你搭建自己的shadowsocks</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">Shadowsocks-go一键安装脚本</span><br><span class="line">本脚本适用环境：</span><br><span class="line">系统支持：CentOS，Debian，Ubuntu</span><br><span class="line">内存要求：≥64M</span><br><span class="line">日期：2018 年 03 月 15 日</span><br><span class="line"></span><br><span class="line">关于本脚本：</span><br><span class="line">一键安装 Go 版的 shadowsocks 最新版本 1.2.1。与 Python 版不同的是，其客户端程序能使用多个服务端配置，本脚本安装的是服务端程序。</span><br><span class="line">友情提示：如果你有问题，请先参考这篇《Shadowsocks Troubleshooting》后再问。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">默认配置：</span><br><span class="line">服务器端口：自己设定（如不设定，默认从 9000-19999 之间随机生成）</span><br><span class="line">密码：自己设定（如不设定，默认为 teddysun.com）</span><br><span class="line">加密方式：自己设定（如不设定，默认为 aes-256-cfb）</span><br><span class="line"></span><br><span class="line">Shadowsocks for Windows 客户端下载：</span><br><span class="line">https://github.com/shadowsocks/shadowsocks-windows/releases</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">使用方法：</span><br><span class="line">使用root用户登录，运行以下命令：</span><br><span class="line">wget --no-check-certificate -O shadowsocks-go.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-go.sh</span><br><span class="line">chmod +x shadowsocks-go.sh</span><br><span class="line">./shadowsocks-go.sh 2&gt;&amp;1 | tee shadowsocks-go.log</span><br><span class="line">安装完成后，脚本提示如下：</span><br><span class="line"></span><br><span class="line">Congratulations, Shadowsocks-go server install completed!</span><br><span class="line">Your Server IP        :your_server_ip</span><br><span class="line">Your Server Port      :your_server_port</span><br><span class="line">Your Password         :your_password</span><br><span class="line">Your Encryption Method:your_encryption_method</span><br><span class="line"></span><br><span class="line">Welcome to visit:https://teddysun.com/392.html</span><br><span class="line">Enjoy it!</span><br><span class="line">卸载方法：</span><br><span class="line">使用 root 用户登录，运行以下命令：</span><br><span class="line"></span><br><span class="line">./shadowsocks-go.sh uninstall</span><br><span class="line">其他事项：</span><br><span class="line">客户端配置的参考链接：https://teddysun.com/339.html</span><br><span class="line"></span><br><span class="line">安装完成后即已后台启动 Shadowsocks-go ，运行：</span><br><span class="line"></span><br><span class="line">/etc/init.d/shadowsocks status</span><br><span class="line">可以查看 Shadowsocks-go 进程是否已经启动。</span><br><span class="line">本脚本安装完成后，已将 shadowsocks-go 加入开机自启动。</span><br><span class="line"></span><br><span class="line">使用命令：</span><br><span class="line">启动：/etc/init.d/shadowsocks start</span><br><span class="line">停止：/etc/init.d/shadowsocks stop</span><br><span class="line">重启：/etc/init.d/shadowsocks restart</span><br><span class="line">状态：/etc/init.d/shadowsocks status</span><br><span class="line"></span><br><span class="line">多用户多端口配置文件示例：</span><br><span class="line">配置文件路径：/etc/shadowsocks/config.json</span><br><span class="line">&#123;</span><br><span class="line">    &quot;port_password&quot;:&#123;</span><br><span class="line">         &quot;8989&quot;:&quot;password0&quot;,</span><br><span class="line">         &quot;9001&quot;:&quot;password1&quot;,</span><br><span class="line">         &quot;9002&quot;:&quot;password2&quot;,</span><br><span class="line">         &quot;9003&quot;:&quot;password3&quot;,</span><br><span class="line">         &quot;9004&quot;:&quot;password4&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;method&quot;:&quot;your_encryption_method&quot;,</span><br><span class="line">    &quot;timeout&quot;:600</span><br><span class="line">&#125;</span><br><span class="line">官方版本的示例 ，详见这里。</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>003db07dd9917b6b057ef115f35233aea23157b0</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="设定固定IP"><a href="#设定固定IP" class="headerlink" title="设定固定IP"></a>设定固定IP</h2><pre><code>虚拟机网络适配模式设为:桥接模式+复制物理网络连接状态
+$sudo cp /etc/network/interfaces /etc/network/interfaces_back
+$sudo vim /etc/network/interfaces
+配置内容为
+auto lo
+iface lo inet loopback           
+
+auto eth0 
+iface eth0 inet static 
+address 192.168.0.111
+netmask 255.255.255.0 
+gateway 192.168.0.1
+
+重启网络使之生效
+$sudo /etc/init.d/networking restart
+
+这时候就能ping到局域网中的电脑了。但是上不了Internet，是因为没有设置DNS的原因。DNS信息保存在/etc/resolv.conf中，一旦更改，立即生效。
+$sudo vim /etc/resolvconf/resolv.conf.d/head
+配置内容为
+nameserver 192.168.2.43
+nameserver 192.168.2.6
+或者直接在/etc/network/interfaces 添加
+dns-nameservers 192.168.2.43
+dns-nameservers 192.168.2.6
+重启生效
+$sudo reboot -h now
+
+查看ip信息
+ifconfig
+查看路由相关信息：
+route -n
+命令设定ip
+ifconfig eth1 192.168.1.10 netmask 255.255.255.0 </code></pre><p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h2 id="C-环境配置-1"><a href="#C-环境配置-1" class="headerlink" title="C++环境配置"></a>C++环境配置</h2><pre><code>build-essential 是一整套工具，gcc，libc等等,但它未安装gdb
+sudo apt-get install build-essential gdb cgdb </code></pre><h2 id="安装lua-1"><a href="#安装lua-1" class="headerlink" title="安装lua"></a>安装lua</h2><pre><code>lua安装依赖breadline环境
+sudo apt-get install libreadline-dev
+安装lua详见[LUA官网](http://www.lua.org/download.html)
+curl -R -O http://www.lua.org/ftp/lua-5.3.4.tar.gz
+tar zxf lua-5.3.4.tar.gz
+cd lua-5.3.4
+sudo make linux &amp;&amp; make install</code></pre><h1 id="ubuntu安装python3-5"><a href="#ubuntu安装python3-5" class="headerlink" title="ubuntu安装python3.5"></a>ubuntu安装python3.5</h1><pre><code>ubuntu14.04系统会自带python2.7，请不要卸载它。不同版本的Python可以共存在一个系统上。
+
+卸载之后，桌面系统会被影响。
+
+（1）sudo add-apt-repository ppa:fkrull/deadsnakes
+
+（2）sudo apt-get update
+
+（3）sudo apt-get install python3.5
+
+（4）sudo cp /usr/bin/python /usr/bin/python_bak，先备份
+（5）sudo rm /usr/bin/python，删除
+（6）sudo ln -s /usr/bin/python3.5 /usr/bin/python，默认设置成python3.5，重建软链接这样在终端中输入python默认就是 3.5版本了</code></pre><h2 id="mysql环境搭建-1"><a href="#mysql环境搭建-1" class="headerlink" title="mysql环境搭建"></a>mysql环境搭建</h2><pre><code>安装mysql
+sudo apt-get install mysql-server  mysql-client  libmysqlclient-dev  
+安装过程中会提示设置密码什么的，注意设置了不要忘了，安装完成之后可以使用如下命令来检查是否安装成功：
+sudo netstat -tap | grep mysql
+
+配置mysql允许远程访问
+允许ubuntu下mysql远程连接，未进行配置则通过Navicat for MySQL远程连接的时候报错mysql 1130
+第一步：
+sudo vim /etc/mysql/my.cnf找到bind-address = 127.0.0.1   
+注释掉这行，如：#bind-address = 127.0.0.1
+或者改为： bind-address = 0.0.0.0
+    或者/etc/mysql/mysql.conf.d/mysqld.cnf 这个文件
+允许任意IP访问；
+或者自己指定一个IP地址。
+重启 MySQL：sudo /etc/init.d/mysql restart
+第二步：
+授权用户能进行远程连接
+登录mysql
+mysql -u root -p
+提示输入密码，输入12345678 即可登录成功
+mysql:grant all privileges on *.* to root@&quot;%&quot; identified by &quot;12345678&quot; with grant option;
+mysql:flush privileges;
+第一行命令解释如下，*.*：第一个*代表数据库名；第二个*代表表名。这里的意思是所有数据库里的所有表都授权给用户。root：授予root账号。“%”：表示授权的用户IP可以指定，这里代表任意的IP地址都能访问MySQL数据库。“password”：分配账号对应的密码，这里密码自己替换成你的mysql root帐号密码。
+第二行命令是刷新权限信息，也即是让我们所作的设置马上生效。
+
+在my.cnf加入解决Navicat 2013错误
+skip-name-resolve
+
+/etc/init.d/mysql restart</code></pre><h2 id="安装Redis"><a href="#安装Redis" class="headerlink" title="安装Redis"></a>安装Redis</h2><ul>
+<li><a href="http://blog.fens.me/linux-redis-install/" target="_blank" rel="noopener">在Ubuntu中安装Redis</a></li>
+<li><a href="http://www.linuxidc.com/Linux/2013-06/85816.htm" target="_blank" rel="noopener">Ubuntu 12.10下安装Redis（图文详解）+ Jedis连接Redis</a></li>
+<li><a href="http://www.linuxidc.com/Linux/2014-05/101544.htm" target="_blank" rel="noopener">Ubuntu 14.04下Redis安装及简单测试</a></li>
+<li></li>
+</ul>
+<h2 id="安装代码管理工具"><a href="#安装代码管理工具" class="headerlink" title="安装代码管理工具"></a>安装代码管理工具</h2><pre><code>安装git
+sudo apt-get install git
+安装svn
+sudo apt-get install subversion subversion-tools</code></pre><h2 id="xshell通过ssh与服务器传输文件-1"><a href="#xshell通过ssh与服务器传输文件-1" class="headerlink" title="xshell通过ssh与服务器传输文件"></a>xshell通过ssh与服务器传输文件</h2><pre><code>sudo apt-get install lrzsz
+上传文件rz</code></pre><h2 id="百度网盘-Python-客户端的使用"><a href="#百度网盘-Python-客户端的使用" class="headerlink" title="百度网盘 Python 客户端的使用"></a>百度网盘 Python 客户端的使用</h2><pre><code>sudo apt-get install python-pip
+sudo pip install requests
+ git clone https://github.com/houtianze/bypy byby/
+cd bypy/
+sudp cp bypy.py /usr/bin
+
+bypy.py list
+第一次使用需要进行认证，复制 Please visit: 下的认证链接，然后进行百度网盘认证得到认证码，复制到控制台回车，可看到成功提示
+bypy.py list 
+如果提示更新requests
+sudo pip2 install -U requests
+
+如果提示编码问题，则修改设置系统的区域编码(locale)设置为UTF-8
+安装中文包
+sudo apt-get install language-pack-zh language-pack-zh-base
+编辑  ~/.bashrc 和~/.profile 添加以下内容
+export LC_ALL=zh_CN.UTF-8
+export LANG=zh_CN.UTF-8
+export LANGUAGE=zh_CN.UTF-8
+使更改生效
+source ~/.bashrc
+重新设置本地配置：
+sudo dpkg-reconfigure locales
+
+常用命令
+--列出远程根目录文件
+bypy.py list
+--把当前目录同步到云盘
+bypy.py syncup
+把云盘内容同步到本地当前目录
+bypy.py syncdown
+比较本地当前目录和云盘（程序的）根目录
+bypy.py compare</code></pre><h2 id="ubuntu-搭建vpn服务器-未成功"><a href="#ubuntu-搭建vpn服务器-未成功" class="headerlink" title="ubuntu 搭建vpn服务器(未成功)"></a>ubuntu 搭建vpn服务器(未成功)</h2><pre><code>1.安装pptpd
+sudo apt-get install pptpd
+
+2.配置内网ip策略
+sudo vim /etc/pptpd.conf
+在# TAG: localip后增加2行
+localip 192.168.0.1
+remoteip 192.168.0.234-238,192.168.0.245
+
+3.配置dns
+sudo vim /etc/ppp/pptpd-options
+在#ms-dns后增加2行，也可以配置其他dns
+ms-dns 8.8.8.8
+ms-dns 8.8.4.4
+
+4.配置VPN帐号
+sudo vim /etc/ppp/chap-secrets
+添加账号、服务器名、密码和IP限制，一个帐号一行，每个参数中间用空格间隔。如：
+user * passwd *
+
+1. TCP/IP策略配置
+sudo vim /etc/sysctl.conf
+插入一行：
+net.ipv4.ip_forward=1
+保存并退出vim
+执行
+sudo sysctl –p
+提示net.ipv4.ip_forward = 1，说明配置生效
+
+6.开放网络端口
+安装iptables(已安装请忽略)
+sudo apt-get install iptables
+开放1723端口
+sudo iptables -I FORWARD -s 192.168.0.0/24 -p tcp --dport 1723 -j ACCEPT
+
+7.配置NAT网络地址转换
+%注意这里eth0代表你的外网网卡，请用ifconfig查看或者咨询网络管理员
+sudo iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eth0 -j MASQUERADE
+%如果上面的命令报错,那么可以尝试以下的命令，其中xxx.xxx.xxx.xxx代表你的VPS外网ip地址
+sudo iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eth0 -j SNAT --to-source xxx.xxx.xxx.xxx
+
+8.重启pptpd
+sudo /etc/init.d/procps restart
+
+搭建完毕，客户端可以连接了。以上未成功</code></pre><h2 id="ubuntu安装更换桌面系统"><a href="#ubuntu安装更换桌面系统" class="headerlink" title="ubuntu安装更换桌面系统"></a>ubuntu安装更换桌面系统</h2><pre><code>sudo apt-get install Ubuntu-desktop
+sudo apt-get install language-support-zh </code></pre><h2 id="vmware-安装vmtool"><a href="#vmware-安装vmtool" class="headerlink" title="vmware 安装vmtool"></a>vmware 安装vmtool</h2><pre><code>安装vmtool
+设置虚拟机查看 自调整大小 自动适应客户端
+设置ubuntu下分辨率与window同步</code></pre><h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><pre><code>sudo apt-get install autoconf</code></pre><h2 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h2><ul>
+<li><a href="http://www.cnblogs.com/king-77024128/articles/2270487.html" target="_blank" rel="noopener">ubuntu下终端路径只显示当前目录</a></li>
+<li><a href="http://blog.csdn.net/gaojinshan/article/details/9314435" target="_blank" rel="noopener">Ubuntu下，清屏等终端常用命令</a></li>
+<li><h1 id="ubuntu下图形模式与linux命令行模式切换方法"><a href="#ubuntu下图形模式与linux命令行模式切换方法" class="headerlink" title="ubuntu下图形模式与linux命令行模式切换方法"></a><a href="http://os.51cto.com/art/200908/142232.htm" target="_blank" rel="noopener">ubuntu下图形模式与linux命令行模式切换方法</a></h1></li>
+</ul>
+<h2 id="相关问题-1"><a href="#相关问题-1" class="headerlink" title="相关问题"></a>相关问题</h2><ul>
+<li><a href="http://www.th7.cn/system/lin/201407/61834.shtml" target="_blank" rel="noopener">[CentOS]如何解决gcc版本冲突？</a></li>
+<li><a href="http://www.linuxidc.com/Linux/2015-01/112595.htm" target="_blank" rel="noopener">CentOS6.5升级手动安装GCC4.8.2</a></li>
+<li><a href="http://www.lxway.com/421808022.htm" target="_blank" rel="noopener">linux下安装或升级GCC4.8，以支持C++11标准</a></li>
+</ul>
+<h2 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h2><ul>
+<li><a href="http://blog.csdn.net/jcjc918/article/details/11022345" target="_blank" rel="noopener">Centos 6.4 python 2.6 升级到 2.7</a></li>
+<li><a href="http://seisman.info/linux-environment-for-seismology-research.html" target="_blank" rel="noopener">用CentOS 7打造合适的科研环境</a></li>
+</ul>
+<h2 id="ssh工具"><a href="#ssh工具" class="headerlink" title="ssh工具"></a>ssh工具</h2><ul>
+<li>xshell</li>
+</ul>
+<h2 id="centos7升级内核-1"><a href="#centos7升级内核-1" class="headerlink" title="centos7升级内核"></a>centos7升级内核</h2><pre><code>教程:https://www.jianshu.com/p/fdf6bb6c5b9c</code></pre><h2 id="gcc升级"><a href="#gcc升级" class="headerlink" title="gcc升级"></a>gcc升级</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://ftp.gnu.org/gnu/gcc/gcc-8.3.0/gcc-8.3.0.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h2 id="相关问题-2"><a href="#相关问题-2" class="headerlink" title="相关问题"></a>相关问题</h2><blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>003db07dd9917b6b057ef115f35233aea23157b0</p>
+<ul>
+<li><a href="http://m.zhihu.com/question/23551546" target="_blank" rel="noopener">如何在 SSH 下远程使用 IDE 编译和调试？</a></li>
+</ul>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="vim相关教程"><a href="#vim相关教程" class="headerlink" title="vim相关教程"></a>vim相关教程</h2><ul>
+<li><a href="http://blog.jobbole.com/10250/" target="_blank" rel="noopener">25个Vim教程、视频和资源</a></li>
+<li><a href="http://www.vpser.net/manage/vi.html" target="_blank" rel="noopener">Linux上vi(vim)编辑器使用教程</a></li>
+<li><a href="http://blog.csdn.net/namecyf/article/details/7787479" target="_blank" rel="noopener">vim配置及插件安装管理（超级详细）</a></li>
+<li><a href="http://www.2cto.com/os/201404/292818.html" target="_blank" rel="noopener">Ubuntu下vim插件的在线安装</a></li>
+<li><a href="http://blog.163.com/clevertanglei900@126/blog/static/111352259201352011129641/" target="_blank" rel="noopener">vim addon manager  </a></li>
+<li><a href="http://www.cnblogs.com/junnyfeng/p/3633697.html" target="_blank" rel="noopener">vim安装YouCompleteMe 插件</a></li>
+<li><a href="http://tieba.baidu.com/p/2672605209" target="_blank" rel="noopener">vim智能补全插件YouCompleteMe新手完全攻略</a></li>
+<li><a href="http://blog.csdn.net/wooin/article/details/1858917" target="_blank" rel="noopener">手把手教你把Vim改装成一个IDE编程环境(图文)</a></li>
+</ul>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h2 id="安装protobuf"><a href="#安装protobuf" class="headerlink" title="安装protobuf"></a>安装protobuf</h2><p>sudo apt-get install gcc autoconf libtool automake curl<br>命令安装<br>sudo apt-get install protobuf-compiler<br>编译安装<br>wget <a href="https://protobuf.googlecode.com/files/protobuf-2.5.0.tar.gz" target="_blank" rel="noopener">https://protobuf.googlecode.com/files/protobuf-2.5.0.tar.gz</a><br>tar zxf protobuf-2.5.0.tar.gz<br>cd protobuf-2.5.0<br>./configure –prefix=/opt/local/protobuf-2.5.0<br>make<br>make install<br>ln -s /opt/local/protobuf-2.5.0/bin/protoc /usr/bin/protoc</p>
+<p>protoc -I=. –cpp_out=. msg.proto</p>
+<h2 id="安装libevent"><a href="#安装libevent" class="headerlink" title="安装libevent"></a>安装libevent</h2><p>sudo apt-get install libevent-dev</p>
+<h2 id="编译与安装-OpenSSL"><a href="#编译与安装-OpenSSL" class="headerlink" title="编译与安装 OpenSSL"></a>编译与安装 OpenSSL</h2><p>prefix 是安装目录，openssldir 是配置文件目录，另外建议安装两次，shared 作用是生成动态连接库。<br>wget <a href="ftp://ftp.openssl.org/source/openssl-1.0.2g.tar.gz" target="_blank" rel="noopener">ftp://ftp.openssl.org/source/openssl-1.0.2g.tar.gz</a><br>tar -zxf openssl-1.0.2g.tar.gz<br>cd openssl-1.0.2g/<br>./config  –prefix=/usr/local –openssldir=/usr/local/ssl<br>make &amp;&amp; make install<br>./config shared –prefix=/usr/local –openssldir=/usr/local/ssl<br>make clean<br>make &amp;&amp; make install</p>
+<h2 id="其它-1"><a href="#其它-1" class="headerlink" title="其它"></a>其它</h2><ul>
+<li><h1 id="window与ubuntu12-10共享文件hgfs下为空和不用每次挂载hgfs的方法"><a href="#window与ubuntu12-10共享文件hgfs下为空和不用每次挂载hgfs的方法" class="headerlink" title="window与ubuntu12.10共享文件hgfs下为空和不用每次挂载hgfs的方法 "></a><a href="http://blog.chinaunix.net/uid-24118190-id-4010225.html" target="_blank" rel="noopener">window与ubuntu12.10共享文件hgfs下为空和不用每次挂载hgfs的方法 </a></h1></li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>003db07dd9917b6b057ef115f35233aea23157b0</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="文件换行符问题"><a href="#文件换行符问题" class="headerlink" title="文件换行符问题"></a>文件换行符问题</h2><pre><code>如test.sh提示换行符问题
+vim test.sh
+命令模式下输入以下内容，表示使用unix换行符，set ff=dos表示使用dos换行符
+set ff=unix
+wq</code></pre><h2 id="在Linux中查看所有正在运行的进程"><a href="#在Linux中查看所有正在运行的进程" class="headerlink" title="在Linux中查看所有正在运行的进程"></a>在Linux中查看所有正在运行的进程</h2><pre><code>[在Linux中查看所有正在运行的进程](http://blog.csdn.net/cnmilan/article/details/34104713)</code></pre><h2 id="端口占用"><a href="#端口占用" class="headerlink" title="端口占用"></a>端口占用</h2><pre><code>sudo netstat -tulnp | grep &apos;:80&apos;
+kill -9 PID</code></pre><h2 id="压缩解压缩"><a href="#压缩解压缩" class="headerlink" title="压缩解压缩"></a>压缩解压缩</h2><pre><code>解压 tar zxvf 文件名.tar.gz
+压缩 tar zcvf 文件名.tar.gz 目标名</code></pre><p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h2 id="安装apache2web服务器"><a href="#安装apache2web服务器" class="headerlink" title="安装apache2web服务器"></a>安装apache2web服务器</h2><pre><code>sudo apt-get install apache2
+修改web默认访问目录为&quot;/var/www/&quot;
+sudo vim /etc/apache2/sites-available/000-default.conf
+找到&quot;&lt;Directory /var/www/&gt;&quot;的位置--&gt;更改&quot;/var/www/&quot;为新的根目录
+
+sudo /etc/init.d/apache2 restart
+将web文件夹复制到/var/www/目录下
+在浏览器http://10.105.60.100/index.xml访问成功记配置成功
+
+ubuntu 环境，当apache2重启提示：
+- Starting web server apache2   
+apache2: Could not reliably determine the server&apos;s fully qualified domain name, ... waiting apache2: Could not reliably determine the server&apos;s fully qualified domain name, using 127.0.1.1 for ServerName
+解决办法
+sudo vim /etc/apache2/sites-available/000-default.conf
+在文件顶端加入：
+ServerName 127.0.0.1
+
+提示80端口占用
+sudo netstat -tulnp | grep &apos;:80&apos;
+kill -9 PID
+
+    杀死指定端口占用
+    kill -9 `lsof -t -i:port`</code></pre><p>=======</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>003db07dd9917b6b057ef115f35233aea23157b0</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="其它-2"><a href="#其它-2" class="headerlink" title="其它"></a>其它</h2><ul>
+<li><a href="http://jingyan.baidu.com/article/aa6a2c14e347010d4c19c48f.html" target="_blank" rel="noopener">在新版 Win10 中启用 Linux Bash 环境</a></li>
+<li><a href="http://app.myzaker.com/news/article.php?pk=571415a51bc8e0fb08000012" target="_blank" rel="noopener">手把手教你：如何让 Windows 恋上 Linux bash</a></li>
+<li><a href="http://blog.iytc.net/wordpress/?p=1148" target="_blank" rel="noopener">centos6、ubuntu 14.04安装ShadowSocks</a></li>
+<li><a href="http://blog.51cto.com/holy2010/1963355" target="_blank" rel="noopener">搭建自己专属的vpn——Centos搭建vpn的几种办法</a></li>
+<li><a href="https://blog.csdn.net/zhldt2008/article/details/52626892" target="_blank" rel="noopener">CentOS 7 开放3306端口访问</a></li>
+</ul>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h2 id="手把手教你搭建自己的shadowsocks-1"><a href="#手把手教你搭建自己的shadowsocks-1" class="headerlink" title="手把手教你搭建自己的shadowsocks"></a>手把手教你搭建自己的shadowsocks</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">Shadowsocks-go一键安装脚本</span><br><span class="line">本脚本适用环境：</span><br><span class="line">系统支持：CentOS，Debian，Ubuntu</span><br><span class="line">内存要求：≥64M</span><br><span class="line">日期：2018 年 03 月 15 日</span><br><span class="line"></span><br><span class="line">关于本脚本：</span><br><span class="line">一键安装 Go 版的 shadowsocks 最新版本 1.2.1。与 Python 版不同的是，其客户端程序能使用多个服务端配置，本脚本安装的是服务端程序。</span><br><span class="line">友情提示：如果你有问题，请先参考这篇《Shadowsocks Troubleshooting》后再问。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">默认配置：</span><br><span class="line">服务器端口：自己设定（如不设定，默认从 9000-19999 之间随机生成）</span><br><span class="line">密码：自己设定（如不设定，默认为 teddysun.com）</span><br><span class="line">加密方式：自己设定（如不设定，默认为 aes-256-cfb）</span><br><span class="line"></span><br><span class="line">Shadowsocks for Windows 客户端下载：</span><br><span class="line">https://github.com/shadowsocks/shadowsocks-windows/releases</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">使用方法：</span><br><span class="line">使用root用户登录，运行以下命令：</span><br><span class="line">wget --no-check-certificate -O shadowsocks-go.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-go.sh</span><br><span class="line">chmod +x shadowsocks-go.sh</span><br><span class="line">./shadowsocks-go.sh 2&gt;&amp;1 | tee shadowsocks-go.log</span><br><span class="line">安装完成后，脚本提示如下：</span><br><span class="line"></span><br><span class="line">Congratulations, Shadowsocks-go server install completed!</span><br><span class="line">Your Server IP        :your_server_ip</span><br><span class="line">Your Server Port      :your_server_port</span><br><span class="line">Your Password         :your_password</span><br><span class="line">Your Encryption Method:your_encryption_method</span><br><span class="line"></span><br><span class="line">Welcome to visit:https://teddysun.com/392.html</span><br><span class="line">Enjoy it!</span><br><span class="line">卸载方法：</span><br><span class="line">使用 root 用户登录，运行以下命令：</span><br><span class="line"></span><br><span class="line">./shadowsocks-go.sh uninstall</span><br><span class="line">其他事项：</span><br><span class="line">客户端配置的参考链接：https://teddysun.com/339.html</span><br><span class="line"></span><br><span class="line">安装完成后即已后台启动 Shadowsocks-go ，运行：</span><br><span class="line"></span><br><span class="line">/etc/init.d/shadowsocks status</span><br><span class="line">可以查看 Shadowsocks-go 进程是否已经启动。</span><br><span class="line">本脚本安装完成后，已将 shadowsocks-go 加入开机自启动。</span><br><span class="line"></span><br><span class="line">使用命令：</span><br><span class="line">启动：/etc/init.d/shadowsocks start</span><br><span class="line">停止：/etc/init.d/shadowsocks stop</span><br><span class="line">重启：/etc/init.d/shadowsocks restart</span><br><span class="line">状态：/etc/init.d/shadowsocks status</span><br><span class="line"></span><br><span class="line">多用户多端口配置文件示例：</span><br><span class="line">配置文件路径：/etc/shadowsocks/config.json</span><br><span class="line">&#123;</span><br><span class="line">    &quot;port_password&quot;:&#123;</span><br><span class="line">         &quot;8989&quot;:&quot;password0&quot;,</span><br><span class="line">         &quot;9001&quot;:&quot;password1&quot;,</span><br><span class="line">         &quot;9002&quot;:&quot;password2&quot;,</span><br><span class="line">         &quot;9003&quot;:&quot;password3&quot;,</span><br><span class="line">         &quot;9004&quot;:&quot;password4&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;method&quot;:&quot;your_encryption_method&quot;,</span><br><span class="line">    &quot;timeout&quot;:600</span><br><span class="line">&#125;</span><br><span class="line">官方版本的示例 ，详见这里。</span><br></pre></td></tr></table></figure>
+
+<p>安装iptables</p>
+<p>一般情况下，ubuntu安装好的时候，iptables会被安装上，没有安装上也没啥，一条命令就可以安装了。</p>
+<p>apt-get install iptables<br>1<br>安装好了之后就可以添加规则了</p>
+<p>iptables -I INPUT -p tcp –dport 80 -j ACCEPT<br>1<br>然后可以直接保存了</p>
+<p>iptables-save<br>1<br>持久化iptables</p>
+<p>上文那样做只是暂时保存了开放端口的信息，如果服务器重启，保存的信息就掉了，所以我们需要持久化一下端口信息，这里我们使用 iptables-persistent</p>
+<p>安装iptables-persistent</p>
+<p>apt-get install iptables-persistent<br>1<br>持久化信息</p>
+<p>service iptables-persistent save</p>
+<h2 id="ufw防火墙"><a href="#ufw防火墙" class="headerlink" title="ufw防火墙"></a>ufw防火墙</h2><p>安装ufw<br>sudo apt-get install ufw<br>安装后默认是不开启的，先配置必须开发的端口比如ssh<br>sudo ufw allow ssh<br>sudo ufw allow 22<br>禁止端口<br>sudo ufw deny 22/tcp<br>禁止ip访问<br>sudo ufw deny from ip<br>启动防火墙<br>sudo ufw enable<br>关闭防火墙<br>sudo ufw disable<br>查看状态<br>sudo ufw status</p>
+<h2 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h2><p>sudo apt-get install nginx<br>/etc/init.d/nginx start<br>/etc/init.d/nginx stop<br>/etc/init.d/nginx reload</p>
+<p> 启动Nginx 服务。<br>sudo systemctl start nginx<br>. 开机自动启动nginx 服务<br>sudo systemctl enable nginx<br>. 关闭开机自动启动nginx 服务<br>sudo systemctl disable nginx</p>
+<p>/etc/nginx, /var/log/nginx.</p>
+<p>cd /</p>
+<p>Nginx常用命令</p>
+<p>sudo service nginx start #启动<br>sudo service nginx stop #停止<br>sudo service nginx restart #重新启动<br>sudo service nginx reload #重新加载配置</p>
+<p>sudo nginx -t #检查Nginx配置是否正确<br>sudo nginx -s start #启动<br>sudo nginx -s stop #停止<br>sudo nginx -s restart #重新启动 </p>
+<h2 id="sudo-nginx-s-reload-重新加载配置"><a href="#sudo-nginx-s-reload-重新加载配置" class="headerlink" title="sudo nginx -s reload #重新加载配置"></a>sudo nginx -s reload #重新加载配置</h2><p>作者：pyd15<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/m0_38025747/article/details/80602651" target="_blank" rel="noopener">https://blog.csdn.net/m0_38025747/article/details/80602651</a> </p>
+<h1 id="版权声明：本文为博主原创文章，转载请附上博文链接！"><a href="#版权声明：本文为博主原创文章，转载请附上博文链接！" class="headerlink" title="版权声明：本文为博主原创文章，转载请附上博文链接！"></a>版权声明：本文为博主原创文章，转载请附上博文链接！</h1><h2 id="在自己vps-ubuntu上安装v2ray"><a href="#在自己vps-ubuntu上安装v2ray" class="headerlink" title="在自己vps ubuntu上安装v2ray"></a>在自己vps ubuntu上安装v2ray</h2><p>输入下面命令进行一键安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -L -s https://install.direct/go.sh)</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后我们来编辑一下配置文件 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/v2ray/config.json</span><br></pre></td></tr></table></figure>
+
+<p>记下来inbounds里面的<br>port 28072<br>id 1656d469-bc80-48d4-a0e3-01243cf7d046<br>alterId 64</p>
+<p>若需要配置Shadowscoks，请于inbounds同级增加以下配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&quot;inboundDetour&quot;: [</span><br><span class="line">  &#123;</span><br><span class="line">    &quot;protocol&quot;: &quot;shadowsocks&quot;,</span><br><span class="line">    &quot;port&quot;: 30001, </span><br><span class="line">    &quot;settings&quot;: &#123;</span><br><span class="line">      &quot;method&quot;: &quot;aes-256-cfb&quot;, </span><br><span class="line">      &quot;password&quot;: &quot;v2ray&quot;,     </span><br><span class="line">      &quot;udp&quot;: false            </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">],</span><br><span class="line">&quot;log&quot;: &#123;</span><br><span class="line">       &quot;loglevel&quot;: &quot;warning&quot;,</span><br><span class="line">       &quot;access&quot;: &quot;/var/log/v2ray/access.log&quot;,</span><br><span class="line">       &quot;error&quot;: &quot;/var/log/v2ray/error.log&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>之后可以使用 service v2ray start|stop|status|reload|restart|force-reload 控制 V2Ray 的运行</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>003db07dd9917b6b057ef115f35233aea23157b0</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2020-04-12T08:51:01.900Z" itemprop="dateUpdated">2020-04-12 16:51:01</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/posts/4270ea2f.html" target="_blank" rel="external">https://jinzt.github.io/posts/4270ea2f.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://jinzt.github.io">
+            <img src="/img/avatar.jpg" alt="金振涛">
+            金振涛
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/4270ea2f.html&title=《centos7》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/4270ea2f.html&title=《centos7》 — 金振涛个人主页&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/4270ea2f.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《centos7》 — 金振涛个人主页&url=https://jinzt.github.io/posts/4270ea2f.html&via=https://jinzt.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/4270ea2f.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/posts/2f5c1cc0.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">cmd</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/posts/5729df21.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">shell</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "PDQy3GUbNJ9CEqhuP8G0kDvc-gzGzoHsz",
+            appKey: "yaOTf2Bsv3ecv889uVD4wlAj",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>金振涛 &copy; 2015 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/4270ea2f.html&title=《centos7》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/4270ea2f.html&title=《centos7》 — 金振涛个人主页&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/4270ea2f.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《centos7》 — 金振涛个人主页&url=https://jinzt.github.io/posts/4270ea2f.html&via=https://jinzt.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/4270ea2f.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIklEQVR42u3aS27DMAwFwNz/0inQVYE2xnuUE9TyaGX4E2m6YEVSj0c8nt/j93V+5+f94/dffXvCwMDAuCzjeTiSn54tK5krWRsGBsZ9GCtBNnl6HGrbPx8GBgbG8VKO77QBd/1bDAwMjDaxzEPq8ZsYGBgYsyT2+M5K8e6juTgGBsYFGSuNgXdff6i/gYGB8Y8Zz9GYFebasF6sBwMDY2vGyiavnaZtlLZtVAwMjF0ZeVuxfTrb5LXJ6h//NzAwMLZjfLKUNjtqNmwMYGBgbMpISAk1b1XO0uClbgMGBsbFGUmAy3nt9axgh4GBcQdGEvjy6dsQ2abKL2fHwMC4AaPdiuXpaBtG860hBgbGfRhJYnlWeyBvaubFuOgBBgbGRozkpWK7FoTdWSsib3BiYGDswWiDYHucIn/aFu/qWiAGBsbFGW1xbdaYbDd2xfEyDAyM2zDaYxCz1mO+iSxCNgYGxtaMWYK6Plne2szTYAwMjDswZmG03WiesMSkPIeBgbEd46xlJWNWdCtSWQwMjK0ZbVltvayfJLcn1A4xMDC2YKyMtpHQhuOlhgEGBsYWjNk0s6Nd7QGOvKWKgYGxN+N9gbX9Kp+rPbSBgYGxB+PdQXZ2IKz9ZQwMjDswZkG2LdKt5NBR9xUDAwMjDpFtKtuyTwi4GBgYmzIS2Mo7S5k3BgbGDRhJErte3G/nxcDAwFhpDKwsYmXRsyMaGBgYl2V8AZ2g2xmHOPahAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

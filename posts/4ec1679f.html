@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>游戏系统 | 金振涛个人主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="游戏设计">
+    <meta name="description" content="基础 RPG游戏设计 MMO游戏系统设计  基础 MMORPG游戏在策划层面上如何设计一个新颖的物品背包系统？  基于mongodb, 设计游戏中的个人背包系统 基础 网络游戏物品校验系统的设计  游戏道具设计（一）：道具产出条件和随机设定  游戏道具的设计-多媒体应用论文  关于动作RPG游戏的技能与道具设计  []   运营功能需求一.目标        快速关闭服务器        快速部署">
+<meta name="keywords" content="游戏设计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="游戏系统">
+<meta property="og:url" content="https://jinzt.github.io/posts/4ec1679f.html">
+<meta property="og:site_name" content="金振涛个人主页">
+<meta property="og:description" content="基础 RPG游戏设计 MMO游戏系统设计  基础 MMORPG游戏在策划层面上如何设计一个新颖的物品背包系统？  基于mongodb, 设计游戏中的个人背包系统 基础 网络游戏物品校验系统的设计  游戏道具设计（一）：道具产出条件和随机设定  游戏道具的设计-多媒体应用论文  关于动作RPG游戏的技能与道具设计  []   运营功能需求一.目标        快速关闭服务器        快速部署">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-12T17:00:11.189Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="游戏系统">
+<meta name="twitter:description" content="基础 RPG游戏设计 MMO游戏系统设计  基础 MMORPG游戏在策划层面上如何设计一个新颖的物品背包系统？  基于mongodb, 设计游戏中的个人背包系统 基础 网络游戏物品校验系统的设计  游戏道具设计（一）：道具产出条件和随机设定  游戏道具的设计-多媒体应用论文  关于动作RPG游戏的技能与道具设计  []   运营功能需求一.目标        快速关闭服务器        快速部署">
+    
+        <link rel="alternate" type="application/atom+xml" title="金振涛个人主页" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">金振涛</h5>
+          <a href="mailto:jinzhentaohb@126.com" title="jinzhentaohb@126.com" class="mail">jinzhentaohb@126.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/jinzt" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/u/5838016173" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                link
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">游戏系统</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">游戏系统</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-07-12T14:53:31.501Z" itemprop="datePublished" class="page-time">
+  2019-07-12
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/游戏设计/">游戏设计</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础"><span class="post-toc-number">1.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-1"><span class="post-toc-number">2.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-2"><span class="post-toc-number">3.</span> <span class="post-toc-text">基础</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#运营功能需求"><span class="post-toc-number"></span> <span class="post-toc-text">运营功能需求</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-3"><span class="post-toc-number">1.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-4"><span class="post-toc-number">2.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-5"><span class="post-toc-number">3.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-6"><span class="post-toc-number">4.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-7"><span class="post-toc-number">5.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-8"><span class="post-toc-number">6.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-9"><span class="post-toc-number">7.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-10"><span class="post-toc-number">8.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关文章"><span class="post-toc-number">9.</span> <span class="post-toc-text">相关文章</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#活动目的"><span class="post-toc-number">10.</span> <span class="post-toc-text">活动目的</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#活动要素"><span class="post-toc-number">11.</span> <span class="post-toc-text">活动要素</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#活动流程"><span class="post-toc-number">12.</span> <span class="post-toc-text">活动流程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#看到活动"><span class="post-toc-number">13.</span> <span class="post-toc-text">看到活动</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参与活动"><span class="post-toc-number">14.</span> <span class="post-toc-text">参与活动</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#领取奖励"><span class="post-toc-number">15.</span> <span class="post-toc-text">领取奖励</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#活动分析"><span class="post-toc-number">16.</span> <span class="post-toc-text">活动分析</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常见活动示例"><span class="post-toc-number">17.</span> <span class="post-toc-text">常见活动示例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#永久性活动"><span class="post-toc-number">17.1.</span> <span class="post-toc-text">永久性活动</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#每日活动、每周活动"><span class="post-toc-number">17.1.1.</span> <span class="post-toc-text">每日活动、每周活动</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#签到型活动"><span class="post-toc-number">17.1.2.</span> <span class="post-toc-text">签到型活动</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#新手活动"><span class="post-toc-number">17.1.3.</span> <span class="post-toc-text">新手活动</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#时间限制性活动"><span class="post-toc-number">17.2.</span> <span class="post-toc-text">时间限制性活动</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#开服活动"><span class="post-toc-number">17.2.1.</span> <span class="post-toc-text">开服活动</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#节日活动"><span class="post-toc-number">17.2.2.</span> <span class="post-toc-text">节日活动</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#充值活动"><span class="post-toc-number">17.2.3.</span> <span class="post-toc-text">充值活动</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#消费活动"><span class="post-toc-number">17.2.4.</span> <span class="post-toc-text">消费活动</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#游戏服务器活动模块实现"><span class="post-toc-number">18.</span> <span class="post-toc-text">游戏服务器活动模块实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置表设计"><span class="post-toc-number">18.1.</span> <span class="post-toc-text">配置表设计</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#流程"><span class="post-toc-number">19.</span> <span class="post-toc-text">流程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据库设计"><span class="post-toc-number">19.1.</span> <span class="post-toc-text">数据库设计</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码设计"><span class="post-toc-number">19.2.</span> <span class="post-toc-text">代码设计</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-11"><span class="post-toc-number">20.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-12"><span class="post-toc-number">21.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-13"><span class="post-toc-number">22.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-14"><span class="post-toc-number">23.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-15"><span class="post-toc-number">24.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-16"><span class="post-toc-number">25.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">26.</span> <span class="post-toc-text">总结</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#任务状态"><span class="post-toc-number">27.</span> <span class="post-toc-text">任务状态</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#任务管理"><span class="post-toc-number">28.</span> <span class="post-toc-text">任务管理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-17"><span class="post-toc-number">29.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-18"><span class="post-toc-number">30.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-19"><span class="post-toc-number">31.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-20"><span class="post-toc-number">32.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-21"><span class="post-toc-number">33.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-22"><span class="post-toc-number">34.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-23"><span class="post-toc-number">35.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-24"><span class="post-toc-number">36.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-25"><span class="post-toc-number">37.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-26"><span class="post-toc-number">38.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-27"><span class="post-toc-number">39.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-28"><span class="post-toc-number">40.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考"><span class="post-toc-number">41.</span> <span class="post-toc-text">参考</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-29"><span class="post-toc-number">42.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-30"><span class="post-toc-number">43.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-31"><span class="post-toc-number">44.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-32"><span class="post-toc-number">45.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考-1"><span class="post-toc-number">46.</span> <span class="post-toc-text">参考</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结-1"><span class="post-toc-number">47.</span> <span class="post-toc-text">总结</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实现"><span class="post-toc-number">48.</span> <span class="post-toc-text">实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#shell脚本监控服务器教程"><span class="post-toc-number">48.1.</span> <span class="post-toc-text">shell脚本监控服务器教程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#日志服务器实现教程"><span class="post-toc-number">48.2.</span> <span class="post-toc-text">日志服务器实现教程</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-33"><span class="post-toc-number">49.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-34"><span class="post-toc-number">50.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-35"><span class="post-toc-number">51.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-36"><span class="post-toc-number">52.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-37"><span class="post-toc-number">53.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-38"><span class="post-toc-number">54.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-39"><span class="post-toc-number">55.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-40"><span class="post-toc-number">56.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-41"><span class="post-toc-number">57.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-42"><span class="post-toc-number">58.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-43"><span class="post-toc-number">59.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考-2"><span class="post-toc-number">60.</span> <span class="post-toc-text">参考</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#页面跳转"><span class="post-toc-number">61.</span> <span class="post-toc-text">页面跳转</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-44"><span class="post-toc-number">62.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-45"><span class="post-toc-number">63.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-46"><span class="post-toc-number">64.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-47"><span class="post-toc-number">65.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-48"><span class="post-toc-number">66.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-49"><span class="post-toc-number">67.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-50"><span class="post-toc-number">68.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-51"><span class="post-toc-number">69.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#相关文章-1"><span class="post-toc-number">70.</span> <span class="post-toc-text">相关文章</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#活动目的-1"><span class="post-toc-number">71.</span> <span class="post-toc-text">活动目的</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#活动要素-1"><span class="post-toc-number">72.</span> <span class="post-toc-text">活动要素</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#活动流程-1"><span class="post-toc-number">73.</span> <span class="post-toc-text">活动流程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#看到活动-1"><span class="post-toc-number">74.</span> <span class="post-toc-text">看到活动</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参与活动-1"><span class="post-toc-number">75.</span> <span class="post-toc-text">参与活动</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#领取奖励-1"><span class="post-toc-number">76.</span> <span class="post-toc-text">领取奖励</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#活动分析-1"><span class="post-toc-number">77.</span> <span class="post-toc-text">活动分析</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常见活动示例-1"><span class="post-toc-number">78.</span> <span class="post-toc-text">常见活动示例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#永久性活动-1"><span class="post-toc-number">78.1.</span> <span class="post-toc-text">永久性活动</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#每日活动、每周活动-1"><span class="post-toc-number">78.1.1.</span> <span class="post-toc-text">每日活动、每周活动</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#签到型活动-1"><span class="post-toc-number">78.1.2.</span> <span class="post-toc-text">签到型活动</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#新手活动-1"><span class="post-toc-number">78.1.3.</span> <span class="post-toc-text">新手活动</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#时间限制性活动-1"><span class="post-toc-number">78.2.</span> <span class="post-toc-text">时间限制性活动</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#开服活动-1"><span class="post-toc-number">78.2.1.</span> <span class="post-toc-text">开服活动</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#节日活动-1"><span class="post-toc-number">78.2.2.</span> <span class="post-toc-text">节日活动</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#充值活动-1"><span class="post-toc-number">78.2.3.</span> <span class="post-toc-text">充值活动</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#消费活动-1"><span class="post-toc-number">78.2.4.</span> <span class="post-toc-text">消费活动</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#游戏服务器活动模块实现-1"><span class="post-toc-number">79.</span> <span class="post-toc-text">游戏服务器活动模块实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置表设计-1"><span class="post-toc-number">79.1.</span> <span class="post-toc-text">配置表设计</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#流程-1"><span class="post-toc-number">80.</span> <span class="post-toc-text">流程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据库设计-1"><span class="post-toc-number">80.1.</span> <span class="post-toc-text">数据库设计</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码设计-1"><span class="post-toc-number">80.2.</span> <span class="post-toc-text">代码设计</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-52"><span class="post-toc-number">81.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-53"><span class="post-toc-number">82.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-54"><span class="post-toc-number">83.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-55"><span class="post-toc-number">84.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-56"><span class="post-toc-number">85.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-57"><span class="post-toc-number">86.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结-2"><span class="post-toc-number">87.</span> <span class="post-toc-text">总结</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#任务状态-1"><span class="post-toc-number">88.</span> <span class="post-toc-text">任务状态</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#任务管理-1"><span class="post-toc-number">89.</span> <span class="post-toc-text">任务管理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-58"><span class="post-toc-number">90.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结-3"><span class="post-toc-number">91.</span> <span class="post-toc-text">总结</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#任务状态-2"><span class="post-toc-number">92.</span> <span class="post-toc-text">任务状态</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#任务管理-2"><span class="post-toc-number">93.</span> <span class="post-toc-text">任务管理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-59"><span class="post-toc-number">94.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-60"><span class="post-toc-number">95.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-61"><span class="post-toc-number">96.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-62"><span class="post-toc-number">97.</span> <span class="post-toc-text">基础</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础-63"><span class="post-toc-number">98.</span> <span class="post-toc-text">基础</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-game dev/game server/游戏系统"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">游戏系统</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-07-12 22:53:31" datetime="2019-07-12T14:53:31.501Z"  itemprop="datePublished">2019-07-12</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/游戏设计/">游戏设计</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://dev.gameres.com/Design/Design/RPG_Design.htm" target="_blank" rel="noopener">RPG游戏设计</a></li>
+<li><a href="http://wenku.baidu.com/link?url=j24BBquWchLXQDgyru5ZIFayhNyB61A83HqBjtFuQYFgnXxobj2q2Tmj0lW2vRWDtk6iDen4BIrOqoXZLX2MPk4vFIycrLW7DI_nlQ1Rs3i" target="_blank" rel="noopener">MMO游戏系统设计</a></li>
+</ul>
+<h2 id="基础-1"><a href="#基础-1" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><p><a href="http://www.zhihu.com/question/22405043" target="_blank" rel="noopener">MMORPG游戏在策划层面上如何设计一个新颖的物品背包系统？</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/firebird321/article/details/46778671" target="_blank" rel="noopener">基于mongodb, 设计游戏中的个人背包系统</a></p>
+<h2 id="基础-2"><a href="#基础-2" class="headerlink" title="基础"></a>基础</h2></li>
+<li><p><a href="http://blog.codingnow.com/2011/01/virtual_goods_verify.html" target="_blank" rel="noopener">网络游戏物品校验系统的设计</a></p>
+</li>
+<li><p><a href="http://www.gameres.com/msg_477379.html" target="_blank" rel="noopener">游戏道具设计（一）：道具产出条件和随机设定</a></p>
+</li>
+<li><p><a href="http://www.doc88.com/p-910702670492.html" target="_blank" rel="noopener">游戏道具的设计-多媒体应用论文</a></p>
+</li>
+<li><p><a href="http://ng.d.cn/wangyouzonghequ/news/detail_374291_1.html" target="_blank" rel="noopener">关于动作RPG游戏的技能与道具设计</a></p>
+</li>
+<li><p>[]</p>
+</li>
+</ul>
+<h1 id="运营功能需求"><a href="#运营功能需求" class="headerlink" title="运营功能需求"></a>运营功能需求</h1><p>一.目标<br>        快速关闭服务器<br>        快速部署跟新服务器<br>        提供运行所需的配置工作</p>
+<p>二.功能<br>        发任务<br>        批量玩家系统消息<br>        全区系统消息<br>        发邮件<br>        踢人<br>        禁言<br>        封账号<br>        封ip<br>        通过GM指令关闭服务器<br>        通过GM工具自动部署服务器</p>
+<h2 id="基础-3"><a href="#基础-3" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://blog.codingnow.com/2011/01/virtual_goods_verify.html" target="_blank" rel="noopener">网络游戏物品校验系统的设计</a></li>
+<li><a href="http://www.gameres.com/msg_477379.html" target="_blank" rel="noopener">游戏道具设计（一）：道具产出条件和随机设定</a></li>
+<li><a href="http://www.doc88.com/p-910702670492.html" target="_blank" rel="noopener">游戏道具的设计-多媒体应用论文</a></li>
+<li><a href="http://ng.d.cn/wangyouzonghequ/news/detail_374291_1.html" target="_blank" rel="noopener">关于动作RPG游戏的技能与道具设计</a></li>
+<li>[]</li>
+</ul>
+<h2 id="基础-4"><a href="#基础-4" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.xuebuyuan.com/2226327.html" target="_blank" rel="noopener">MMORPG大型游戏设计与开发（服务器 游戏场景 地图和区域）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=406249740&idx=2&sn=7d1383db1f3678d75789faab1d0b913a&scene=23&srcid=03290FSZ7pZRpk7wG9FNXwym#rd" target="_blank" rel="noopener">游戏程序 | 迷宫寻路系列常用算法逻辑探究</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=403194040&idx=2&sn=d90bb9234f0efaebed31ce691dedae29&scene=23&srcid=032951baYyHra1fo2IbQmMB7#rd" target="_blank" rel="noopener">游戏研发 | 开发笔记：掉落系统模块设计思路</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTMxNTU0MQ==&mid=402064627&idx=2&sn=b7f250b58ab38dca66b04bdf7df995de&scene=23&srcid=0329p3qZL2EBc4Pfnj7eYrNF#rd" target="_blank" rel="noopener">技术交流：横版动作游戏中角色的移动逻辑</a></li>
+</ul>
+<h2 id="基础-5"><a href="#基础-5" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.xuebuyuan.com/2226327.html" target="_blank" rel="noopener">MMORPG大型游戏设计与开发（服务器 游戏场景 地图和区域）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=406249740&idx=2&sn=7d1383db1f3678d75789faab1d0b913a&scene=23&srcid=03290FSZ7pZRpk7wG9FNXwym#rd" target="_blank" rel="noopener">游戏程序 | 迷宫寻路系列常用算法逻辑探究</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=403194040&idx=2&sn=d90bb9234f0efaebed31ce691dedae29&scene=23&srcid=032951baYyHra1fo2IbQmMB7#rd" target="_blank" rel="noopener">游戏研发 | 开发笔记：掉落系统模块设计思路</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTMxNTU0MQ==&mid=402064627&idx=2&sn=b7f250b58ab38dca66b04bdf7df995de&scene=23&srcid=0329p3qZL2EBc4Pfnj7eYrNF#rd" target="_blank" rel="noopener">技术交流：横版动作游戏中角色的移动逻辑</a></li>
+</ul>
+<h2 id="基础-6"><a href="#基础-6" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><p><a href="http://bbs.gameres.com/thread_310134.html" target="_blank" rel="noopener">游戏服务器登陆以及验证过程</a></p>
+</li>
+<li><p><a href="http://www.doc88.com/p-506837604697.html" target="_blank" rel="noopener">游戏系统策划案-基本设定-01-游戏登陆设定</a></p>
+</li>
+<li><p>[]</p>
+<h2 id="基础-7"><a href="#基础-7" class="headerlink" title="基础"></a>基础</h2></li>
+<li><p><a href="http://gamerboom.com/archives/44753" target="_blank" rel="noopener">实例分析武器/道具锻造系统的设计要点</a></p>
+</li>
+</ul>
+<h2 id="基础-8"><a href="#基础-8" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><p><a href="http://wenku.baidu.com/link?url=n5euj7sUcdkP0o-CYQWGxEVCLm5epNMZ7IxE3iVII0955BBz-rrrlzjPThr7CV05adP0ttd21EZqEooLPGRJ1EPGAtMCRXlSp-FWxD4oQ1e" target="_blank" rel="noopener">副本系统设计</a></p>
+</li>
+<li><p><a href="http://bbs.gameres.com/thread_219473.html" target="_blank" rel="noopener">游戏服务端编程–场景服务器探讨</a></p>
+</li>
+<li><p><a href="http://www.doc88.com/p-8951936452670.html" target="_blank" rel="noopener">浅论游戏场景设计的概念和功能</a></p>
+</li>
+</ul>
+<h2 id="基础-9"><a href="#基础-9" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><p><a href="http://wenku.baidu.com/link?url=n5euj7sUcdkP0o-CYQWGxEVCLm5epNMZ7IxE3iVII0955BBz-rrrlzjPThr7CV05adP0ttd21EZqEooLPGRJ1EPGAtMCRXlSp-FWxD4oQ1e" target="_blank" rel="noopener">副本系统设计</a></p>
+</li>
+<li><p><a href="http://bbs.gameres.com/thread_219473.html" target="_blank" rel="noopener">游戏服务端编程–场景服务器探讨</a></p>
+</li>
+<li><p><a href="http://www.doc88.com/p-8951936452670.html" target="_blank" rel="noopener">浅论游戏场景设计的概念和功能</a></p>
+</li>
+</ul>
+<h2 id="基础-10"><a href="#基础-10" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.doc88.com/p-714757656738.html" target="_blank" rel="noopener">网络游戏公会系统设计与实现</a></li>
+<li><a href="http://wenku.baidu.com/link?url=kcPC7tyXHwcj8b-P69l6dmmF-uu8fCo_r7iEmGUWnLe_reeygdB26n1E4arJA75nGp8jtP4VYBXsFIyMEGZEqXD7rbSRX3vyvq_dsXOb-0K" target="_blank" rel="noopener">公会系统</a></li>
+<li>[]</li>
+</ul>
+<h2 id="相关文章"><a href="#相关文章" class="headerlink" title="相关文章"></a>相关文章</h2><ul>
+<li><a href="http://www.gameres.com/454060.html" target="_blank" rel="noopener">运营菜鸟也谈游戏运营活动基础分类</a></li>
+<li><a href="http://www.gamelook.com.cn/2009/11/8207" target="_blank" rel="noopener">浅谈网络游戏线上活动策划</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTMxNTU0MQ==&mid=401970137&idx=4&sn=5eb652de6c27c5e72f731748afc2b9a5&scene=23&srcid=0329ZSHhwo8TL9PAG98fhFim#rd" target="_blank" rel="noopener">教你一步一步入运营的大门：活动策划篇</a></li>
+</ul>
+<h2 id="活动目的"><a href="#活动目的" class="headerlink" title="活动目的"></a>活动目的</h2><p>促进游戏留存率，及用户消费等，最终目的是促进用户消费。</p>
+<h2 id="活动要素"><a href="#活动要素" class="headerlink" title="活动要素"></a>活动要素</h2><pre><code>活动时间：永久、时间段（期限限制）
+活动范围：什么区，什么服可以参加
+活动内容：描述了活动的参与规则，达成条件，领取奖励等信息</code></pre><h2 id="活动流程"><a href="#活动流程" class="headerlink" title="活动流程"></a>活动流程</h2><pre><code>看到活动-&gt;参与活动-&gt;领取奖励</code></pre><h2 id="看到活动"><a href="#看到活动" class="headerlink" title="看到活动"></a>看到活动</h2><pre><code>方式主要有两种
+游戏内部
+    活动界面展示、GM活动提醒等
+游戏外部
+    游戏官网、渠道、微信等</code></pre><h2 id="参与活动"><a href="#参与活动" class="headerlink" title="参与活动"></a>参与活动</h2><pre><code>参与条件限制：时间限制（到了时间自动默认参加），玩家达成指定条件才可参与.
+活动状态（时间）：未开启、已开启、已结束
+参与状态：未参加、已参加、已完成(已参加并领取完了活动奖励)</code></pre><h2 id="领取奖励"><a href="#领取奖励" class="headerlink" title="领取奖励"></a>领取奖励</h2><pre><code>能否领取奖励条件
+玩家参与了活动，玩家达到领取奖励的触发条件
+奖励状态:不可领取（未达成领取奖励条件）、可领取、已领取</code></pre><h2 id="活动分析"><a href="#活动分析" class="headerlink" title="活动分析"></a>活动分析</h2><pre><code>活动范围分析：只要服与服之间不共享数据，那么就存在不同的服有不同的活动，比如手游IOS平台服与Android服数据不共享，通常有针对各自平台的活动，比如端游不同的区有不同的活动，甚至同一区，几个服也有不同的活动。
+
+活动时间分析：活动按时间可分为两种，永久型，时间限制。永久型活动的特点是保留性，以数据持久化的角度考虑，玩家永久型活动的数据是需要永久保存的。时间限制性活动的特点是只能在活动时间段内才能参加，在活动开始之前或活动开始之后无法再次参加，通常为一次性活动，以数据持久化的角度考虑，在游戏结束后是可以不必保存该类型活动数据的。</code></pre><h2 id="常见活动示例"><a href="#常见活动示例" class="headerlink" title="常见活动示例"></a>常见活动示例</h2><h3 id="永久性活动"><a href="#永久性活动" class="headerlink" title="永久性活动"></a>永久性活动</h3><h4 id="每日活动、每周活动"><a href="#每日活动、每周活动" class="headerlink" title="每日活动、每周活动"></a>每日活动、每周活动</h4><pre><code>活动描述：
+    每日活动：通关A,B,C副本可获得宝石、金币、等多少
+    每周活动：周一完成。。。，可获得。。。
+              周二完成。。。可获得。。
+              一周累计完成。。。多少次可获得。。。。
+
+活动分析：它们属于永久性活动，通常一直存在，只是每日或每周达成条件与奖励不同罢了，它是循环型活动，在每周运营商关服维护后只需修改培训表的条件，奖励，无需修改代码即可，重新开服后清理玩家每日活动，每周活动的达成记录领取记录，玩家可重新开始参加活动。</code></pre><h4 id="签到型活动"><a href="#签到型活动" class="headerlink" title="签到型活动"></a>签到型活动</h4><pre><code>每天签到领取什么</code></pre><h4 id="新手活动"><a href="#新手活动" class="headerlink" title="新手活动"></a>新手活动</h4><pre><code>玩家创建角色
+针对新创建角色，新手的活动，目的为了鼓励新玩家加入游戏，或老玩家玩多个角色。如新手礼包</code></pre><h3 id="时间限制性活动"><a href="#时间限制性活动" class="headerlink" title="时间限制性活动"></a>时间限制性活动</h3><h4 id="开服活动"><a href="#开服活动" class="headerlink" title="开服活动"></a>开服活动</h4><pre><code>运营商在新服初开之际，为了鼓励更多的玩家加入该新服，而准备的活动，活动开始时间为开服时间
+，活动结束时间为新服开服后的某一天，如开服7日在线奖励活动。</code></pre><h4 id="节日活动"><a href="#节日活动" class="headerlink" title="节日活动"></a>节日活动</h4><pre><code>在国庆期间通过副本经验200%，通关巢穴获得什么</code></pre><h4 id="充值活动"><a href="#充值活动" class="headerlink" title="充值活动"></a>充值活动</h4><pre><code>在某日到某日充值，送。。。</code></pre><h4 id="消费活动"><a href="#消费活动" class="headerlink" title="消费活动"></a>消费活动</h4><pre><code>在某日到某日在商城购买抽奖券送。。。</code></pre><h2 id="游戏服务器活动模块实现"><a href="#游戏服务器活动模块实现" class="headerlink" title="游戏服务器活动模块实现"></a>游戏服务器活动模块实现</h2><h3 id="配置表设计"><a href="#配置表设计" class="headerlink" title="配置表设计"></a>配置表设计</h3><ul>
+<li><p>活动表：活动类型+活动时间类型+活动列表（元素为活动奖励表中的id）+活动描述+开始时间+结束时间+额外数据（活动参与条件）</p>
+</li>
+<li><p>活动（子项）奖励表：活动id+奖励达成条件+奖励+活动描述+额外数据</p>
+</li>
+</ul>
+<p>定义活动基类<br>活动基类<br>成员：<br>protected<br>    活动类型 ：时间类型<br>    活动项：{id,活动类型，活动时间表，宣告id，时间长度，时间信息}<br>    活动id 实例id（唯一性）<br>public<br>    活动开启时间<br>    活动结束时间</p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 项目Export </span><br><span class="line">e=&gt;end: 结束 </span><br><span class="line">op1=&gt;operation: 选择java下的javadoc </span><br><span class="line">op2=&gt;operation: 选择要导出的工程 </span><br><span class="line">op3=&gt;operation: java doc的配置设置 </span><br><span class="line">st-&gt;op1-&gt;op2-&gt;op3-&gt;e</span><br></pre></td></tr></table></figure>
+
+<h3 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h3><h3 id="代码设计"><a href="#代码设计" class="headerlink" title="代码设计"></a>代码设计</h3><p>活动基类<br>类名：ActivityBase<br>成员：活动类型、活动实例id，活动奖励数据，活动开启时间、结束时间、活动状态、附加数据<br>接口:<br>    内部:<br>    通用虚函数：活动开启、活动结束、激活活动、领取活动奖励、格式化活动数据<br>    特殊虚函数：在线活动时间统计，邀请好友活动人数统计，副本通关统计等<br>活动管理器类<br>成员：活动列表<br>接口：<br>    非虚：加载所有活动，玩家登陆、登出<br>玩家活动数据类：<br>    函数：玩家活动数据加载，保存，更新,删除</p>
+<p>外部cmd<br>– 通用接口</p>
+<p>玩家登陆<br>玩家登出</p>
+<p>激活指定类型活动（大类型）（当前默认条件是时间，也有可能是其它）<br>激活某类型当中子活动（条件值，当前int行，需扩展）<br>领取活动奖励<br>– 后台活动，获取后台活动玩家信息</p>
+<p>方法<br>public</p>
+<pre><code>虚 活动开启
+虚 活动结束
+
+触发达成活动（事件影响活动奖励领取状态）
+领取活动奖励
+通知活动结束
+获取活动类型
+获取活动项
+获取活动id</code></pre><p>活动管理类<br>成员：<br>private<br>    活动管理单例实例<br>    活动容器</p>
+<p>方法<br>public<br>    定时器检测（活动创建与关闭）<br>    销毁活动(活动列表删除活动)</p>
+<p>private<br>    创建活动（tempid）<br>public<br>    玩家加入活动（玩家信息，活动id）<br>    通知wordboss开启</p>
+<h2 id="基础-11"><a href="#基础-11" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><p><a href="http://bbs.gameres.com/forum.php?mod=viewthread&tid=485378" target="_blank" rel="noopener">游戏编程干货：游戏技能系统全解析</a></p>
+</li>
+<li><p><a href="http://bbs.gameres.com/thread_485421.html" target="_blank" rel="noopener"> 技能系统设计：技能模块同步的实现</a></p>
+</li>
+<li><p><a href="http://www.gameres.com/450054.html" target="_blank" rel="noopener">如何设计一个易扩展的游戏技能系统？</a></p>
+</li>
+<li><p><a href="http://bbs.gameres.com/thread_442541.html" target="_blank" rel="noopener">mmorpg 技能同步问题?</a></p>
+</li>
+<li><p><a href="http://www.360doc.com/content/15/0117/15/110467_441556883.shtml" target="_blank" rel="noopener">游戏技能设计</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/zh379835552/article/details/37969205?utm_source=tuicool&utm_medium=referral" target="_blank" rel="noopener"> 游戏开发——战斗系统之技能设计</a></p>
+</li>
+<li><p><a href="http://www.cnblogs.com/sawyerzhu/archive/2012/09/17/2688398.html" target="_blank" rel="noopener">游戏技能设计参考</a></p>
+</li>
+<li><p><a href="http://wenku.baidu.com/link?url=XPdV0aCDZl-i5niUoTy8nz1dDVSmKFqqSspisYyaPLvfXi2g1a8YDR_NmKk8RSNiDKQW0sPlai3l8hlD895S-gfU2KcQOAYST3_ezOP9EUe" target="_blank" rel="noopener">游戏技能系统全解析</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/cnlm2/article/details/6231222" target="_blank" rel="noopener">MMORPG游戏服务器技能系统设计</a></p>
+</li>
+<li><p><a href="http://www.gameres.com/msg_292657.html" target="_blank" rel="noopener">技能和BUFF数据编辑架构</a></p>
+</li>
+<li><p><a href="http://www.cnblogs.com/GameDeveloper/p/3370860.html" target="_blank" rel="noopener">浅谈游戏中BUFF的设计要点</a></p>
+</li>
+<li><p><a href="http://bbs.gameres.com/thread_215027_1_1.html" target="_blank" rel="noopener">Buff机制及其实际运用</a></p>
+</li>
+<li><p><a href="http://bbs.csdn.net/topics/350114625" target="_blank" rel="noopener">游戏技能、buff的代码如何架构</a></p>
+</li>
+<li><p><a href="http://www.doc88.com/p-273833980485.html" target="_blank" rel="noopener">传奇还原案·技能和BUFF效果设计说明.pdf</a></p>
+</li>
+<li><p><a href="http://www.cnblogs.com/anxin1225/p/4750025.html?utm_source=tuicool&utm_medium=referral" target="_blank" rel="noopener">Buff系统设计</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/yuanfengyun/article/details/40377707" target="_blank" rel="noopener">游戏技能系统实现</a></p>
+</li>
+<li><p><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=407392509&idx=2&sn=e3db226c65e9dd1cbfc5d403eaf2386a&scene=23&srcid=0328SOrnSDT0bqCkllywsfcH#rd" target="_blank" rel="noopener">游戏程序 | 游戏服务端开发：如何精确计算MMO游戏技能攻击区域？</a></p>
+</li>
+<li><p><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=405370345&idx=4&sn=934a773f270719b2edc7a1b03b24109f&scene=23&srcid=0329hvCibj2mobjeC2B4Wr3q#rd" target="_blank" rel="noopener">游戏编程干货：游戏技能系统全解析</a></p>
+</li>
+<li><p><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=405244098&idx=2&sn=9abf1a5c67231c2843c5ba89f34c100e&scene=23&srcid=0329QAe5saMiR0DgagWEZuIG#rd" target="_blank" rel="noopener">游戏程序 | 技能系统设计：技能模块同步的实现</a></p>
+</li>
+<li><p><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTMxNTU0MQ==&mid=402238914&idx=1&sn=9d3c3b973e1c7f91a743a327282188cf&scene=23&srcid=0329FFNMxBra3MiQaLJtWvZv#rd" target="_blank" rel="noopener">游戏服务端开发：如何精确计算MMO游戏技能攻击区域？</a></p>
+</li>
+<li><p><a href="http://gad.qq.com/article/detail/7153763" target="_blank" rel="noopener">MMORPG游戏服务器技能系统设计：表格字段与技能程序框架</a></p>
+</li>
+</ul>
+<h2 id="基础-12"><a href="#基础-12" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://bbs.gameres.com/thread_309463.html" target="_blank" rel="noopener">如何做到在跨服务器无锁完成交易</a></li>
+<li><a href="https://www.baidu.com/s?wd=游戏道具系统设计&pn=10&oq=游戏道具系统设计&tn=90177821_hao_pg&ie=utf-8&rsv_idx=2&rsv_pq=c8f3cab8003800c7&rsv_t=5622RVfMwmR6lV21OMRbBvYXkRsgvmXQT10SbscA0i28jlp5F9UqdYqyk7weuhbQV6T1TWfl&rsv_page=1" target="_blank" rel="noopener">游戏经济系统设计问题的四个难点!</a></li>
+<li><a href="http://wenku.baidu.com/link?url=9TSCuxJdfypmsqZLYegHNuKYP1TABFwGT22v-cJut5wenWM-Ll2Bp6zqgDEeIvd9M9t-jpBrhGmxN16eFMAP3mPA9yn8GJg1C4awVFovoKO" target="_blank" rel="noopener">《神武》交易系统设计思路分析</a></li>
+<li><a href="http://games.qq.com/a/20141029/019104.htm" target="_blank" rel="noopener">手游发展论：端游之后再无交易系统？</a></li>
+<li><a href="http://wenku.baidu.com/link?url=VDyvd8wzbUd05LqUwcBVZZnqv2qnGZU4CscfFtcuP5h1BWfS4un-SWh1cdPjOBVGcwPPeyDDjPOeeJiJ8UVwMT7pzYX5w-15VYxHIllHC-i" target="_blank" rel="noopener">游戏经济系统设计</a></li>
+<li>[]</li>
+</ul>
+<h2 id="基础-13"><a href="#基础-13" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://xueshu.baidu.com/s?ie=utf-8&tn=SE_baiduxueshu_c1gjeupa&wd=游戏人物系统实现&sc_f_para=sc_tasktype%3D%7BrecommendKeyword%7D" target="_blank" rel="noopener">游戏人物系统实现</a></li>
+</ul>
+<h2 id="基础-14"><a href="#基础-14" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://wenku.baidu.com/link?url=97D89_CLY1-mufJVYgbWvt4_1fvJim_XwQmJcKKDNzkLGFFTFbgBRrZszgOQB9TY0-B1IAy0T4xHkkHcLxHbfeVKnVsqlLecCXDi-iK8Zli" target="_blank" rel="noopener">游戏策划学习资料之DNF聊天系统分析</a></li>
+<li><a href="http://www.docin.com/p-289155607.html" target="_blank" rel="noopener">【自由之城】聊天系统补充文档 游戏设计策划方案</a></li>
+</ul>
+<h2 id="基础-15"><a href="#基础-15" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=406199830&idx=4&sn=c86446f7022bb5f3e2902c949c70d25a&scene=23&srcid=0329FXQjA1yvnSkF1hJ0D6t6#rd" target="_blank" rel="noopener">排行榜算法设计实现比较</a></li>
+</ul>
+<h2 id="基础-16"><a href="#基础-16" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.woshipm.com/pd/34680.html" target="_blank" rel="noopener">游戏任务系统设计思路</a></li>
+<li><a href="http://www.csaspx.com/articlelist-727.html" target="_blank" rel="noopener">创新手机游戏《3L》开发点滴(1)——道具、物品、装备表设计</a></li>
+<li><a href="http://blog.csdn.net/lufy_legend/article/details/21942227/" target="_blank" rel="noopener">《游戏脚本的设计与开发》-(RPG部分)3.5 游戏背包和任务系统</a></li>
+<li><a href="http://www.docin.com/p-254280196.html" target="_blank" rel="noopener">游戏任务系统的设计要素</a></li>
+<li><a href="http://wenku.baidu.com/link?url=JQuQfsYfH8adUREBrq5RC42dyZp5fsjrwaYu2YuNljlw3TvwAP_RpXtpcGgYgUCGNyRsrLWA3Uy-zv_alklgj1Fct4dfRPQufrkb0y6JaUm" target="_blank" rel="noopener">游戏任务结构</a></li>
+<li><a href="http://www.zhihu.com/question/22239069" target="_blank" rel="noopener">游戏为什么需要有任务系统？</a></li>
+<li><a href="http://xueshu.baidu.com/s?wd=游戏任务系统设计&tn=SE_baiduxueshu_c1gjeupa&ie=utf-8&sc_hit=1" target="_blank" rel="noopener">游戏任务系统设计</a></li>
+<li><a href="http://xueshu.baidu.com/s?ie=utf-8&tn=SE_baiduxueshu_c1gjeupa&wd=游戏任务系统实现&sc_f_para=sc_tasktype%3D%7BrecommendKeyword%7D" target="_blank" rel="noopener">游戏任务系统实现</a></li>
+<li><a href="http://edu.gamfe.com/tutor/d/10614.html" target="_blank" rel="noopener">程序开发MMORPG开发杂谈(一):任务系统设计</a></li>
+<li><a href="http://bbs.youxihun.com/thread-13647-1-1.html" target="_blank" rel="noopener">任务系统实现：数据结构和处理流程版</a></li>
+<li><a href="http://www.gameres.com/msg_192668.html" target="_blank" rel="noopener">《天择》设计思路之：任务系统对于RPG网络游戏的作用</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=406146099&idx=1&sn=8bc0e12c7084238ef41bf441249ce220&scene=23&srcid=0329iPoijbSeiPGnaSrSHAs3#rd" target="_blank" rel="noopener">游戏策划 | 游戏任务设计(1)：概念与简史</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTMxNTU0MQ==&mid=401932609&idx=1&sn=c11f05de6cb7d30b2d9590cbe1d50297&scene=23&srcid=0329nx7CRAfGWZgpGTFMK9IG#rd" target="_blank" rel="noopener">游戏任务设计方法论：Collect与Hunt任务</a></li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h2 id="任务状态"><a href="#任务状态" class="headerlink" title="任务状态"></a>任务状态</h2><ul>
+<li>无效 INVALID</li>
+<li>任务已完成 COMPLETE </li>
+<li>任务正在进行中 RUNNING </li>
+<li>准备可以执行任务 VIABLE </li>
+</ul>
+<h2 id="任务管理"><a href="#任务管理" class="headerlink" title="任务管理"></a>任务管理</h2><p>容器 任务列表</p>
+<h2 id="基础-17"><a href="#基础-17" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.gameres.com/forum.php?mod=viewthread&tid=470525" target="_blank" rel="noopener">一个商城系统的改良设计方案</a></li>
+</ul>
+<h2 id="基础-18"><a href="#基础-18" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.docin.com/p-77330527.html" target="_blank" rel="noopener">游戏策划-邮件系统</a></li>
+<li><a href="http://www.doc88.com/p-7028372159860.html" target="_blank" rel="noopener">3D网络游戏中邮件系统的设计与实现</a></li>
+<li>[]</li>
+</ul>
+<h2 id="基础-19"><a href="#基础-19" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://gamerboom.com/archives/59080" target="_blank" rel="noopener">举例阐述游戏战斗系统设计的基本规则</a></li>
+<li><a href="http://blog.csdn.net/mooke/article/details/9771545" target="_blank" rel="noopener">游戏系统开发笔记（九）——构建战斗系统</a></li>
+<li><a href="http://wenku.baidu.com/link?url=Vtgq5LsgWnw2X0Ma8t3wvdTxgxtac38EctZ-FJ6py-JNjSS7B1dbXalkbIK6-FPieqnBdSt_OMwgb2-6MKMOPV6DDBslUH7t9VmJ3RvuOyC" target="_blank" rel="noopener">战斗系统说明文档</a></li>
+<li><a href="http://www.docin.com/p-13213569.html" target="_blank" rel="noopener"> 游戏战斗系统设计文档</a></li>
+<li><a href="http://www.taodocs.com/p-3159754.html" target="_blank" rel="noopener">大型多人在线角色扮演类网络游戏角色战斗系统的设计与实现.pdf</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_57e4912d0100ccto.html" target="_blank" rel="noopener">DNF战斗系统分析文档</a></li>
+<li><a href="http://blog.csdn.net/jjiss318/article/details/7611213" target="_blank" rel="noopener">MMORPG战斗系统设计(1)——战斗系统概述</a></li>
+<li><a href="http://www.docin.com/p-754359614.html" target="_blank" rel="noopener">MMORPG战斗系统设计</a></li>
+<li><a href="http://my.oschina.net/roll1987/blog/550227" target="_blank" rel="noopener"> 一种手游中实时战斗系统的设计思路</a></li>
+<li><a href="http://www.gameres.com/459404.html" target="_blank" rel="noopener">游戏战斗设计入门：类层的划分与创新</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=404935336&idx=4&sn=99d2fd1611d500fca452aa52ef5a1439&scene=23&srcid=03298oC3n09I1BJc2ZUDr90N#rd" target="_blank" rel="noopener">游戏程序 | 基于战斗重演的全校验—- 塔防大师PVP反外挂设计思路分享</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=403890395&idx=3&sn=e739a23b969daf1991bd233335829964&scene=23&srcid=0329F0UOB5UeHkyxSdp2pgQc#rd" target="_blank" rel="noopener">游戏研发 | 游戏开发之状态机的实现与优化</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTMxNTU0MQ==&mid=402007682&idx=3&sn=efc454d1eab953e0234274977c282d9e&scene=23&srcid=032916yiQGx7IihvsnIH12hF#rd" target="_blank" rel="noopener">移动游戏战斗系统实现方式探讨</a></li>
+</ul>
+<h2 id="基础-20"><a href="#基础-20" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://wenku.baidu.com/link?url=gKmT0oesPtgH8gl0VC4RrJlHT6z74FQfRXDTZf1Fsnev_XaqP9ApQZAgEjt3LxxYWBwexgbXUmQA6sSkiP2q1HoDoWjPH4jjLjwvKQso1Ie" target="_blank" rel="noopener">网络游戏中装备相关子系统的架构设计</a></li>
+<li><a href="http://wenku.baidu.com/link?url=2dHyA7e_VWAqdLrlYUkoYDh7rq8VJWuA2nwHK9QO7_E-fFguGLL4rspqdfZ1_FV2j7U_px0hG44Y1aOyXAKAqrxaz7VrVrfvQw4P5Q9_-bS" target="_blank" rel="noopener">游戏道具设计</a></li>
+<li><a href="https://www.zhihu.com/question/27708949/answer/38166664" target="_blank" rel="noopener">游戏在设计装备系统中需要考虑哪些因素？</a></li>
+<li><a href="http://wenku.baidu.com/link?url=BAgLOSkzoav46tG6SenFIv279COkx28d34w3VtmWy76yV1gurCTa-aIsE8Ns1dbZ3ijO-YuehqgIDbxhqfy2E9m4WYAjV4AE9yhSGp1pF_q" target="_blank" rel="noopener">游戏策划培训笔记之游戏道具设计</a></li>
+<li>[]</li>
+</ul>
+<h2 id="基础-21"><a href="#基础-21" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.j2megame.com/html/tpsj/qjch/2454.html" target="_blank" rel="noopener">MMO RPG 游戏中的组队系统设计</a></li>
+</ul>
+<h2 id="基础-22"><a href="#基础-22" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.douban.com/note/523720265/" target="_blank" rel="noopener">游戏系统——变装系统</a></li>
+</ul>
+<h2 id="基础-23"><a href="#基础-23" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://blog.sina.com.cn/s/blog_4a540aa70101h95d.html" target="_blank" rel="noopener">如何设计游戏中的成就系统？</a></li>
+<li><a href="http://wenku.baidu.com/view/bab9246f10661ed9ad51f3f4.html?re=view" target="_blank" rel="noopener">游戏成就系统设计1</a></li>
+<li><a href="http://wenku.baidu.com/view/2e198c2ded630b1c59eeb5f6.html?re=view" target="_blank" rel="noopener">游戏策划资料-天龙八部系统设计分析</a></li>
+</ul>
+<h2 id="基础-24"><a href="#基础-24" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://wenku.baidu.com/link?url=cuFCVqAtPW_gAyJqdfwvUpn9RmG9Mf4FF1dWBu5ZAEHEey2EME5b60u0KJDycPZXPeJSRKr-UX-bBrE-FUGIg3ONz7dRemHdNImxG_DHzlS" target="_blank" rel="noopener">宠物系统-设计文档</a></li>
+<li><a href="http://games.qq.com/a/20100917/000424.htm" target="_blank" rel="noopener">宠物系统</a></li>
+<li>[]</li>
+</ul>
+<h2 id="基础-25"><a href="#基础-25" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://wenku.baidu.com/link?url=cuFCVqAtPW_gAyJqdfwvUpn9RmG9Mf4FF1dWBu5ZAEHEey2EME5b60u0KJDycPZXPeJSRKr-UX-bBrE-FUGIg3ONz7dRemHdNImxG_DHzlS" target="_blank" rel="noopener">宠物系统-设计文档</a></li>
+<li><a href="http://games.qq.com/a/20100917/000424.htm" target="_blank" rel="noopener">宠物系统</a></li>
+<li>[]</li>
+</ul>
+<h2 id="基础-26"><a href="#基础-26" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://bbs.gameres.com/thread_252906.html" target="_blank" rel="noopener">游戏策划新人作业之一：签到系统作业</a></li>
+<li><a href="http://tieba.baidu.com/p/3375160702" target="_blank" rel="noopener">一份系统策划案，请大神评点</a></li>
+<li><a href="http://wenku.baidu.com/link?url=QFj9zP0EivqXdWUR0n1eI1nPw6FdSmeQtp4S9AdBKkDeniPuacJ1xCSjfN_Ykljm-cckdE0YLpQTepb1vMx2SfCXj1m0T1FsLDrUPQjvizW" target="_blank" rel="noopener">游戏签到系统详解 签到奖励详情及补签攻略</a></li>
+<li><a href="http://www.docin.com/p-811487576.html" target="_blank" rel="noopener">签到系统设计–RS</a></li>
+<li><a href="http://www.zhihu.com/question/27149066" target="_blank" rel="noopener">连续签到奖励 数据库如何设计？</a></li>
+</ul>
+<h2 id="基础-27"><a href="#基础-27" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTMxNTU0MQ==&mid=402095472&idx=4&sn=296e9d16f6aa609105a67978c767c0b5&scene=23&srcid=0329Q3dTYbLbC7CVA65512P5#rd" target="_blank" rel="noopener">分享：游戏新手引导程序框架设计3要点</a></li>
+</ul>
+<h2 id="基础-28"><a href="#基础-28" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.gameres.com/442274.html" target="_blank" rel="noopener">游戏行业的人工智能设计：AI的设计和实施</a></li>
+<li><a href="http://www.gameres.com/442437.html" target="_blank" rel="noopener">游戏行业的人工智能设计（二）：路径搜寻和感知</a></li>
+<li><a href="http://bbs.gameres.com/thread_442680.html" target="_blank" rel="noopener">设计面向游戏的人工智能（三）：战术和战略人工智能 (AI)</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=406417555&idx=2&sn=b30fe5b049fe0a8abc7a4cdc57c1ed15&scene=23&srcid=0329hg3JOUMzanKkIZZG3lJn#rd" target="_blank" rel="noopener">游戏程序 | 使用行动列表去创造简单且可扩展的AI</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=405216212&idx=3&sn=50ff992a372e2ab8b6fe2d0da7ea1fc8&scene=23&srcid=0329pCUyrcsjvNOh2R4EZHbd#rd" target="_blank" rel="noopener">游戏程序 | 对弈类游戏的人工智能设计(4)——游戏AI的落地</a></li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://gad.qq.com/article/detail/659" target="_blank" rel="noopener">MMORPG游戏的人工智能（AI）和行为树</a></li>
+<li><a href="http://gad.qq.com/program/translateview/7158132" target="_blank" rel="noopener">使用群体行为创建一个冰球游戏的AI：发起攻击</a></li>
+</ul>
+<h2 id="基础-29"><a href="#基础-29" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://blog.csdn.net/chenjie19891104/article/details/42217281" target="_blank" rel="noopener"> 教你快速高效接入SDK——总体思路和架构</a></li>
+<li><a href="http://blog.csdn.net/chenjie19891104/article/details/44134901" target="_blank" rel="noopener">教你快速高效接入SDK——统一sdk服务器的实现</a></li>
+<li>[]</li>
+</ul>
+<h2 id="基础-30"><a href="#基础-30" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://wenku.baidu.com/link?url=VE3Lob30i823jLwRyAqsZMU0zUCL3tDvkrOjK4bFjyVmDnv67bmqlLyDFDGSXRUuXQf2hmMhsh486uVs9SVr2X8v2lMjKr01iSJPXsZkutu" target="_blank" rel="noopener">玉米游戏VIP系统文档《惊天战神》</a></li>
+</ul>
+<h2 id="基础-31"><a href="#基础-31" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://bbs.gameres.com/thread_253928.html" target="_blank" rel="noopener">服务器压力测试需要哪些功能，机器人怎么做</a></li>
+<li><a href="http://bbs.gameres.com/thread_494261.html" target="_blank" rel="noopener">揭秘《英雄联盟》的自动化测试</a></li>
+</ul>
+<p>关服方式<br>1.GM关服（自身也是玩家）</p>
+<p>2.web关服<br>    通过连接服务</p>
+<p>3.杀进程<br>    不能保存数据<br>    需知道服务的进程号</p>
+<p>流程<br>服务器状态<br>    启动中<br>    运行中<br>    重启中<br>    关服中<br>    已关闭</p>
+<p>服务器启动时设置为启动中状态<br>    禁止所有客户端连接<br>    启动所有服务<br>    收到所有服务已启动消息后设置为运行中</p>
+<p>只有在运行中状态才允许客户端连接游戏</p>
+<p>一个连接在请求关服后<br>    设置为关服中状态<br>    在关服状态下禁止连接（有新的连接直接杀掉）<br>    需关闭所有除请求关服者之外所有的客户端连接（要保存数据）<br>    通知关闭所有的服务<br>    在收到所有的服务已关闭消息 设置为已关闭状态<br>    像请求关服者发送已关服成功消息（或以断开连接表示）<br>    视情况决定是否直接退出</p>
+<p>连接服务器</p>
+<h2 id="基础-32"><a href="#基础-32" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://wenku.baidu.com/link?url=Q3nLJtZ9uStyE6FmKYuXofoBIWVY6sSwVU-bLOgopq-eTEEqSMl0_HnrsnCMsm2G9U655Y13IdBi0xb-rU5n_TAtiTZISk3MTNRXZ9ZdRLO" target="_blank" rel="noopener">自动更新程序设计实现思路</a></li>
+<li><a href="http://www.zhihu.com/question/28065265" target="_blank" rel="noopener">大型的客户端游戏是怎么实现游戏内更新的呢？是更新dll么？</a></li>
+<li><a href="http://www.codesec.net/view/218354.html" target="_blank" rel="noopener"> 游戏内热更新实现方案</a></li>
+<li></li>
+</ul>
+<h2 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://my.oschina.net/u/1024573/blog/474942" target="_blank" rel="noopener">游戏服务器中的日志处理方式之一</a></li>
+<li><a href="http://blog.csdn.net/football111/article/details/19810209" target="_blank" rel="noopener">浅谈游戏服务器—功能模块上来看</a></li>
+<li><a href="http://blog.csdn.net/zhoudaxia/article/details/12850291" target="_blank" rel="noopener">服务器设计系列：日志模块</a></li>
+<li><a href="http://bbs.csdn.net/topics/390868924" target="_blank" rel="noopener">tx面试题 设计一个高并发的日志系统</a></li>
+<li><a href="http://cxlh.iteye.com/blog/729644" target="_blank" rel="noopener">基于Log4J的日志服务器的搭建</a></li>
+<li><a href="http://jiayf.blog.51cto.com/1659430/330316" target="_blank" rel="noopener">编写Shell脚本监测服务器状态</a></li>
+<li><a href="http://www.xuebuyuan.com/1507084.html" target="_blank" rel="noopener">写了一个简单的shell脚本监控mysql服务器运行状态</a></li>
+<li><a href="http://outofmemory.cn/code-snippet/3269/shell-script-jiankong-service-qi-process-port" target="_blank" rel="noopener">shell脚本监控服务器进程和端口</a></li>
+<li><a href="http://www.centoscn.com/shell/2014/0809/3461.html" target="_blank" rel="noopener">shell脚本监控服务器宕机、检测、报警程序</a></li>
+<li><a href="http://www.jb51.net/article/58799.htm" target="_blank" rel="noopener">shell脚本监控系统负载、CPU和内存使用情况</a></li>
+<li><a href="http://www.jb51.net/article/48053.htm" target="_blank" rel="noopener">Shell脚本监控服务器在线状态和邮件报警的方法</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_86347018010170kg.html" target="_blank" rel="noopener">一个shell监控服务日志的脚本</a></li>
+<li><a href="http://developer.51cto.com/art/201308/408954.htm" target="_blank" rel="noopener">我常用的主机监控Shell脚本</a></li>
+</ul>
+<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><pre><code>日志模块：我将此日志模块分为两大类，一类是游戏服务器调试维护用日志，一类是游戏运营用日志，可选择使用本地文档或是数据库模式记录
+    调试维护日志没啥好说的，运营日志说说，是给客服提供的，谁消费了什么 交易流向 物品流向 等等的记录 GM操作的记录等等 比如万一某玩家装备被盗了，则可通过此来证明。 
+日志模块分类：
+一、运行日志
+    描述：通常用于记录服务器日常运行状态及异常状态。通常以文件的形式进行存储，以备查看。如果需要存储到数据库中，或使用工具查看，则需要定义好日志的格式，以方便解析。
+    存储方式：文件
+    日志格式：
+    记录方式：主要借助辅助工具 shell等监控服务器运行状态
+    日志读取：远程访问
+    日志处理:监控 记录 报警 维护
+
+二、异常日志
+    描述：主要记录在游戏服务器中程序发生的异常。有些BUG在测试环境中是很难测试到的。记录程序中的异常，可以定位程序中BUG的位置，清楚BUG产生的原因。对游戏服务器的改进提供必要的支持。
+    存储格式：文件或数据库
+    日志格式：时间 位置 错误原因 相关数据
+    记录方式：捕获异常，存储到日志文件，或发送到日志服务器，统一存储
+    日志读取：远程访问
+
+三、运营日志
+    描述：亦称为用户日志
+    游戏服务器的核心就是用户的日志。用户日志可以分为几大类：登陆日志；消费日志，收入日志，行为日志，充值日志。
+    1，登陆日志
+    主要记录玩家登陆的时间，IP等信息。登陆日志可以用于判断客户端的状态。识别使用软件进行不正常的大规模访问。比如，频繁的登陆断开。这会给服务器造成额外的压力。使正常的玩家受到影响，有时候严重的，不能正常登陆。管理员可以根据这些信息，对此客户端的IP进行封号处理。
+    2，消费日志
+    主要记录玩家在游戏中各种货币的消费情况。根据这些信息，可以分析玩家大部分资金的流向，对运营的营销有很大的帮助。还可以根据这些信息，查看服务器系统中是否存在一些刷钱的BUG。因为一个人无限的可以购买一个物品明显是不正常的。根据这些日志，可以很快定位到哪个功能导致了这种情况的发生。
+    3，收入日志
+    主要记录玩家在游戏中的货币来源情况。也是游戏系统整个产出的表现。便于数值对整个游戏的产出情况做一个全面的了解。也有助于发现系统的BUG，因为一个人的资金突然比别的玩家高出了很多是不正常的。根据这些日志，可以定位到是哪个功能导致了这种异常的增长。
+    4行为日志
+    主要记录玩家的一些操作行为，比如抽卡次数，挑战次数，购买次数等信息。分析玩家在游戏成长过程中的行为。根据这些日志，可以修改游戏的某些小功能，增加用户体验的好感。
+    5充值日志
+    主要记录玩家的充值信息。这是非常重要的，如果一个玩家充值，钱扣了，但是钻石没发给人家，是要给人家一个说法的。充值日志可以直接反映出哪些玩家是土豪，清楚游戏收入的来源。
+    存储方式：数据库
+    日志格式：
+    记录方式：主要借助辅助工具 shell等监控服务器运行状态
+    日志读取：通过网站
+    日志处理: 针对 通过gm</code></pre><h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="shell脚本监控服务器教程"><a href="#shell脚本监控服务器教程" class="headerlink" title="shell脚本监控服务器教程"></a>shell脚本监控服务器教程</h3><h3 id="日志服务器实现教程"><a href="#日志服务器实现教程" class="headerlink" title="日志服务器实现教程"></a>日志服务器实现教程</h3><pre><code>非实时存储
+日志等级 存储优先级 存储实时性 日志</code></pre><p><a href="http://www.zolsky.com/read/best/6/314.htm" target="_blank" rel="noopener">http://www.zolsky.com/read/best/6/314.htm</a></p>
+<p><a href="http://blog.csdn.net/yutianhuan/article/details/51121182" target="_blank" rel="noopener">http://blog.csdn.net/yutianhuan/article/details/51121182</a></p>
+<p><a href="http://blog.csdn.net/gujintong1110/article/details/44278535" target="_blank" rel="noopener">http://blog.csdn.net/gujintong1110/article/details/44278535</a></p>
+<p><a href="http://blog.chinaunix.net/uid-21222282-id-1829129.html" target="_blank" rel="noopener">http://blog.chinaunix.net/uid-21222282-id-1829129.html</a></p>
+<p><a href="http://zhoulifa.bokee.com/6071872.html" target="_blank" rel="noopener">http://zhoulifa.bokee.com/6071872.html</a></p>
+<h2 id="基础-33"><a href="#基础-33" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://dev.gameres.com/Design/Design/RPG_Design.htm" target="_blank" rel="noopener">RPG游戏设计</a></li>
+<li><a href="http://wenku.baidu.com/link?url=j24BBquWchLXQDgyru5ZIFayhNyB61A83HqBjtFuQYFgnXxobj2q2Tmj0lW2vRWDtk6iDen4BIrOqoXZLX2MPk4vFIycrLW7DI_nlQ1Rs3i" target="_blank" rel="noopener">MMO游戏系统设计</a></li>
+</ul>
+<h2 id="基础-34"><a href="#基础-34" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://bbs.gameres.com/thread_253928.html" target="_blank" rel="noopener">服务器压力测试需要哪些功能，机器人怎么做</a></li>
+<li><a href="http://bbs.gameres.com/thread_494261.html" target="_blank" rel="noopener">揭秘《英雄联盟》的自动化测试</a></li>
+</ul>
+<h2 id="基础-35"><a href="#基础-35" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://wenku.baidu.com/link?url=Q3nLJtZ9uStyE6FmKYuXofoBIWVY6sSwVU-bLOgopq-eTEEqSMl0_HnrsnCMsm2G9U655Y13IdBi0xb-rU5n_TAtiTZISk3MTNRXZ9ZdRLO" target="_blank" rel="noopener">自动更新程序设计实现思路</a></li>
+<li><a href="http://www.zhihu.com/question/28065265" target="_blank" rel="noopener">大型的客户端游戏是怎么实现游戏内更新的呢？是更新dll么？</a></li>
+<li><a href="http://www.codesec.net/view/218354.html" target="_blank" rel="noopener"> 游戏内热更新实现方案</a></li>
+<li></li>
+</ul>
+<h2 id="基础-36"><a href="#基础-36" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://wenku.baidu.com/link?url=Q3nLJtZ9uStyE6FmKYuXofoBIWVY6sSwVU-bLOgopq-eTEEqSMl0_HnrsnCMsm2G9U655Y13IdBi0xb-rU5n_TAtiTZISk3MTNRXZ9ZdRLO" target="_blank" rel="noopener">自动更新程序设计实现思路</a></li>
+<li><a href="http://www.zhihu.com/question/28065265" target="_blank" rel="noopener">大型的客户端游戏是怎么实现游戏内更新的呢？是更新dll么？</a></li>
+<li><a href="http://www.codesec.net/view/218354.html" target="_blank" rel="noopener"> 游戏内热更新实现方案</a></li>
+<li></li>
+</ul>
+<h2 id="基础-37"><a href="#基础-37" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://wenku.baidu.com/link?url=Q3nLJtZ9uStyE6FmKYuXofoBIWVY6sSwVU-bLOgopq-eTEEqSMl0_HnrsnCMsm2G9U655Y13IdBi0xb-rU5n_TAtiTZISk3MTNRXZ9ZdRLO" target="_blank" rel="noopener">自动更新程序设计实现思路</a></li>
+<li><a href="http://www.zhihu.com/question/28065265" target="_blank" rel="noopener">大型的客户端游戏是怎么实现游戏内更新的呢？是更新dll么？</a></li>
+<li><a href="http://www.codesec.net/view/218354.html" target="_blank" rel="noopener"> 游戏内热更新实现方案</a></li>
+<li></li>
+</ul>
+<p><a href="http://www.zolsky.com/read/best/6/314.htm" target="_blank" rel="noopener">http://www.zolsky.com/read/best/6/314.htm</a></p>
+<p><a href="http://blog.csdn.net/yutianhuan/article/details/51121182" target="_blank" rel="noopener">http://blog.csdn.net/yutianhuan/article/details/51121182</a></p>
+<p><a href="http://blog.csdn.net/gujintong1110/article/details/44278535" target="_blank" rel="noopener">http://blog.csdn.net/gujintong1110/article/details/44278535</a></p>
+<p><a href="http://blog.chinaunix.net/uid-21222282-id-1829129.html" target="_blank" rel="noopener">http://blog.chinaunix.net/uid-21222282-id-1829129.html</a></p>
+<p><a href="http://zhoulifa.bokee.com/6071872.html" target="_blank" rel="noopener">http://zhoulifa.bokee.com/6071872.html</a></p>
+<h2 id="基础-38"><a href="#基础-38" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.douban.com/note/523720265/" target="_blank" rel="noopener">游戏系统——变装系统</a></li>
+</ul>
+<h2 id="基础-39"><a href="#基础-39" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://blog.sina.com.cn/s/blog_4a540aa70101h95d.html" target="_blank" rel="noopener">如何设计游戏中的成就系统？</a></li>
+<li><a href="http://wenku.baidu.com/view/bab9246f10661ed9ad51f3f4.html?re=view" target="_blank" rel="noopener">游戏成就系统设计1</a></li>
+<li><a href="http://wenku.baidu.com/view/2e198c2ded630b1c59eeb5f6.html?re=view" target="_blank" rel="noopener">游戏策划资料-天龙八部系统设计分析</a></li>
+</ul>
+<h2 id="基础-40"><a href="#基础-40" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://wenku.baidu.com/link?url=cuFCVqAtPW_gAyJqdfwvUpn9RmG9Mf4FF1dWBu5ZAEHEey2EME5b60u0KJDycPZXPeJSRKr-UX-bBrE-FUGIg3ONz7dRemHdNImxG_DHzlS" target="_blank" rel="noopener">宠物系统-设计文档</a></li>
+<li><a href="http://games.qq.com/a/20100917/000424.htm" target="_blank" rel="noopener">宠物系统</a></li>
+<li>[]</li>
+</ul>
+<h2 id="基础-41"><a href="#基础-41" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://bbs.gameres.com/thread_252906.html" target="_blank" rel="noopener">游戏策划新人作业之一：签到系统作业</a></li>
+<li><a href="http://tieba.baidu.com/p/3375160702" target="_blank" rel="noopener">一份系统策划案，请大神评点</a></li>
+<li><a href="http://wenku.baidu.com/link?url=QFj9zP0EivqXdWUR0n1eI1nPw6FdSmeQtp4S9AdBKkDeniPuacJ1xCSjfN_Ykljm-cckdE0YLpQTepb1vMx2SfCXj1m0T1FsLDrUPQjvizW" target="_blank" rel="noopener">游戏签到系统详解 签到奖励详情及补签攻略</a></li>
+<li><a href="http://www.docin.com/p-811487576.html" target="_blank" rel="noopener">签到系统设计–RS</a></li>
+<li><a href="http://www.zhihu.com/question/27149066" target="_blank" rel="noopener">连续签到奖励 数据库如何设计？</a></li>
+</ul>
+<h2 id="基础-42"><a href="#基础-42" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTMxNTU0MQ==&mid=402095472&idx=4&sn=296e9d16f6aa609105a67978c767c0b5&scene=23&srcid=0329Q3dTYbLbC7CVA65512P5#rd" target="_blank" rel="noopener">分享：游戏新手引导程序框架设计3要点</a></li>
+</ul>
+<h2 id="基础-43"><a href="#基础-43" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.gameres.com/442274.html" target="_blank" rel="noopener">游戏行业的人工智能设计：AI的设计和实施</a></li>
+<li><a href="http://www.gameres.com/442437.html" target="_blank" rel="noopener">游戏行业的人工智能设计（二）：路径搜寻和感知</a></li>
+<li><a href="http://bbs.gameres.com/thread_442680.html" target="_blank" rel="noopener">设计面向游戏的人工智能（三）：战术和战略人工智能 (AI)</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=406417555&idx=2&sn=b30fe5b049fe0a8abc7a4cdc57c1ed15&scene=23&srcid=0329hg3JOUMzanKkIZZG3lJn#rd" target="_blank" rel="noopener">游戏程序 | 使用行动列表去创造简单且可扩展的AI</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=405216212&idx=3&sn=50ff992a372e2ab8b6fe2d0da7ea1fc8&scene=23&srcid=0329pCUyrcsjvNOh2R4EZHbd#rd" target="_blank" rel="noopener">游戏程序 | 对弈类游戏的人工智能设计(4)——游戏AI的落地</a></li>
+</ul>
+<h2 id="参考-2"><a href="#参考-2" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://gad.qq.com/article/detail/659" target="_blank" rel="noopener">MMORPG游戏的人工智能（AI）和行为树</a></li>
+<li><a href="http://gad.qq.com/program/translateview/7158132" target="_blank" rel="noopener">使用群体行为创建一个冰球游戏的AI：发起攻击</a></li>
+</ul>
+<h2 id="页面跳转"><a href="#页面跳转" class="headerlink" title="页面跳转"></a>页面跳转</h2><ul>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTMxNTU0MQ==&mid=400945500&idx=1&sn=de0a10e205066d820173d3c648a1d3f7&scene=23&srcid=0329fWlWrmRa7AmHuW7Zy5v1#rd" target="_blank" rel="noopener">反推文档教程第一部分：格式篇</a></li>
+</ul>
+<h2 id="基础-44"><a href="#基础-44" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://wenku.baidu.com/link?url=VE3Lob30i823jLwRyAqsZMU0zUCL3tDvkrOjK4bFjyVmDnv67bmqlLyDFDGSXRUuXQf2hmMhsh486uVs9SVr2X8v2lMjKr01iSJPXsZkutu" target="_blank" rel="noopener">玉米游戏VIP系统文档《惊天战神》</a></li>
+</ul>
+<h2 id="基础-45"><a href="#基础-45" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.zhihu.com/question/22405043" target="_blank" rel="noopener">MMORPG游戏在策划层面上如何设计一个新颖的物品背包系统？</a></li>
+<li><a href="http://blog.csdn.net/firebird321/article/details/46778671" target="_blank" rel="noopener">基于mongodb, 设计游戏中的个人背包系统</a></li>
+</ul>
+<h2 id="基础-46"><a href="#基础-46" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://blog.codingnow.com/2011/01/virtual_goods_verify.html" target="_blank" rel="noopener">网络游戏物品校验系统的设计</a></li>
+<li><a href="http://www.gameres.com/msg_477379.html" target="_blank" rel="noopener">游戏道具设计（一）：道具产出条件和随机设定</a></li>
+<li><a href="http://www.doc88.com/p-910702670492.html" target="_blank" rel="noopener">游戏道具的设计-多媒体应用论文</a></li>
+<li><a href="http://ng.d.cn/wangyouzonghequ/news/detail_374291_1.html" target="_blank" rel="noopener">关于动作RPG游戏的技能与道具设计</a></li>
+<li>[]</li>
+</ul>
+<h2 id="基础-47"><a href="#基础-47" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.xuebuyuan.com/2226327.html" target="_blank" rel="noopener">MMORPG大型游戏设计与开发（服务器 游戏场景 地图和区域）</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=406249740&idx=2&sn=7d1383db1f3678d75789faab1d0b913a&scene=23&srcid=03290FSZ7pZRpk7wG9FNXwym#rd" target="_blank" rel="noopener">游戏程序 | 迷宫寻路系列常用算法逻辑探究</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=403194040&idx=2&sn=d90bb9234f0efaebed31ce691dedae29&scene=23&srcid=032951baYyHra1fo2IbQmMB7#rd" target="_blank" rel="noopener">游戏研发 | 开发笔记：掉落系统模块设计思路</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTMxNTU0MQ==&mid=402064627&idx=2&sn=b7f250b58ab38dca66b04bdf7df995de&scene=23&srcid=0329p3qZL2EBc4Pfnj7eYrNF#rd" target="_blank" rel="noopener">技术交流：横版动作游戏中角色的移动逻辑</a></li>
+</ul>
+<h2 id="基础-48"><a href="#基础-48" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://bbs.gameres.com/thread_310134.html" target="_blank" rel="noopener">游戏服务器登陆以及验证过程</a></li>
+<li><a href="http://www.doc88.com/p-506837604697.html" target="_blank" rel="noopener">游戏系统策划案-基本设定-01-游戏登陆设定</a></li>
+<li>[]</li>
+</ul>
+<h2 id="基础-49"><a href="#基础-49" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://gamerboom.com/archives/44753" target="_blank" rel="noopener">实例分析武器/道具锻造系统的设计要点</a></li>
+</ul>
+<h2 id="基础-50"><a href="#基础-50" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><p><a href="http://wenku.baidu.com/link?url=n5euj7sUcdkP0o-CYQWGxEVCLm5epNMZ7IxE3iVII0955BBz-rrrlzjPThr7CV05adP0ttd21EZqEooLPGRJ1EPGAtMCRXlSp-FWxD4oQ1e" target="_blank" rel="noopener">副本系统设计</a></p>
+</li>
+<li><p><a href="http://bbs.gameres.com/thread_219473.html" target="_blank" rel="noopener">游戏服务端编程–场景服务器探讨</a></p>
+</li>
+<li><p><a href="http://www.doc88.com/p-8951936452670.html" target="_blank" rel="noopener">浅论游戏场景设计的概念和功能</a></p>
+</li>
+</ul>
+<h2 id="基础-51"><a href="#基础-51" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.doc88.com/p-714757656738.html" target="_blank" rel="noopener">网络游戏公会系统设计与实现</a></li>
+<li><a href="http://wenku.baidu.com/link?url=kcPC7tyXHwcj8b-P69l6dmmF-uu8fCo_r7iEmGUWnLe_reeygdB26n1E4arJA75nGp8jtP4VYBXsFIyMEGZEqXD7rbSRX3vyvq_dsXOb-0K" target="_blank" rel="noopener">公会系统</a></li>
+<li>[]</li>
+</ul>
+<h2 id="相关文章-1"><a href="#相关文章-1" class="headerlink" title="相关文章"></a>相关文章</h2><ul>
+<li><a href="http://www.gameres.com/454060.html" target="_blank" rel="noopener">运营菜鸟也谈游戏运营活动基础分类</a></li>
+<li><a href="http://www.gamelook.com.cn/2009/11/8207" target="_blank" rel="noopener">浅谈网络游戏线上活动策划</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTMxNTU0MQ==&mid=401970137&idx=4&sn=5eb652de6c27c5e72f731748afc2b9a5&scene=23&srcid=0329ZSHhwo8TL9PAG98fhFim#rd" target="_blank" rel="noopener">教你一步一步入运营的大门：活动策划篇</a></li>
+</ul>
+<h2 id="活动目的-1"><a href="#活动目的-1" class="headerlink" title="活动目的"></a>活动目的</h2><p>促进游戏留存率，及用户消费等，最终目的是促进用户消费。</p>
+<h2 id="活动要素-1"><a href="#活动要素-1" class="headerlink" title="活动要素"></a>活动要素</h2><pre><code>活动时间：永久、时间段（期限限制）
+活动范围：什么区，什么服可以参加
+活动内容：描述了活动的参与规则，达成条件，领取奖励等信息</code></pre><h2 id="活动流程-1"><a href="#活动流程-1" class="headerlink" title="活动流程"></a>活动流程</h2><pre><code>看到活动-&gt;参与活动-&gt;领取奖励</code></pre><h2 id="看到活动-1"><a href="#看到活动-1" class="headerlink" title="看到活动"></a>看到活动</h2><pre><code>方式主要有两种
+游戏内部
+    活动界面展示、GM活动提醒等
+游戏外部
+    游戏官网、渠道、微信等</code></pre><h2 id="参与活动-1"><a href="#参与活动-1" class="headerlink" title="参与活动"></a>参与活动</h2><pre><code>参与条件限制：时间限制（到了时间自动默认参加），玩家达成指定条件才可参与.
+活动状态（时间）：未开启、已开启、已结束
+参与状态：未参加、已参加、已完成(已参加并领取完了活动奖励)</code></pre><h2 id="领取奖励-1"><a href="#领取奖励-1" class="headerlink" title="领取奖励"></a>领取奖励</h2><pre><code>能否领取奖励条件
+玩家参与了活动，玩家达到领取奖励的触发条件
+奖励状态:不可领取（未达成领取奖励条件）、可领取、已领取</code></pre><h2 id="活动分析-1"><a href="#活动分析-1" class="headerlink" title="活动分析"></a>活动分析</h2><pre><code>活动范围分析：只要服与服之间不共享数据，那么就存在不同的服有不同的活动，比如手游IOS平台服与Android服数据不共享，通常有针对各自平台的活动，比如端游不同的区有不同的活动，甚至同一区，几个服也有不同的活动。
+
+活动时间分析：活动按时间可分为两种，永久型，时间限制。永久型活动的特点是保留性，以数据持久化的角度考虑，玩家永久型活动的数据是需要永久保存的。时间限制性活动的特点是只能在活动时间段内才能参加，在活动开始之前或活动开始之后无法再次参加，通常为一次性活动，以数据持久化的角度考虑，在游戏结束后是可以不必保存该类型活动数据的。</code></pre><h2 id="常见活动示例-1"><a href="#常见活动示例-1" class="headerlink" title="常见活动示例"></a>常见活动示例</h2><h3 id="永久性活动-1"><a href="#永久性活动-1" class="headerlink" title="永久性活动"></a>永久性活动</h3><h4 id="每日活动、每周活动-1"><a href="#每日活动、每周活动-1" class="headerlink" title="每日活动、每周活动"></a>每日活动、每周活动</h4><pre><code>活动描述：
+    每日活动：通关A,B,C副本可获得宝石、金币、等多少
+    每周活动：周一完成。。。，可获得。。。
+              周二完成。。。可获得。。
+              一周累计完成。。。多少次可获得。。。。
+
+活动分析：它们属于永久性活动，通常一直存在，只是每日或每周达成条件与奖励不同罢了，它是循环型活动，在每周运营商关服维护后只需修改培训表的条件，奖励，无需修改代码即可，重新开服后清理玩家每日活动，每周活动的达成记录领取记录，玩家可重新开始参加活动。</code></pre><h4 id="签到型活动-1"><a href="#签到型活动-1" class="headerlink" title="签到型活动"></a>签到型活动</h4><pre><code>每天签到领取什么</code></pre><h4 id="新手活动-1"><a href="#新手活动-1" class="headerlink" title="新手活动"></a>新手活动</h4><pre><code>玩家创建角色
+针对新创建角色，新手的活动，目的为了鼓励新玩家加入游戏，或老玩家玩多个角色。如新手礼包</code></pre><h3 id="时间限制性活动-1"><a href="#时间限制性活动-1" class="headerlink" title="时间限制性活动"></a>时间限制性活动</h3><h4 id="开服活动-1"><a href="#开服活动-1" class="headerlink" title="开服活动"></a>开服活动</h4><pre><code>运营商在新服初开之际，为了鼓励更多的玩家加入该新服，而准备的活动，活动开始时间为开服时间
+，活动结束时间为新服开服后的某一天，如开服7日在线奖励活动。</code></pre><h4 id="节日活动-1"><a href="#节日活动-1" class="headerlink" title="节日活动"></a>节日活动</h4><pre><code>在国庆期间通过副本经验200%，通关巢穴获得什么</code></pre><h4 id="充值活动-1"><a href="#充值活动-1" class="headerlink" title="充值活动"></a>充值活动</h4><pre><code>在某日到某日充值，送。。。</code></pre><h4 id="消费活动-1"><a href="#消费活动-1" class="headerlink" title="消费活动"></a>消费活动</h4><pre><code>在某日到某日在商城购买抽奖券送。。。</code></pre><h2 id="游戏服务器活动模块实现-1"><a href="#游戏服务器活动模块实现-1" class="headerlink" title="游戏服务器活动模块实现"></a>游戏服务器活动模块实现</h2><h3 id="配置表设计-1"><a href="#配置表设计-1" class="headerlink" title="配置表设计"></a>配置表设计</h3><ul>
+<li><p>活动表：活动类型+活动时间类型+活动列表（元素为活动奖励表中的id）+活动描述+开始时间+结束时间+额外数据（活动参与条件）</p>
+</li>
+<li><p>活动（子项）奖励表：活动id+奖励达成条件+奖励+活动描述+额外数据</p>
+</li>
+</ul>
+<p>定义活动基类<br>活动基类<br>成员：<br>protected<br>    活动类型 ：时间类型<br>    活动项：{id,活动类型，活动时间表，宣告id，时间长度，时间信息}<br>    活动id 实例id（唯一性）<br>public<br>    活动开启时间<br>    活动结束时间</p>
+<h2 id="流程-1"><a href="#流程-1" class="headerlink" title="流程"></a>流程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 项目Export </span><br><span class="line">e=&gt;end: 结束 </span><br><span class="line">op1=&gt;operation: 选择java下的javadoc </span><br><span class="line">op2=&gt;operation: 选择要导出的工程 </span><br><span class="line">op3=&gt;operation: java doc的配置设置 </span><br><span class="line">st-&gt;op1-&gt;op2-&gt;op3-&gt;e</span><br></pre></td></tr></table></figure>
+
+<h3 id="数据库设计-1"><a href="#数据库设计-1" class="headerlink" title="数据库设计"></a>数据库设计</h3><h3 id="代码设计-1"><a href="#代码设计-1" class="headerlink" title="代码设计"></a>代码设计</h3><p>活动基类<br>类名：ActivityBase<br>成员：活动类型、活动实例id，活动奖励数据，活动开启时间、结束时间、活动状态、附加数据<br>接口:<br>    内部:<br>    通用虚函数：活动开启、活动结束、激活活动、领取活动奖励、格式化活动数据<br>    特殊虚函数：在线活动时间统计，邀请好友活动人数统计，副本通关统计等<br>活动管理器类<br>成员：活动列表<br>接口：<br>    非虚：加载所有活动，玩家登陆、登出<br>玩家活动数据类：<br>    函数：玩家活动数据加载，保存，更新,删除</p>
+<p>外部cmd<br>– 通用接口</p>
+<p>玩家登陆<br>玩家登出</p>
+<p>激活指定类型活动（大类型）（当前默认条件是时间，也有可能是其它）<br>激活某类型当中子活动（条件值，当前int行，需扩展）<br>领取活动奖励<br>– 后台活动，获取后台活动玩家信息</p>
+<p>方法<br>public</p>
+<pre><code>虚 活动开启
+虚 活动结束
+
+触发达成活动（事件影响活动奖励领取状态）
+领取活动奖励
+通知活动结束
+获取活动类型
+获取活动项
+获取活动id</code></pre><p>活动管理类<br>成员：<br>private<br>    活动管理单例实例<br>    活动容器</p>
+<p>方法<br>public<br>    定时器检测（活动创建与关闭）<br>    销毁活动(活动列表删除活动)</p>
+<p>private<br>    创建活动（tempid）<br>public<br>    玩家加入活动（玩家信息，活动id）<br>    通知wordboss开启</p>
+<h2 id="基础-52"><a href="#基础-52" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><p><a href="http://bbs.gameres.com/forum.php?mod=viewthread&tid=485378" target="_blank" rel="noopener">游戏编程干货：游戏技能系统全解析</a></p>
+</li>
+<li><p><a href="http://bbs.gameres.com/thread_485421.html" target="_blank" rel="noopener"> 技能系统设计：技能模块同步的实现</a></p>
+</li>
+<li><p><a href="http://www.gameres.com/450054.html" target="_blank" rel="noopener">如何设计一个易扩展的游戏技能系统？</a></p>
+</li>
+<li><p><a href="http://bbs.gameres.com/thread_442541.html" target="_blank" rel="noopener">mmorpg 技能同步问题?</a></p>
+</li>
+<li><p><a href="http://www.360doc.com/content/15/0117/15/110467_441556883.shtml" target="_blank" rel="noopener">游戏技能设计</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/zh379835552/article/details/37969205?utm_source=tuicool&utm_medium=referral" target="_blank" rel="noopener"> 游戏开发——战斗系统之技能设计</a></p>
+</li>
+<li><p><a href="http://www.cnblogs.com/sawyerzhu/archive/2012/09/17/2688398.html" target="_blank" rel="noopener">游戏技能设计参考</a></p>
+</li>
+<li><p><a href="http://wenku.baidu.com/link?url=XPdV0aCDZl-i5niUoTy8nz1dDVSmKFqqSspisYyaPLvfXi2g1a8YDR_NmKk8RSNiDKQW0sPlai3l8hlD895S-gfU2KcQOAYST3_ezOP9EUe" target="_blank" rel="noopener">游戏技能系统全解析</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/cnlm2/article/details/6231222" target="_blank" rel="noopener">MMORPG游戏服务器技能系统设计</a></p>
+</li>
+<li><p><a href="http://www.gameres.com/msg_292657.html" target="_blank" rel="noopener">技能和BUFF数据编辑架构</a></p>
+</li>
+<li><p><a href="http://www.cnblogs.com/GameDeveloper/p/3370860.html" target="_blank" rel="noopener">浅谈游戏中BUFF的设计要点</a></p>
+</li>
+<li><p><a href="http://bbs.gameres.com/thread_215027_1_1.html" target="_blank" rel="noopener">Buff机制及其实际运用</a></p>
+</li>
+<li><p><a href="http://bbs.csdn.net/topics/350114625" target="_blank" rel="noopener">游戏技能、buff的代码如何架构</a></p>
+</li>
+<li><p><a href="http://www.doc88.com/p-273833980485.html" target="_blank" rel="noopener">传奇还原案·技能和BUFF效果设计说明.pdf</a></p>
+</li>
+<li><p><a href="http://www.cnblogs.com/anxin1225/p/4750025.html?utm_source=tuicool&utm_medium=referral" target="_blank" rel="noopener">Buff系统设计</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/yuanfengyun/article/details/40377707" target="_blank" rel="noopener">游戏技能系统实现</a></p>
+</li>
+<li><p><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=407392509&idx=2&sn=e3db226c65e9dd1cbfc5d403eaf2386a&scene=23&srcid=0328SOrnSDT0bqCkllywsfcH#rd" target="_blank" rel="noopener">游戏程序 | 游戏服务端开发：如何精确计算MMO游戏技能攻击区域？</a></p>
+</li>
+<li><p><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=405370345&idx=4&sn=934a773f270719b2edc7a1b03b24109f&scene=23&srcid=0329hvCibj2mobjeC2B4Wr3q#rd" target="_blank" rel="noopener">游戏编程干货：游戏技能系统全解析</a></p>
+</li>
+<li><p><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=405244098&idx=2&sn=9abf1a5c67231c2843c5ba89f34c100e&scene=23&srcid=0329QAe5saMiR0DgagWEZuIG#rd" target="_blank" rel="noopener">游戏程序 | 技能系统设计：技能模块同步的实现</a></p>
+</li>
+<li><p><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTMxNTU0MQ==&mid=402238914&idx=1&sn=9d3c3b973e1c7f91a743a327282188cf&scene=23&srcid=0329FFNMxBra3MiQaLJtWvZv#rd" target="_blank" rel="noopener">游戏服务端开发：如何精确计算MMO游戏技能攻击区域？</a></p>
+</li>
+<li><p><a href="http://gad.qq.com/article/detail/7153763" target="_blank" rel="noopener">MMORPG游戏服务器技能系统设计：表格字段与技能程序框架</a></p>
+</li>
+</ul>
+<h2 id="基础-53"><a href="#基础-53" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><p><a href="http://bbs.gameres.com/thread_309463.html" target="_blank" rel="noopener">如何做到在跨服务器无锁完成交易</a></p>
+</li>
+<li><p><a href="https://www.baidu.com/s?wd=游戏道具系统设计&pn=10&oq=游戏道具系统设计&tn=90177821_hao_pg&ie=utf-8&rsv_idx=2&rsv_pq=c8f3cab8003800c7&rsv_t=5622RVfMwmR6lV21OMRbBvYXkRsgvmXQT10SbscA0i28jlp5F9UqdYqyk7weuhbQV6T1TWfl&rsv_page=1" target="_blank" rel="noopener">游戏经济系统设计问题的四个难点!</a></p>
+</li>
+<li><p><a href="http://wenku.baidu.com/link?url=9TSCuxJdfypmsqZLYegHNuKYP1TABFwGT22v-cJut5wenWM-Ll2Bp6zqgDEeIvd9M9t-jpBrhGmxN16eFMAP3mPA9yn8GJg1C4awVFovoKO" target="_blank" rel="noopener">《神武》交易系统设计思路分析</a></p>
+</li>
+<li><p><a href="http://games.qq.com/a/20141029/019104.htm" target="_blank" rel="noopener">手游发展论：端游之后再无交易系统？</a></p>
+</li>
+<li><p><a href="http://wenku.baidu.com/link?url=VDyvd8wzbUd05LqUwcBVZZnqv2qnGZU4CscfFtcuP5h1BWfS4un-SWh1cdPjOBVGcwPPeyDDjPOeeJiJ8UVwMT7pzYX5w-15VYxHIllHC-i" target="_blank" rel="noopener">游戏经济系统设计</a></p>
+</li>
+<li><p>[]</p>
+<h2 id="基础-54"><a href="#基础-54" class="headerlink" title="基础"></a>基础</h2></li>
+<li><p><a href="http://xueshu.baidu.com/s?ie=utf-8&tn=SE_baiduxueshu_c1gjeupa&wd=游戏人物系统实现&sc_f_para=sc_tasktype%3D%7BrecommendKeyword%7D" target="_blank" rel="noopener">游戏人物系统实现</a></p>
+</li>
+</ul>
+<h2 id="基础-55"><a href="#基础-55" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://wenku.baidu.com/link?url=97D89_CLY1-mufJVYgbWvt4_1fvJim_XwQmJcKKDNzkLGFFTFbgBRrZszgOQB9TY0-B1IAy0T4xHkkHcLxHbfeVKnVsqlLecCXDi-iK8Zli" target="_blank" rel="noopener">游戏策划学习资料之DNF聊天系统分析</a></li>
+<li><a href="http://www.docin.com/p-289155607.html" target="_blank" rel="noopener">【自由之城】聊天系统补充文档 游戏设计策划方案</a></li>
+</ul>
+<h2 id="基础-56"><a href="#基础-56" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=406199830&idx=4&sn=c86446f7022bb5f3e2902c949c70d25a&scene=23&srcid=0329FXQjA1yvnSkF1hJ0D6t6#rd" target="_blank" rel="noopener">排行榜算法设计实现比较</a></li>
+</ul>
+<h2 id="基础-57"><a href="#基础-57" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.woshipm.com/pd/34680.html" target="_blank" rel="noopener">游戏任务系统设计思路</a></li>
+<li><a href="http://www.csaspx.com/articlelist-727.html" target="_blank" rel="noopener">创新手机游戏《3L》开发点滴(1)——道具、物品、装备表设计</a></li>
+<li><a href="http://blog.csdn.net/lufy_legend/article/details/21942227/" target="_blank" rel="noopener">《游戏脚本的设计与开发》-(RPG部分)3.5 游戏背包和任务系统</a></li>
+<li><a href="http://www.docin.com/p-254280196.html" target="_blank" rel="noopener">游戏任务系统的设计要素</a></li>
+<li><a href="http://wenku.baidu.com/link?url=JQuQfsYfH8adUREBrq5RC42dyZp5fsjrwaYu2YuNljlw3TvwAP_RpXtpcGgYgUCGNyRsrLWA3Uy-zv_alklgj1Fct4dfRPQufrkb0y6JaUm" target="_blank" rel="noopener">游戏任务结构</a></li>
+<li><a href="http://www.zhihu.com/question/22239069" target="_blank" rel="noopener">游戏为什么需要有任务系统？</a></li>
+<li><a href="http://xueshu.baidu.com/s?wd=游戏任务系统设计&tn=SE_baiduxueshu_c1gjeupa&ie=utf-8&sc_hit=1" target="_blank" rel="noopener">游戏任务系统设计</a></li>
+<li><a href="http://xueshu.baidu.com/s?ie=utf-8&tn=SE_baiduxueshu_c1gjeupa&wd=游戏任务系统实现&sc_f_para=sc_tasktype%3D%7BrecommendKeyword%7D" target="_blank" rel="noopener">游戏任务系统实现</a></li>
+<li><a href="http://edu.gamfe.com/tutor/d/10614.html" target="_blank" rel="noopener">程序开发MMORPG开发杂谈(一):任务系统设计</a></li>
+<li><a href="http://bbs.youxihun.com/thread-13647-1-1.html" target="_blank" rel="noopener">任务系统实现：数据结构和处理流程版</a></li>
+<li><a href="http://www.gameres.com/msg_192668.html" target="_blank" rel="noopener">《天择》设计思路之：任务系统对于RPG网络游戏的作用</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=406146099&idx=1&sn=8bc0e12c7084238ef41bf441249ce220&scene=23&srcid=0329iPoijbSeiPGnaSrSHAs3#rd" target="_blank" rel="noopener">游戏策划 | 游戏任务设计(1)：概念与简史</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTMxNTU0MQ==&mid=401932609&idx=1&sn=c11f05de6cb7d30b2d9590cbe1d50297&scene=23&srcid=0329nx7CRAfGWZgpGTFMK9IG#rd" target="_blank" rel="noopener">游戏任务设计方法论：Collect与Hunt任务</a></li>
+</ul>
+<h2 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h2><h2 id="任务状态-1"><a href="#任务状态-1" class="headerlink" title="任务状态"></a>任务状态</h2><ul>
+<li>无效 INVALID</li>
+<li>任务已完成 COMPLETE </li>
+<li>任务正在进行中 RUNNING </li>
+<li>准备可以执行任务 VIABLE </li>
+</ul>
+<h2 id="任务管理-1"><a href="#任务管理-1" class="headerlink" title="任务管理"></a>任务管理</h2><p>容器 任务列表</p>
+<h2 id="基础-58"><a href="#基础-58" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.woshipm.com/pd/34680.html" target="_blank" rel="noopener">游戏任务系统设计思路</a></li>
+<li><a href="http://www.csaspx.com/articlelist-727.html" target="_blank" rel="noopener">创新手机游戏《3L》开发点滴(1)——道具、物品、装备表设计</a></li>
+<li><a href="http://blog.csdn.net/lufy_legend/article/details/21942227/" target="_blank" rel="noopener">《游戏脚本的设计与开发》-(RPG部分)3.5 游戏背包和任务系统</a></li>
+<li><a href="http://www.docin.com/p-254280196.html" target="_blank" rel="noopener">游戏任务系统的设计要素</a></li>
+<li><a href="http://wenku.baidu.com/link?url=JQuQfsYfH8adUREBrq5RC42dyZp5fsjrwaYu2YuNljlw3TvwAP_RpXtpcGgYgUCGNyRsrLWA3Uy-zv_alklgj1Fct4dfRPQufrkb0y6JaUm" target="_blank" rel="noopener">游戏任务结构</a></li>
+<li><a href="http://www.zhihu.com/question/22239069" target="_blank" rel="noopener">游戏为什么需要有任务系统？</a></li>
+<li><a href="http://xueshu.baidu.com/s?wd=游戏任务系统设计&tn=SE_baiduxueshu_c1gjeupa&ie=utf-8&sc_hit=1" target="_blank" rel="noopener">游戏任务系统设计</a></li>
+<li><a href="http://xueshu.baidu.com/s?ie=utf-8&tn=SE_baiduxueshu_c1gjeupa&wd=游戏任务系统实现&sc_f_para=sc_tasktype%3D%7BrecommendKeyword%7D" target="_blank" rel="noopener">游戏任务系统实现</a></li>
+<li><a href="http://edu.gamfe.com/tutor/d/10614.html" target="_blank" rel="noopener">程序开发MMORPG开发杂谈(一):任务系统设计</a></li>
+<li><a href="http://bbs.youxihun.com/thread-13647-1-1.html" target="_blank" rel="noopener">任务系统实现：数据结构和处理流程版</a></li>
+<li><a href="http://www.gameres.com/msg_192668.html" target="_blank" rel="noopener">《天择》设计思路之：任务系统对于RPG网络游戏的作用</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=406146099&idx=1&sn=8bc0e12c7084238ef41bf441249ce220&scene=23&srcid=0329iPoijbSeiPGnaSrSHAs3#rd" target="_blank" rel="noopener">游戏策划 | 游戏任务设计(1)：概念与简史</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTMxNTU0MQ==&mid=401932609&idx=1&sn=c11f05de6cb7d30b2d9590cbe1d50297&scene=23&srcid=0329nx7CRAfGWZgpGTFMK9IG#rd" target="_blank" rel="noopener">游戏任务设计方法论：Collect与Hunt任务</a></li>
+</ul>
+<h2 id="总结-3"><a href="#总结-3" class="headerlink" title="总结"></a>总结</h2><h2 id="任务状态-2"><a href="#任务状态-2" class="headerlink" title="任务状态"></a>任务状态</h2><ul>
+<li>无效 INVALID</li>
+<li>任务已完成 COMPLETE </li>
+<li>任务正在进行中 RUNNING </li>
+<li>准备可以执行任务 VIABLE </li>
+</ul>
+<h2 id="任务管理-2"><a href="#任务管理-2" class="headerlink" title="任务管理"></a>任务管理</h2><p>容器 任务列表</p>
+<h2 id="基础-59"><a href="#基础-59" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.gameres.com/forum.php?mod=viewthread&tid=470525" target="_blank" rel="noopener">一个商城系统的改良设计方案</a></li>
+</ul>
+<h2 id="基础-60"><a href="#基础-60" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.docin.com/p-77330527.html" target="_blank" rel="noopener">游戏策划-邮件系统</a></li>
+<li><a href="http://www.doc88.com/p-7028372159860.html" target="_blank" rel="noopener">3D网络游戏中邮件系统的设计与实现</a></li>
+<li>[]</li>
+</ul>
+<h2 id="基础-61"><a href="#基础-61" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://gamerboom.com/archives/59080" target="_blank" rel="noopener">举例阐述游戏战斗系统设计的基本规则</a></li>
+<li><a href="http://blog.csdn.net/mooke/article/details/9771545" target="_blank" rel="noopener">游戏系统开发笔记（九）——构建战斗系统</a></li>
+<li><a href="http://wenku.baidu.com/link?url=Vtgq5LsgWnw2X0Ma8t3wvdTxgxtac38EctZ-FJ6py-JNjSS7B1dbXalkbIK6-FPieqnBdSt_OMwgb2-6MKMOPV6DDBslUH7t9VmJ3RvuOyC" target="_blank" rel="noopener">战斗系统说明文档</a></li>
+<li><a href="http://www.docin.com/p-13213569.html" target="_blank" rel="noopener"> 游戏战斗系统设计文档</a></li>
+<li><a href="http://www.taodocs.com/p-3159754.html" target="_blank" rel="noopener">大型多人在线角色扮演类网络游戏角色战斗系统的设计与实现.pdf</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_57e4912d0100ccto.html" target="_blank" rel="noopener">DNF战斗系统分析文档</a></li>
+<li><a href="http://blog.csdn.net/jjiss318/article/details/7611213" target="_blank" rel="noopener">MMORPG战斗系统设计(1)——战斗系统概述</a></li>
+<li><a href="http://www.docin.com/p-754359614.html" target="_blank" rel="noopener">MMORPG战斗系统设计</a></li>
+<li><a href="http://my.oschina.net/roll1987/blog/550227" target="_blank" rel="noopener"> 一种手游中实时战斗系统的设计思路</a></li>
+<li><a href="http://www.gameres.com/459404.html" target="_blank" rel="noopener">游戏战斗设计入门：类层的划分与创新</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=404935336&idx=4&sn=99d2fd1611d500fca452aa52ef5a1439&scene=23&srcid=03298oC3n09I1BJc2ZUDr90N#rd" target="_blank" rel="noopener">游戏程序 | 基于战斗重演的全校验—- 塔防大师PVP反外挂设计思路分享</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzI2NDA0MjcyNg==&mid=403890395&idx=3&sn=e739a23b969daf1991bd233335829964&scene=23&srcid=0329F0UOB5UeHkyxSdp2pgQc#rd" target="_blank" rel="noopener">游戏研发 | 游戏开发之状态机的实现与优化</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5NTMxNTU0MQ==&mid=402007682&idx=3&sn=efc454d1eab953e0234274977c282d9e&scene=23&srcid=032916yiQGx7IihvsnIH12hF#rd" target="_blank" rel="noopener">移动游戏战斗系统实现方式探讨</a></li>
+</ul>
+<h2 id="基础-62"><a href="#基础-62" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://wenku.baidu.com/link?url=gKmT0oesPtgH8gl0VC4RrJlHT6z74FQfRXDTZf1Fsnev_XaqP9ApQZAgEjt3LxxYWBwexgbXUmQA6sSkiP2q1HoDoWjPH4jjLjwvKQso1Ie" target="_blank" rel="noopener">网络游戏中装备相关子系统的架构设计</a></li>
+<li><a href="http://wenku.baidu.com/link?url=2dHyA7e_VWAqdLrlYUkoYDh7rq8VJWuA2nwHK9QO7_E-fFguGLL4rspqdfZ1_FV2j7U_px0hG44Y1aOyXAKAqrxaz7VrVrfvQw4P5Q9_-bS" target="_blank" rel="noopener">游戏道具设计</a></li>
+<li><a href="https://www.zhihu.com/question/27708949/answer/38166664" target="_blank" rel="noopener">游戏在设计装备系统中需要考虑哪些因素？</a></li>
+<li><a href="http://wenku.baidu.com/link?url=BAgLOSkzoav46tG6SenFIv279COkx28d34w3VtmWy76yV1gurCTa-aIsE8Ns1dbZ3ijO-YuehqgIDbxhqfy2E9m4WYAjV4AE9yhSGp1pF_q" target="_blank" rel="noopener">游戏策划培训笔记之游戏道具设计</a></li>
+<li>[]</li>
+</ul>
+<h2 id="基础-63"><a href="#基础-63" class="headerlink" title="基础"></a>基础</h2><ul>
+<li><a href="http://www.j2megame.com/html/tpsj/qjch/2454.html" target="_blank" rel="noopener">MMO RPG 游戏中的组队系统设计</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-07-12T17:00:11.189Z" itemprop="dateUpdated">2019-07-13 01:00:11</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/posts/4ec1679f.html" target="_blank" rel="external">https://jinzt.github.io/posts/4ec1679f.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://jinzt.github.io">
+            <img src="/img/avatar.jpg" alt="金振涛">
+            金振涛
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/游戏设计/">游戏设计</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/4ec1679f.html&title=《游戏系统》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/4ec1679f.html&title=《游戏系统》 — 金振涛个人主页&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/4ec1679f.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《游戏系统》 — 金振涛个人主页&url=https://jinzt.github.io/posts/4ec1679f.html&via=https://jinzt.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/4ec1679f.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/posts/0.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">[no title]</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/posts/49e22dc0.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">应该阅读</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "PDQy3GUbNJ9CEqhuP8G0kDvc-gzGzoHsz",
+            appKey: "yaOTf2Bsv3ecv889uVD4wlAj",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>金振涛 &copy; 2015 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/4ec1679f.html&title=《游戏系统》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/4ec1679f.html&title=《游戏系统》 — 金振涛个人主页&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/4ec1679f.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《游戏系统》 — 金振涛个人主页&url=https://jinzt.github.io/posts/4ec1679f.html&via=https://jinzt.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/4ec1679f.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJElEQVR42u3awY5bIQwF0Pn/n06lriq1Ye41maiBw+opegkcFg7G/vqKx+P3+Ps5/+TPz9fvP/vuCwYGBsbHMh7Lsc9ISOu51mvDwMC4h5EH2fXEyVKSTczXhoGBgbFe+ixAJ9uEgYGBsRNwZylucrx76/8GBgbGBzKSAJof+NrLu7fm4hgYGB/I2CkM/PTzm+obGBgY/zHjMRqvPRrm4fXpdzEwMI5mrBsgZse72RJn5YeojwMDA+MgRstbX5nNDnltsvqPgIuBgXEco232mhUJ2kaKfBOLkykGBsYRjP0UNA+abZj+JvhiYGAczcinn7VH5M/thR0GBsY9jFnA3b/jyn852lYMDIwLGHmzV9uYNQuj7eZiYGCczWjzwVkgbouas0QXAwPjBkbyUg5LfjlJkusCJwYGxqGMPAjmy9ovdrZzYWBgnMqYFSbbVLNt16g3CAMD42jGTiPXztX/rAkDAwMDY+eQ96rF5Q0cT5NYDAyMCxjJYTEJ0HlxtMi211uGgYFxGWNWRMxJ7cG0KF5iYGBcwMhT2fZKLn+/TZUxMDBuYOQtYu1Vfjtm242BgXE2YzbN7GKubeAojqoYGBhHM2YBdx/ckmYFVAwMjJMY71nQrBQ6bLbAwMA4lJEE2TYcz36tbebAwMDAaN9JAuWsXPrNejAwMDBG7VztBrUlTwwMjNsYeYPF7P3ZvEUCjIGBcTTj5woD+4fI2WUcBgbGQYxfQZqJh0tkQQ4AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
