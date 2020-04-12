@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     
 
     
@@ -21,18 +21,18 @@
     
     
     <meta name="keywords" content="linux">
-    <meta name="description" content="frpcentos7配置frpc开机自启复制frpc启动命令及配置文件到系统相应目录 1234cp frpc /usr/local/bin/frpcmkdir /etc/frpccp frpc.ini /etc/frpc/frpc.inichmod 777 /etc/frpc/frpc.ini  新建：vim /lib/systemd/system/frpc.service，输入： 1234567">
-<meta name="keywords" content="linux">
+    <meta name="description" content="frpcentos7配置frpc开机自启复制frpc启动命令及配置文件到系统相应目录 1234cp frpc &#x2F;usr&#x2F;local&#x2F;bin&#x2F;frpcmkdir &#x2F;etc&#x2F;frpccp frpc.ini &#x2F;etc&#x2F;frpc&#x2F;frpc.inichmod 777 &#x2F;etc&#x2F;frpc&#x2F;f">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker">
 <meta property="og:url" content="https://jinzt.github.io/posts/f255ffad.html">
 <meta property="og:site_name" content="金振涛个人主页">
-<meta property="og:description" content="frpcentos7配置frpc开机自启复制frpc启动命令及配置文件到系统相应目录 1234cp frpc /usr/local/bin/frpcmkdir /etc/frpccp frpc.ini /etc/frpc/frpc.inichmod 777 /etc/frpc/frpc.ini  新建：vim /lib/systemd/system/frpc.service，输入： 1234567">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-12T08:52:15.670Z">
+<meta property="og:description" content="frpcentos7配置frpc开机自启复制frpc启动命令及配置文件到系统相应目录 1234cp frpc &#x2F;usr&#x2F;local&#x2F;bin&#x2F;frpcmkdir &#x2F;etc&#x2F;frpccp frpc.ini &#x2F;etc&#x2F;frpc&#x2F;frpc.inichmod 777 &#x2F;etc&#x2F;frpc&#x2F;f">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-12T09:21:46.388Z">
+<meta property="article:modified_time" content="2020-04-11T17:51:33.090Z">
+<meta property="article:author" content="金振涛">
+<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="docker">
-<meta name="twitter:description" content="frpcentos7配置frpc开机自启复制frpc启动命令及配置文件到系统相应目录 1234cp frpc /usr/local/bin/frpcmkdir /etc/frpccp frpc.ini /etc/frpc/frpc.inichmod 777 /etc/frpc/frpc.ini  新建：vim /lib/systemd/system/frpc.service，输入： 1234567">
     
         <link rel="alternate" type="application/atom+xml" title="金振涛个人主页" href="/atom.xml">
     
@@ -43,7 +43,7 @@
     <!-- custom head -->
     
 
-</head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
     <div id="loading" class="active"></div>
@@ -68,7 +68,7 @@
       <ul class="nav">
         
             <li class="waves-block waves-effect">
-              <a href="/"  >
+              <a href="/about"  >
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
@@ -82,16 +82,16 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                标签
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                分类
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
               </a>
             </li>
         
@@ -152,7 +152,7 @@
         <h1 class="title">docker</h1>
         <h5 class="subtitle">
             
-                <time datetime="2020-04-12T08:50:19.151Z" itemprop="datePublished" class="page-time">
+                <time datetime="2020-04-12T09:21:46.388Z" itemprop="datePublished" class="page-time">
   2020-04-12
 </time>
 
@@ -179,13 +179,13 @@
     </aside>
 
 
-<article id="post-linux/frp"
+<article id="post-运维/frp"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
         <h1 class="post-card-title">docker</h1>
         <div class="post-meta">
-            <time class="post-time" title="2020-04-12 16:50:19" datetime="2020-04-12T08:50:19.151Z"  itemprop="datePublished">2020-04-12</time>
+            <time class="post-time" title="2020-04-12 17:21:46" datetime="2020-04-12T09:21:46.388Z"  itemprop="datePublished">2020-04-12</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/linux/">linux</a></li></ul>
@@ -201,10 +201,10 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h1 id="frp"><a href="#frp" class="headerlink" title="frp"></a>frp</h1><h2 id="centos7配置frpc开机自启"><a href="#centos7配置frpc开机自启" class="headerlink" title="centos7配置frpc开机自启"></a>centos7配置frpc开机自启</h2><p>复制frpc启动命令及配置文件到系统相应目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cp frpc /usr/local/bin/frpc</span><br><span class="line">mkdir /etc/frpc</span><br><span class="line">cp frpc.ini /etc/frpc/frpc.ini</span><br><span class="line">chmod 777 /etc/frpc/frpc.ini</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cp frpc &#x2F;usr&#x2F;local&#x2F;bin&#x2F;frpc</span><br><span class="line">mkdir &#x2F;etc&#x2F;frpc</span><br><span class="line">cp frpc.ini &#x2F;etc&#x2F;frpc&#x2F;frpc.ini</span><br><span class="line">chmod 777 &#x2F;etc&#x2F;frpc&#x2F;frpc.ini</span><br></pre></td></tr></table></figure>
 
 <p>新建：vim /lib/systemd/system/frpc.service，输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=frpc service</span><br><span class="line">After=network.target syslog.target</span><br><span class="line">Wants=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line">ExecStart=/usr/local/bin/frpc -c /etc/frpc/frpc.ini</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description&#x3D;frpc service</span><br><span class="line">After&#x3D;network.target syslog.target</span><br><span class="line">Wants&#x3D;network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type&#x3D;simple</span><br><span class="line">ExecStart&#x3D;&#x2F;usr&#x2F;local&#x2F;bin&#x2F;frpc -c &#x2F;etc&#x2F;frpc&#x2F;frpc.ini</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy&#x3D;multi-user.target</span><br></pre></td></tr></table></figure>
 
 <p>开机自启动依次执行以下命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable frpc</span><br><span class="line">systemctl start frpc</span><br><span class="line">systemctl status frpc</span><br></pre></td></tr></table></figure>
@@ -218,7 +218,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-04-12T08:52:15.670Z" itemprop="dateUpdated">2020-04-12 16:52:15</time>
+    最后更新时间：<time datetime="2020-04-11T17:51:33.090Z" itemprop="dateUpdated">2020-04-12 01:51:33</time>
 </span><br>
 
 
@@ -244,7 +244,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
 
 
             
@@ -302,18 +302,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/posts/0.html" id="post-prev" class="post-nav-link">
+      <a href="/posts/5729df21.html" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">[no title]</h4>
+        <h4 class="title">nginx</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/posts/f66864f1.html" id="post-next" class="post-nav-link">
+      <a href="/posts/5729df21.html" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">微信公众号</h4>
+        <h4 class="title">docker</h4>
       </a>
     </div>
   
@@ -415,7 +415,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
@@ -509,6 +509,27 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
 
 

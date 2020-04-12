@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     
 
     
@@ -22,17 +22,17 @@
     
     <meta name="keywords" content="tool">
     <meta name="description" content="1，介绍Vagrant我们做web开发的时候经常要安装各种本地测试环境，比如apache,php,mysql,redis等等。出于个人使用习惯，可能我们还是比较习惯用windows。虽然说在windows下搭建各种开发环境是可行的，各大开发环境都有windows版本。然而在windows下配置有时候会显得繁琐，并且还会导致开发环境（windows）和生产环境（lunix）不一致。 能不能在wind">
-<meta name="keywords" content="tool">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vagrant 使用">
 <meta property="og:url" content="https://jinzt.github.io/posts/e6ca16c8.html">
 <meta property="og:site_name" content="金振涛个人主页">
 <meta property="og:description" content="1，介绍Vagrant我们做web开发的时候经常要安装各种本地测试环境，比如apache,php,mysql,redis等等。出于个人使用习惯，可能我们还是比较习惯用windows。虽然说在windows下搭建各种开发环境是可行的，各大开发环境都有windows版本。然而在windows下配置有时候会显得繁琐，并且还会导致开发环境（windows）和生产环境（lunix）不一致。 能不能在wind">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-12T08:51:01.884Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-12T09:21:46.431Z">
+<meta property="article:modified_time" content="2020-04-11T16:30:31.536Z">
+<meta property="article:author" content="金振涛">
+<meta property="article:tag" content="tool">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vagrant 使用">
-<meta name="twitter:description" content="1，介绍Vagrant我们做web开发的时候经常要安装各种本地测试环境，比如apache,php,mysql,redis等等。出于个人使用习惯，可能我们还是比较习惯用windows。虽然说在windows下搭建各种开发环境是可行的，各大开发环境都有windows版本。然而在windows下配置有时候会显得繁琐，并且还会导致开发环境（windows）和生产环境（lunix）不一致。 能不能在wind">
     
         <link rel="alternate" type="application/atom+xml" title="金振涛个人主页" href="/atom.xml">
     
@@ -43,7 +43,7 @@
     <!-- custom head -->
     
 
-</head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
     <div id="loading" class="active"></div>
@@ -68,7 +68,7 @@
       <ul class="nav">
         
             <li class="waves-block waves-effect">
-              <a href="/"  >
+              <a href="/about"  >
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
@@ -82,16 +82,16 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                标签
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                分类
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
               </a>
             </li>
         
@@ -152,8 +152,8 @@
         <h1 class="title">vagrant 使用</h1>
         <h5 class="subtitle">
             
-                <time datetime="2019-07-12T14:53:08.200Z" itemprop="datePublished" class="page-time">
-  2019-07-12
+                <time datetime="2020-04-12T09:21:46.431Z" itemprop="datePublished" class="page-time">
+  2020-04-12
 </time>
 
 
@@ -174,18 +174,18 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1，介绍Vagrant"><span class="post-toc-number">1.</span> <span class="post-toc-text">1，介绍Vagrant</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2，下载"><span class="post-toc-number">2.</span> <span class="post-toc-text">2，下载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3，安装"><span class="post-toc-number">3.</span> <span class="post-toc-text">3，安装</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4，配置"><span class="post-toc-number">4.</span> <span class="post-toc-text">4，配置</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#把上面这句代码前面的-号去掉即可"><span class="post-toc-number"></span> <span class="post-toc-text"> 把上面这句代码前面的#号去掉即可</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#vagrant-package"><span class="post-toc-number"></span> <span class="post-toc-text">vagrant package</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置centos环境"><span class="post-toc-number">1.</span> <span class="post-toc-text">配置centos环境</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考"><span class="post-toc-number"></span> <span class="post-toc-text">参考</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#yum-install-y-wget-amp-amp-wget-O-install-sh-http-download-bt-cn-install-install-sh-amp-amp-sh-install-sh"><span class="post-toc-number"></span> <span class="post-toc-text">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install.sh &amp;&amp; sh install.sh</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考-1"><span class="post-toc-number"></span> <span class="post-toc-text">参考</span></a>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1，介绍Vagrant"><span class="post-toc-number">1.</span> <span class="post-toc-text">1，介绍Vagrant</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2，下载"><span class="post-toc-number">2.</span> <span class="post-toc-text">2，下载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3，安装"><span class="post-toc-number">3.</span> <span class="post-toc-text">3，安装</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4，配置"><span class="post-toc-number">4.</span> <span class="post-toc-text">4，配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置centos环境"><span class="post-toc-number">5.</span> <span class="post-toc-text">配置centos环境</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考"><span class="post-toc-number"></span> <span class="post-toc-text">参考</span></a>
         </nav>
     </aside>
 
 
-<article id="post-tool/Vagrant"
+<article id="post-其它/Vagrant"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
         <h1 class="post-card-title">vagrant 使用</h1>
         <div class="post-meta">
-            <time class="post-time" title="2019-07-12 22:53:08" datetime="2019-07-12T14:53:08.200Z"  itemprop="datePublished">2019-07-12</time>
+            <time class="post-time" title="2020-04-12 17:21:46" datetime="2020-04-12T09:21:46.431Z"  itemprop="datePublished">2020-04-12</time>
 
             
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/tool/">tool</a></li></ul>
@@ -220,32 +220,13 @@
 <li>1，端口映射</li>
 </ul>
 <p><code>config.vm.network :forwarded_port, guest: 80, host: 8080</code></p>
-<p> 把上面这句代码前面的#号去掉。它表示映射本机的8080端口到虚拟机的80端口<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<ul>
-<li>2，如果需要自己自由的访问虚拟机，但是别人不需要访问虚拟机，可以使用private_network，并为虚拟机设置IP。</li>
-</ul>
-<p><code>config.vm.network :private_network, ip: 192.168.33.10</code></p>
-<h1 id="把上面这句代码前面的-号去掉即可"><a href="#把上面这句代码前面的-号去掉即可" class="headerlink" title=" 把上面这句代码前面的#号去掉即可"></a> 把上面这句代码前面的#号去掉即可</h1><p>优点：简单、容易理解、容易实现外网访问虚拟机。</p>
+<p> 把上面这句代码前面的#号去掉。它表示映射本机的8080端口到虚拟机的80端口</p>
+<p>优点：简单、容易理解、容易实现外网访问虚拟机。</p>
 <p>缺点：需映射很多端口时较麻烦、不支持在宿主机器上使用小于1024的端口来转发(如:不能使用SSL的443端口来进行https连接)。</p>
 <ul>
 <li>2，Public network(公有网络) 推荐<br><code>config.vm.network &quot;public_network&quot;, ip: &quot;192.168.50.4&quot;</code><br>优点：方便团队协作，别人可以访问你的虚拟机。</li>
 </ul>
 <p>缺点：需要有网络，有路由器分配IP</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>003db07dd9917b6b057ef115f35233aea23157b0</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
 <ul>
 <li>3，目录映射</li>
 </ul>
@@ -262,68 +243,33 @@
 <p>在cmd里进行工作目录后，执行下面命令</p>
 </li>
 </ul>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<h1 id="vagrant-package"><a href="#vagrant-package" class="headerlink" title="vagrant package"></a><code>vagrant package</code></h1><p><code>vagrant package --output centos-7.2.box</code></p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>003db07dd9917b6b057ef115f35233aea23157b0</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+<p><code>vagrant package --output centos-7.2.box</code></p>
 <p>完成后会在当前目录就会生成package.box，之后新建虚拟机则可使用这个box。如果事先在你的虚拟机里建立好了各种开发环境，那么你直接把这个box给你的团队其他成员安装，这样就可以省去一台台电脑部署的时间，还可以保持开发环境一致。很方便有木有。</p>
 <ul>
 <li>7，其他命令</li>
 </ul>
 <p>下面列举出一些常用的cmd操作命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vagrant up //（启动虚拟机）</span><br><span class="line">vagrant halt //（关闭虚拟机——对应就是关机）</span><br><span class="line">vagrant suspend //（暂停虚拟机——只是暂停，虚拟机内存等信息将以状态文件的方式保存在本地，可以执行恢复操作后继续使用）</span><br><span class="line">vagrant resume //（恢复虚拟机 —— 与前面的暂停相对应）</span><br><span class="line">vagrant box remove centos6.6 //（移除box，其中centos6.6是box名）</span><br><span class="line">vagrant destroy //（删除虚拟机，删除后在当前虚拟机所做进行的除开Vagrantfile中的配置都不会保留）</span><br><span class="line">vagrant ssh // SSH登录到该虚拟机</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">=======</span><br><span class="line">vagrant reload // 重载</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; 003db07dd9917b6b057ef115f35233aea23157b0</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vagrant up &#x2F;&#x2F;（启动虚拟机）</span><br><span class="line">vagrant halt &#x2F;&#x2F;（关闭虚拟机——对应就是关机）</span><br><span class="line">vagrant suspend &#x2F;&#x2F;（暂停虚拟机——只是暂停，虚拟机内存等信息将以状态文件的方式保存在本地，可以执行恢复操作后继续使用）</span><br><span class="line">vagrant resume &#x2F;&#x2F;（恢复虚拟机 —— 与前面的暂停相对应）</span><br><span class="line">vagrant box remove centos6.6 &#x2F;&#x2F;（移除box，其中centos6.6是box名）</span><br><span class="line">vagrant destroy &#x2F;&#x2F;（删除虚拟机，删除后在当前虚拟机所做进行的除开Vagrantfile中的配置都不会保留）</span><br><span class="line">vagrant ssh &#x2F;&#x2F; SSH登录到该虚拟机</span><br><span class="line">vagrant reload &#x2F;&#x2F; 重载</span><br></pre></td></tr></table></figure>
+
 
 <h3 id="配置centos环境"><a href="#配置centos环境" class="headerlink" title="配置centos环境"></a>配置centos环境</h3><p>使用 vagrant ssh 命令登录到该虚拟机 默认账号密码<br>vagrant vagrant<br>root vagrant</p>
 <p>或者在xshell上访问，ip:127.2.0.1 port:2222 账号密码:root/vagrant</p>
 <p>切换到管理员模式</p>
 <p><code>su</code></p>
 <p><strong>更换国内源</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br><span class="line">2、下载新的CentOS-Base.repo 到/etc/yum.repos.d/</span><br><span class="line">下载阿里云源</span><br><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line">或者网易云源</span><br><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS7-Base-163.repo</span><br><span class="line">3、之后运行yum makecache生成缓存</span><br><span class="line">yum makecache</span><br><span class="line">4、更新</span><br><span class="line">yum -y update</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">mv &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo.backup</span><br><span class="line">2、下载新的CentOS-Base.repo 到&#x2F;etc&#x2F;yum.repos.d&#x2F;</span><br><span class="line">下载阿里云源</span><br><span class="line">wget -O &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;repo&#x2F;Centos-7.repo</span><br><span class="line">或者网易云源</span><br><span class="line">wget -O &#x2F;etc&#x2F;yum.repos.d&#x2F;CentOS-Base.repo http:&#x2F;&#x2F;mirrors.163.com&#x2F;.help&#x2F;CentOS7-Base-163.repo</span><br><span class="line">3、之后运行yum makecache生成缓存</span><br><span class="line">yum makecache</span><br><span class="line">4、更新</span><br><span class="line">yum -y update</span><br></pre></td></tr></table></figure>
 
-<p><strong>安装基础工具</strong><br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br>yum install wget curl lrzsz git  </p>
-<p>yum instal golang vim-golang</p>
-<p>sudo yum install nginx</p>
+<p><strong>安装基础工具</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install wget curl lrzsz git unzip zip net-tools vim</span><br><span class="line">yum install golang vim-golang</span><br><span class="line">yum install nginx</span><br></pre></td></tr></table></figure>
+
+
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="https://www.centos.bz/2018/07/vagrant-centos-7-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" target="_blank" rel="noopener">vagrant + centos/7 搭建自己的本地开发环境</a></li>
-</ul>
-<p>yum update<br>yum install -y vim lrzsz wget curl git subversion unzip zip net-tools unzip zip</p>
-<h1 id="yum-install-y-wget-amp-amp-wget-O-install-sh-http-download-bt-cn-install-install-sh-amp-amp-sh-install-sh"><a href="#yum-install-y-wget-amp-amp-wget-O-install-sh-http-download-bt-cn-install-install-sh-amp-amp-sh-install-sh" class="headerlink" title="yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install.sh &amp;&amp; sh install.sh"></a>yum install -y wget &amp;&amp; wget -O install.sh <a href="http://download.bt.cn/install/install.sh" target="_blank" rel="noopener">http://download.bt.cn/install/install.sh</a> &amp;&amp; sh install.sh</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install wget curl lrzsz git unzip zip net-tools vim</span><br><span class="line">yum install golang vim-golang</span><br><span class="line">yum install nginx</span><br></pre></td></tr></table></figure>
-
-<h2 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h2><ul>
 <li><a href="https://vagrant.ninghao.net/" target="_blank" rel="noopener">vagrant文档</a></li>
 <li><a href="https://www.centos.bz/2018/07/vagrant-centos-7-%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" target="_blank" rel="noopener">vagrant + centos/7 搭建自己的本地开发环境</a></li>
 </ul>
 <p><strong>搭建宝塔(可选)</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum update</span><br><span class="line">yum install -y vim lrzsz wget curl git subversion unzip zip net-tools unzip zip</span><br><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install.sh &amp;&amp; sh install.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum update</span><br><span class="line">yum install -y vim lrzsz wget curl git subversion unzip zip net-tools unzip zip</span><br><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http:&#x2F;&#x2F;download.bt.cn&#x2F;install&#x2F;install.sh &amp;&amp; sh install.sh</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>003db07dd9917b6b057ef115f35233aea23157b0</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
 <p>记住最后的 地址用户名及密码<br>Bt-Panel: <a href="http://183.17.229.18:8888" target="_blank" rel="noopener">http://183.17.229.18:8888</a>   <a href="http://172.12.10.117:8888" target="_blank" rel="noopener">http://172.12.10.117:8888</a><br>username: fcfu5v0d<br>password: 3ec942f9</p>
 
         </div>
@@ -333,7 +279,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-04-12T08:51:01.884Z" itemprop="dateUpdated">2020-04-12 16:51:01</time>
+    最后更新时间：<time datetime="2020-04-11T16:30:31.536Z" itemprop="dateUpdated">2020-04-12 00:30:31</time>
 </span><br>
 
 
@@ -359,7 +305,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/">tool</a></li></ul>
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/" rel="tag">tool</a></li></ul>
 
 
             
@@ -417,9 +363,9 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/posts/49e22dc0.html" id="post-prev" class="post-nav-link">
+      <a href="/posts/0.html" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">应该五c</h4>
+        <h4 class="title">其它/vps</h4>
       </a>
     </div>
   
@@ -530,7 +476,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
@@ -624,6 +570,27 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
 
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     
 
     
@@ -20,19 +20,20 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="nodejs,服务器框架">
+    <meta name="keywords" content="服务器框架,nodejs">
     <meta name="description" content="介绍colyseus 主页 使用 colyseus 的优秀文章  io类游戏快速开发 1 io类游戏快速开发 2 帧同步 IO类游戏快速开发 3 状态同步  其它文章  colyseus.js, 用于JavaScript的多人游戏客户端  对等游戏平台的可扩展性与状态一致性的分析.pdf   colyseus 作者的项目  colyseus-server colyseus.js colyseus-">
-<meta name="keywords" content="nodejs,服务器框架">
 <meta property="og:type" content="article">
 <meta property="og:title" content="colyseus 使用">
 <meta property="og:url" content="https://jinzt.github.io/posts/353574cd.html">
 <meta property="og:site_name" content="金振涛个人主页">
 <meta property="og:description" content="介绍colyseus 主页 使用 colyseus 的优秀文章  io类游戏快速开发 1 io类游戏快速开发 2 帧同步 IO类游戏快速开发 3 状态同步  其它文章  colyseus.js, 用于JavaScript的多人游戏客户端  对等游戏平台的可扩展性与状态一致性的分析.pdf   colyseus 作者的项目  colyseus-server colyseus.js colyseus-">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-12T08:51:01.913Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-12T09:21:46.284Z">
+<meta property="article:modified_time" content="2020-04-11T16:30:31.489Z">
+<meta property="article:author" content="金振涛">
+<meta property="article:tag" content="服务器框架">
+<meta property="article:tag" content="nodejs">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="colyseus 使用">
-<meta name="twitter:description" content="介绍colyseus 主页 使用 colyseus 的优秀文章  io类游戏快速开发 1 io类游戏快速开发 2 帧同步 IO类游戏快速开发 3 状态同步  其它文章  colyseus.js, 用于JavaScript的多人游戏客户端  对等游戏平台的可扩展性与状态一致性的分析.pdf   colyseus 作者的项目  colyseus-server colyseus.js colyseus-">
     
         <link rel="alternate" type="application/atom+xml" title="金振涛个人主页" href="/atom.xml">
     
@@ -43,7 +44,7 @@
     <!-- custom head -->
     
 
-</head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
     <div id="loading" class="active"></div>
@@ -68,7 +69,7 @@
       <ul class="nav">
         
             <li class="waves-block waves-effect">
-              <a href="/"  >
+              <a href="/about"  >
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
@@ -82,16 +83,16 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                标签
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                分类
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
               </a>
             </li>
         
@@ -152,12 +153,12 @@
         <h1 class="title">colyseus 使用</h1>
         <h5 class="subtitle">
             
-                <time datetime="2019-07-12T14:51:39.744Z" itemprop="datePublished" class="page-time">
-  2019-07-12
+                <time datetime="2020-04-12T09:21:46.284Z" itemprop="datePublished" class="page-time">
+  2020-04-12
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/游戏设计/">游戏设计</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/">游戏设计</a></li></ul>
 
             
         </h5>
@@ -174,21 +175,21 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">介绍</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#"><span class="post-toc-number">2.</span> <span class="post-toc-text"></span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-game dev/game client/cocos creator/colyseus"
+<article id="post-游戏开发/game server/框架/colyseus"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
         <h1 class="post-card-title">colyseus 使用</h1>
         <div class="post-meta">
-            <time class="post-time" title="2019-07-12 22:51:39" datetime="2019-07-12T14:51:39.744Z"  itemprop="datePublished">2019-07-12</time>
+            <time class="post-time" title="2020-04-12 17:21:46" datetime="2020-04-12T09:21:46.284Z"  itemprop="datePublished">2020-04-12</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/游戏设计/">游戏设计</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/">游戏设计</a></li></ul>
 
 
 
@@ -237,8 +238,7 @@
 <li><a href="https://github.com/gmfc/Yggdrasill" target="_blank" rel="noopener">Yggdrasill</a></li>
 <li><a href="https://github.com/pkchv/auditory/tree/master/server/src/colyseus" target="_blank" rel="noopener">auditory</a></li>
 </ul>
-<p>## </p>
-<ul>
+<h2 id><a href="#" class="headerlink" title></a></h2><ul>
 <li><a href="https://github.com/endel/tanx" target="_blank" rel="noopener">endel/tanx 多人坦克</a> <a href="https://playcanvas.com/signup/free" target="_blank" rel="noopener">体验</a></li>
 </ul>
 
@@ -249,7 +249,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-04-12T08:51:01.913Z" itemprop="dateUpdated">2020-04-12 16:51:01</time>
+    最后更新时间：<time datetime="2020-04-11T16:30:31.489Z" itemprop="dateUpdated">2020-04-12 00:30:31</time>
 </span><br>
 
 
@@ -275,7 +275,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器框架/">服务器框架</a></li></ul>
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A1%86%E6%9E%B6/" rel="tag">服务器框架</a></li></ul>
 
 
             
@@ -333,18 +333,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/posts/6a598898.html" id="post-prev" class="post-nav-link">
+      <a href="/posts/b86dc7eb.html" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">cocos creator收集的学习资源</h4>
+        <h4 class="title">服务器框架 go</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/posts/d671372b.html" id="post-next" class="post-nav-link">
+      <a href="/posts/0.html" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">lua</h4>
+        <h4 class="title">游戏开发/game server/配置中心</h4>
       </a>
     </div>
   
@@ -446,7 +446,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
@@ -540,6 +540,27 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
 
 

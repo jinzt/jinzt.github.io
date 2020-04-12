@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     
 
     
@@ -21,18 +21,18 @@
     
     
     <meta name="keywords" content="源码分析">
-    <meta name="description" content="消息定义在rpc_mogo.h中定义了所有消息 客户端输入帐户名/密码进行登录验证MSGID_LOGINAPP_LOGIN                    = 31    判断是否超过最大登录数量    判断是否被禁止登录    判断是否重复登录    是否是首次登录        是            MSGID_DBMGR_SELECT_ACCOUNT        不是">
-<meta name="keywords" content="源码分析">
+    <meta name="description" content="消息定义在rpc_mogo.h中定义了所有消息 客户端输入帐户名&#x2F;密码进行登录验证MSGID_LOGINAPP_LOGIN                    &#x3D; 31    判断是否超过最大登录数量    判断是否被禁止登录    判断是否重复登录    是否是首次登录        是            MSGID_DBMGR_SELECT_ACCOUNT        不是">
 <meta property="og:type" content="article">
 <meta property="og:title" content="暗黑战神">
 <meta property="og:url" content="https://jinzt.github.io/posts/c11120a3.html">
 <meta property="og:site_name" content="金振涛个人主页">
-<meta property="og:description" content="消息定义在rpc_mogo.h中定义了所有消息 客户端输入帐户名/密码进行登录验证MSGID_LOGINAPP_LOGIN                    = 31    判断是否超过最大登录数量    判断是否被禁止登录    判断是否重复登录    是否是首次登录        是            MSGID_DBMGR_SELECT_ACCOUNT        不是">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-12T17:32:36.163Z">
+<meta property="og:description" content="消息定义在rpc_mogo.h中定义了所有消息 客户端输入帐户名&#x2F;密码进行登录验证MSGID_LOGINAPP_LOGIN                    &#x3D; 31    判断是否超过最大登录数量    判断是否被禁止登录    判断是否重复登录    是否是首次登录        是            MSGID_DBMGR_SELECT_ACCOUNT        不是">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-12T09:21:46.334Z">
+<meta property="article:modified_time" content="2020-04-11T16:30:31.550Z">
+<meta property="article:author" content="金振涛">
+<meta property="article:tag" content="源码分析">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="暗黑战神">
-<meta name="twitter:description" content="消息定义在rpc_mogo.h中定义了所有消息 客户端输入帐户名/密码进行登录验证MSGID_LOGINAPP_LOGIN                    = 31    判断是否超过最大登录数量    判断是否被禁止登录    判断是否重复登录    是否是首次登录        是            MSGID_DBMGR_SELECT_ACCOUNT        不是">
     
         <link rel="alternate" type="application/atom+xml" title="金振涛个人主页" href="/atom.xml">
     
@@ -43,7 +43,7 @@
     <!-- custom head -->
     
 
-</head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
     <div id="loading" class="active"></div>
@@ -68,7 +68,7 @@
       <ul class="nav">
         
             <li class="waves-block waves-effect">
-              <a href="/"  >
+              <a href="/about"  >
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
@@ -82,16 +82,16 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                标签
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                分类
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
               </a>
             </li>
         
@@ -152,12 +152,12 @@
         <h1 class="title">暗黑战神</h1>
         <h5 class="subtitle">
             
-                <time datetime="2019-07-12T17:27:12.277Z" itemprop="datePublished" class="page-time">
-  2019-07-13
+                <time datetime="2020-04-12T09:21:46.334Z" itemprop="datePublished" class="page-time">
+  2020-04-12
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/源码分析/">源码分析</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">源码分析</a></li></ul>
 
             
         </h5>
@@ -179,16 +179,16 @@
     </aside>
 
 
-<article id="post-源码分析/暗黑战神源码分析"
+<article id="post-游戏开发/源码分析/暗黑战神源码分析"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
         <h1 class="post-card-title">暗黑战神</h1>
         <div class="post-meta">
-            <time class="post-time" title="2019-07-13 01:27:12" datetime="2019-07-12T17:27:12.277Z"  itemprop="datePublished">2019-07-13</time>
+            <time class="post-time" title="2020-04-12 17:21:46" datetime="2020-04-12T09:21:46.334Z"  itemprop="datePublished">2020-04-12</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/源码分析/">源码分析</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">源码分析</a></li></ul>
 
 
 
@@ -250,7 +250,7 @@ mailbox分类
     效验失败处理
         则把客户端拉回原来的坐标点 同步坐标给客户端自己
     效验成功
-        同步坐标给aoi范围内其他玩家</code></pre><h1 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h1><p>unity3d采用4.7.1版本<br>1、删除Assets/Plugins目录下的Android目录<br>2、修改client\Assets\Resources\cfg.xml里面的路径为你的WEB服务器cfg.xml的路径<br>    <a href="http://10.105.60.100/mogo/cfg.xml" target="_blank" rel="noopener">http://10.105.60.100/mogo/cfg.xml</a><br>3、修改Assets\Resources\SystemSwitch.xml的<useplatformsdk>1</useplatformsdk>把里面的1改成0<br>4.代码Scripts\GameLogic\NoticeManager.cs修改DownloadNotice函数中通知ip<br>C:\Users\Administrator\AppData\LocalLow\aiyou4399</p>
+        同步坐标给aoi范围内其他玩家</code></pre><h1 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h1><p>unity3d采用4.7.1版本<br>1、删除Assets/Plugins目录下的Android目录<br>2、修改client\Assets\Resources\cfg.xml里面的路径为你的WEB服务器cfg.xml的路径<br>    <a href="http://10.105.60.100/mogo/cfg.xml" target="_blank" rel="noopener">http://10.105.60.100/mogo/cfg.xml</a><br>3、修改Assets\Resources\SystemSwitch.xml的<UsePlatformSDK>1</UsePlatformSDK>把里面的1改成0<br>4.代码Scripts\GameLogic\NoticeManager.cs修改DownloadNotice函数中通知ip<br>C:\Users\Administrator\AppData\LocalLow\aiyou4399</p>
 <h1 id="服务器配置"><a href="#服务器配置" class="headerlink" title="服务器配置"></a>服务器配置</h1><h2 id="服务环境搭建"><a href="#服务环境搭建" class="headerlink" title="服务环境搭建"></a>服务环境搭建</h2><h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><pre><code>sudo apt-get update
 lua依赖
     编译安装lua5.3.2
@@ -319,7 +319,7 @@ sudo /etc/init.d/nginx start
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-07-12T17:32:36.163Z" itemprop="dateUpdated">2019-07-13 01:32:36</time>
+    最后更新时间：<time datetime="2020-04-11T16:30:31.550Z" itemprop="dateUpdated">2020-04-12 00:30:31</time>
 </span><br>
 
 
@@ -345,7 +345,7 @@ sudo /etc/init.d/nginx start
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/源码分析/">源码分析</a></li></ul>
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" rel="tag">源码分析</a></li></ul>
 
 
             
@@ -403,18 +403,18 @@ sudo /etc/init.d/nginx start
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/posts/0.html" id="post-prev" class="post-nav-link">
+      <a href="/posts/8ea7e252.html" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">[no title]</h4>
+        <h4 class="title">最后一战</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/posts/d9583520.html" id="post-next" class="post-nav-link">
+      <a href="/posts/1e5e4d57.html" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">other</h4>
+        <h4 class="title">unity坦克</h4>
       </a>
     </div>
   
@@ -516,7 +516,7 @@ sudo /etc/init.d/nginx start
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
@@ -610,6 +610,27 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
 
 

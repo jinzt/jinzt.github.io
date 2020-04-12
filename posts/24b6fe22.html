@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>编程语言/golang/收集 | 金振涛个人主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="##  Go mod 使用 golang内置包管理工具go mod简明教程 将 dep 更换为 go mod  准备使用go mod需要1.11以后的版本才能使用，并且需要配置GO111MODULE环境变量GO111MODULE&#x3D;on（可设置三个值，分别是auto, on, off） 配置环境变量新建 用户变量 变量名:GO111MODULE 变量值:on ##进入仓库根目录go mod in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编程语言&#x2F;golang&#x2F;收集">
+<meta property="og:url" content="https://jinzt.github.io/posts/24b6fe22.html">
+<meta property="og:site_name" content="金振涛个人主页">
+<meta property="og:description" content="##  Go mod 使用 golang内置包管理工具go mod简明教程 将 dep 更换为 go mod  准备使用go mod需要1.11以后的版本才能使用，并且需要配置GO111MODULE环境变量GO111MODULE&#x3D;on（可设置三个值，分别是auto, on, off） 配置环境变量新建 用户变量 变量名:GO111MODULE 变量值:on ##进入仓库根目录go mod in">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-12T09:28:34.860Z">
+<meta property="article:modified_time" content="2020-04-12T09:43:47.328Z">
+<meta property="article:author" content="金振涛">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="金振涛个人主页" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">金振涛</h5>
+          <a href="mailto:jinzhentaohb@126.com" title="jinzhentaohb@126.com" class="mail">jinzhentaohb@126.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/jinzt" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/u/5838016173" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                link
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">编程语言/golang/收集</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">编程语言/golang/收集</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-04-12T09:28:34.860Z" itemprop="datePublished" class="page-time">
+  2020-04-12
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#"><span class="post-toc-number">1.</span> <span class="post-toc-text"></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#准备"><span class="post-toc-number">2.</span> <span class="post-toc-text">准备</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mod命令"><span class="post-toc-number">3.</span> <span class="post-toc-text">mod命令</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#orm-库"><span class="post-toc-number">4.</span> <span class="post-toc-text">orm 库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#-1"><span class="post-toc-number">5.</span> <span class="post-toc-text"></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文档注释规范"><span class="post-toc-number">6.</span> <span class="post-toc-text">文档注释规范</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考"><span class="post-toc-number">7.</span> <span class="post-toc-text">参考</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#-2"><span class="post-toc-number">8.</span> <span class="post-toc-text"></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#-3"><span class="post-toc-number">9.</span> <span class="post-toc-text"></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#-4"><span class="post-toc-number">10.</span> <span class="post-toc-text"></span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#go-静态库-动态库"><span class="post-toc-number">11.</span> <span class="post-toc-text">go 静态库 动态库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#go-mod"><span class="post-toc-number">12.</span> <span class="post-toc-text">go mod</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#-5"><span class="post-toc-number">13.</span> <span class="post-toc-text"></span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-编程语言/golang/收集"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">编程语言/golang/收集</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-04-12 17:28:34" datetime="2020-04-12T09:28:34.860Z"  itemprop="datePublished">2020-04-12</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <hr>
+<hr>
+<p>##</p>
+<ul>
+<li><a href="https://segmentfault.com/a/1190000018536993" target="_blank" rel="noopener">Go mod 使用</a></li>
+<li><a href="https://segmentfault.com/a/1190000019314903?utm_source=tag-newest" target="_blank" rel="noopener">golang内置包管理工具go mod简明教程</a></li>
+<li><a href="https://learnku.com/articles/33241" target="_blank" rel="noopener">将 dep 更换为 go mod</a></li>
+</ul>
+<h2 id><a href="#" class="headerlink" title></a></h2><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>使用go mod需要1.11以后的版本才能使用，并且需要配置GO111MODULE环境变量<br>GO111MODULE=on（可设置三个值，分别是auto, on, off）</p>
+<p>配置环境变量<br>新建 用户变量 变量名:GO111MODULE 变量值:on</p>
+<p>##<br>进入仓库根目录<br>go mod init  </p>
+<h2 id="mod命令"><a href="#mod命令" class="headerlink" title="mod命令"></a>mod命令</h2><ul>
+<li>go help mod 查看mod命令的帮助</li>
+<li>go mod init <packageName> 初始化模块，目录下生成go.mod</packageName></li>
+<li>go mod tidy 根据go.mod文件来处理依赖关系</li>
+<li>go list -m all 显示依赖文件</li>
+<li>go mod download &lt;path@version&gt; 下载依赖（path是包的路径，version是包的版本）</li>
+<li>go mod vendor 复制所有依赖到模块下的vendor目录</li>
+<li>go mod graph 输出模块所需的依赖表</li>
+<li>go mod verify 验证模块的完整性</li>
+</ul>
+<h2 id="orm-库"><a href="#orm-库" class="headerlink" title="orm 库"></a>orm 库</h2><h2 id="-1"><a href="#-1" class="headerlink" title></a></h2><ul>
+<li><p><a href="https://www.cnblogs.com/liuzhongchao/p/9497326.html" target="_blank" rel="noopener">Golang xorm工具，根据数据库自动生成 go 代码</a></p>
+</li>
+<li><p><a href="https://www.bbsmax.com/A/8Bz8X3VNzx/" target="_blank" rel="noopener">Go 语言，开源服务端代码自动生成 框架 - EasyGoServer</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/BlackCarDriver/article/details/95208399" target="_blank" rel="noopener">【go】根据数据库自动生成相应结构体代码</a></p>
+</li>
+<li><p><a href="https://studygolang.com/articles/22688" target="_blank" rel="noopener">生成mysql每一个表golang的CRUD生产代码</a></p>
+</li>
+<li><p><a href="https://huangjunwen.github.io/post/2018/sqlw-mysql/" target="_blank" rel="noopener">写了一个 MySQL 数据表和查询的 go 代码生成器</a></p>
+</li>
+</ul>
+<h2 id="文档注释规范"><a href="#文档注释规范" class="headerlink" title="文档注释规范"></a>文档注释规范</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><p><a href="https://studygolang.com/articles/6623" target="_blank" rel="noopener">go标准命令详解0.5 godoc</a></p>
+</li>
+<li><p><a href="https://www.codercto.com/a/36718.html" target="_blank" rel="noopener">GoDoc的使用</a></p>
+</li>
+<li><p><a href="https://www.jianshu.com/p/50c9fbf4046c" target="_blank" rel="noopener">Golang Mysql笔记（二）— CURD基础</a></p>
+</li>
+</ul>
+<h2 id="-2"><a href="#-2" class="headerlink" title></a></h2><ul>
+<li><a href="https://blog.csdn.net/alwaysrun/article/details/82919127" target="_blank" rel="noopener">go数据同步（sync与atomic包）</a></li>
+<li><a href="https://github.com/fatih/pool?files=1" target="_blank" rel="noopener">fatih/pool go连接池</a></li>
+<li><a href="https://blog.csdn.net/e421083458/article/details/90579036" target="_blank" rel="noopener">《Go 同步和并发设计模式》培训会后整理</a></li>
+<li><a href="https://www.cnblogs.com/jackluo/p/6137531.html" target="_blank" rel="noopener">Golang之chan/goroutine(转)</a></li>
+<li><a href="https://github.com/tyrchen/chatroom" target="_blank" rel="noopener">tyrchen/chatroom</a></li>
+<li><a href="https://blog.csdn.net/gohuge/article/details/83413941" target="_blank" rel="noopener">Golang类似Erlang OTP的实现</a></li>
+<li><a href="https://blog.csdn.net/shangguan_1234/article/details/79584856" target="_blank" rel="noopener">【GO语言】棋牌游戏服务器</a></li>
+<li><a href="https://github.com/dbldqt/landlord" target="_blank" rel="noopener">dbldqt/landlord</a></li>
+<li><a href="https://github.com/Terry-Ye/im" target="_blank" rel="noopener">纯go实现的分布式im即时通讯系统</a></li>
+<li><a href="https://blog.csdn.net/warrially/article/details/88802264" target="_blank" rel="noopener">golang制作一个斗地主游戏服务器[10]:房间、桌子、玩家</a></li>
+</ul>
+<h2 id="-3"><a href="#-3" class="headerlink" title></a></h2><p> 2019/9/4 23:21:02<br><a href="https://my.oschina.net/mickelfeng/blog/3013119" target="_blank" rel="noopener">https://my.oschina.net/mickelfeng/blog/3013119</a></p>
+<p> 2019/9/4 23:27:03<br><a href="https://github.com/gansidui/chatserver?files=1" target="_blank" rel="noopener">https://github.com/gansidui/chatserver?files=1</a></p>
+<p> 2019/9/4 23:45:09<br><a href="https://www.ctolib.com/mip/fananchong-go-xserver.html" target="_blank" rel="noopener">https://www.ctolib.com/mip/fananchong-go-xserver.html</a></p>
+<p> 2019/9/4 23:49:40<br><a href="https://www.ctolib.com/mip/connsvr.html" target="_blank" rel="noopener">https://www.ctolib.com/mip/connsvr.html</a></p>
+<p> 2019/9/4 23:53:38<br><a href="https://blog.csdn.net/RA681t58CJxsgCkJ31/article/details/84986162" target="_blank" rel="noopener">https://blog.csdn.net/RA681t58CJxsgCkJ31/article/details/84986162</a></p>
+<p> 0:01:49<br><a href="https://www.jianshu.com/p/64e777b87c96" target="_blank" rel="noopener">https://www.jianshu.com/p/64e777b87c96</a></p>
+<p> 0:03:01<br><a href="https://www.codercto.com/a/52418.html" target="_blank" rel="noopener">https://www.codercto.com/a/52418.html</a></p>
+<p> 0:16:20<br><a href="https://blog.csdn.net/RA681t58CJxsgCkJ31/article/details/84948665" target="_blank" rel="noopener">https://blog.csdn.net/RA681t58CJxsgCkJ31/article/details/84948665</a></p>
+<p> 0:21:09<br><a href="https://blog.csdn.net/shangguan_1234/article/details/79584856" target="_blank" rel="noopener">https://blog.csdn.net/shangguan_1234/article/details/79584856</a></p>
+<p> 0:38:38<br><a href="https://github.com/dwg255/landlord" target="_blank" rel="noopener">https://github.com/dwg255/landlord</a></p>
+<p> 8:52:20<br><a href="https://coding.net/u/anywherecreate/p/px_game_server/git" target="_blank" rel="noopener">https://coding.net/u/anywherecreate/p/px_game_server/git</a></p>
+<p> 9:05:15<br><a href="https://github.com/Golangltd/codeclass" target="_blank" rel="noopener">https://github.com/Golangltd/codeclass</a></p>
+<p> 9:09:52<br><a href="https://github.com/Golangltd/codeclass" target="_blank" rel="noopener">https://github.com/Golangltd/codeclass</a></p>
+<p> 9:12:24<br><a href="https://www.zhihu.com/question/35385236/answer/62654548" target="_blank" rel="noopener">https://www.zhihu.com/question/35385236/answer/62654548</a></p>
+<p><a href="https://github.com/shuimuliang/qnmahjongserver" target="_blank" rel="noopener">https://github.com/shuimuliang/qnmahjongserver</a></p>
+<p><a href="https://github.com/gochenzl/chess" target="_blank" rel="noopener">https://github.com/gochenzl/chess</a></p>
+<p><a href="https://www.jianshu.com/p/546773568592" target="_blank" rel="noopener">https://www.jianshu.com/p/546773568592</a></p>
+<p> 2019/9/5 9:12:24<br><a href="https://www.zhihu.com/question/35385236/answer/62654548" target="_blank" rel="noopener">https://www.zhihu.com/question/35385236/answer/62654548</a></p>
+<p> 8:33:10<br><a href="https://github.com/tux21b/ChessBuddy?files=1" target="_blank" rel="noopener">https://github.com/tux21b/ChessBuddy?files=1</a></p>
+<p> 8:51:38<br><a href="https://blog.csdn.net/shangguan_1234/article/details/79584856" target="_blank" rel="noopener">https://blog.csdn.net/shangguan_1234/article/details/79584856</a></p>
+<p> 9:01:34<br><a href="https://blog.csdn.net/hnxxwyq/article/details/12995083" target="_blank" rel="noopener">https://blog.csdn.net/hnxxwyq/article/details/12995083</a></p>
+<p> 9:12:28<br><a href="https://github.com/3zheng/railgun/blob/master/README.md" target="_blank" rel="noopener">https://github.com/3zheng/railgun/blob/master/README.md</a></p>
+<p><a href="https://studygolang.com/topics/2167" target="_blank" rel="noopener">https://studygolang.com/topics/2167</a></p>
+<p> 2019/9/5 0:38:38<br><a href="https://github.com/dwg255/landlord" target="_blank" rel="noopener">https://github.com/dwg255/landlord</a></p>
+<p> 2019/9/5 8:52:20<br><a href="https://coding.net/u/anywherecreate/p/px_game_server/git" target="_blank" rel="noopener">https://coding.net/u/anywherecreate/p/px_game_server/git</a></p>
+<p> 2019/9/5 9:05:15<br><a href="https://github.com/Golangltd/codeclass" target="_blank" rel="noopener">https://github.com/Golangltd/codeclass</a></p>
+<p> 2019/9/5 9:09:52<br><a href="https://github.com/Golangltd/codeclass" target="_blank" rel="noopener">https://github.com/Golangltd/codeclass</a></p>
+<p> 2019/9/5 9:12:24<br><a href="https://www.zhihu.com/question/35385236/answer/62654548" target="_blank" rel="noopener">https://www.zhihu.com/question/35385236/answer/62654548</a></p>
+<p> 2019/9/6 8:33:10<br><a href="https://github.com/tux21b/ChessBuddy?files=1" target="_blank" rel="noopener">https://github.com/tux21b/ChessBuddy?files=1</a></p>
+<p> 2019/9/6 8:51:38<br><a href="https://blog.csdn.net/shangguan_1234/article/details/79584856" target="_blank" rel="noopener">https://blog.csdn.net/shangguan_1234/article/details/79584856</a></p>
+<p> 2019/9/6 9:01:34<br><a href="https://blog.csdn.net/hnxxwyq/article/details/12995083" target="_blank" rel="noopener">https://blog.csdn.net/hnxxwyq/article/details/12995083</a></p>
+<p> 2019/9/6 9:12:28<br><a href="https://github.com/3zheng/railgun/blob/master/README.md" target="_blank" rel="noopener">https://github.com/3zheng/railgun/blob/master/README.md</a></p>
+<p> 2019/9/6 9:14:15<br><a href="https://studygolang.com/topics/2167" target="_blank" rel="noopener">https://studygolang.com/topics/2167</a></p>
+<p> 2019/9/7 15:41:29<br><a href="https://cloud.tencent.com/developer/article/1487549" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1487549</a></p>
+<p> 2019/9/8 1:17:55<br><a href="https://www.jianshu.com/p/f20cd2304aea" target="_blank" rel="noopener">https://www.jianshu.com/p/f20cd2304aea</a></p>
+<p> 2019/9/8 2:01:10<br><a href="https://segmentfault.com/a/1190000006744213?utm_medium=referral&amp;utm_source=tuicool" target="_blank" rel="noopener">https://segmentfault.com/a/1190000006744213?utm_medium=referral&amp;utm_source=tuicool</a></p>
+<p> 2019/9/8 2:29:03<br><a href="https://github.com/9b9387/zero?files=1" target="_blank" rel="noopener">https://github.com/9b9387/zero?files=1</a></p>
+<p> 2019/9/8 2:33:51<br><a href="https://blog.csdn.net/fwhezfwhez/article/details/89487425" target="_blank" rel="noopener">https://blog.csdn.net/fwhezfwhez/article/details/89487425</a></p>
+<p> 2019/9/8 3:46:17<br><a href="https://github.com/fwhezfwhez/tcpx?files=1" target="_blank" rel="noopener">https://github.com/fwhezfwhez/tcpx?files=1</a></p>
+<p> 2019/9/8 4:02:38<br><a href="https://www.cnblogs.com/tohxyblog/p/8974763.html" target="_blank" rel="noopener">https://www.cnblogs.com/tohxyblog/p/8974763.html</a></p>
+<p> 2019/9/8 4:05:27<br><a href="https://www.cnblogs.com/tohxyblog/p/8974763.html" target="_blank" rel="noopener">https://www.cnblogs.com/tohxyblog/p/8974763.html</a></p>
+<p> 2019/9/8 4:10:05<br><a href="https://www.xuebuyuan.com/1289326.html" target="_blank" rel="noopener">https://www.xuebuyuan.com/1289326.html</a></p>
+<p> 2019/9/8 4:11:43<br><a href="https://my.oschina.net/u/1859679/blog/842513" target="_blank" rel="noopener">https://my.oschina.net/u/1859679/blog/842513</a></p>
+<p> 2019/9/8 4:16:12<br><a href="http://m.ishare.iask.sina.com.cn/f/32P6HS6NWpC.html" target="_blank" rel="noopener">http://m.ishare.iask.sina.com.cn/f/32P6HS6NWpC.html</a></p>
+<p> 2019/9/8 4:21:35<br><a href="https://blog.csdn.net/chenjiayi_yun/article/details/23291731" target="_blank" rel="noopener">https://blog.csdn.net/chenjiayi_yun/article/details/23291731</a></p>
+<p> 2019/9/8 4:28:04<br><a href="http://open.biligame.com/wiki/sdk_server_doc/" target="_blank" rel="noopener">http://open.biligame.com/wiki/sdk_server_doc/</a></p>
+<p> 2019/9/8 4:32:22<br><a href="https://go.ctolib.com/magiclvzs-antnet.html" target="_blank" rel="noopener">https://go.ctolib.com/magiclvzs-antnet.html</a></p>
+<p> 2019/9/8 5:17:10<br><a href="https://blog.csdn.net/diagnoa_wleng/article/details/81608795" target="_blank" rel="noopener">https://blog.csdn.net/diagnoa_wleng/article/details/81608795</a></p>
+<p> 2019/9/8 5:27:22<br><a href="https://itbilu.com/nodejs/npm/EknY6k0FX.html" target="_blank" rel="noopener">https://itbilu.com/nodejs/npm/EknY6k0FX.html</a></p>
+<p> 2019/9/8 5:32:06<br><a href="https://itbilu.com/nodejs/npm/EknY6k0FX.html" target="_blank" rel="noopener">https://itbilu.com/nodejs/npm/EknY6k0FX.html</a></p>
+<p> 2019/9/8 5:42:12<br><a href="https://www.it610.com/article/4672602.htm" target="_blank" rel="noopener">https://www.it610.com/article/4672602.htm</a></p>
+<p> 2019/9/8 5:45:17<br><a href="https://my.oschina.net/nextzeus/blog/1204620" target="_blank" rel="noopener">https://my.oschina.net/nextzeus/blog/1204620</a></p>
+<p> 2019/9/9 2:36:37<br><a href="https://blog.csdn.net/micl200110041/article/details/82013032" target="_blank" rel="noopener">https://blog.csdn.net/micl200110041/article/details/82013032</a></p>
+<p> 2019/9/9 2:37:21<br><a href="https://hxzqlh.com/2018/09/12/go-rate-limit/" target="_blank" rel="noopener">https://hxzqlh.com/2018/09/12/go-rate-limit/</a></p>
+<p> 2019/9/9 2:37:58<br><a href="https://cloud.tencent.com/developer/article/1477080" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1477080</a></p>
+<p> 2019/9/9 2:38:23<br><a href="https://studygolang.com/articles/15890" target="_blank" rel="noopener">https://studygolang.com/articles/15890</a></p>
+<p> 2019/9/9 2:43:15<br><a href="https://m.baidu.com/ala/c/www.ctolib.com/mip/yangwenmai-ratelimit.html" target="_blank" rel="noopener">https://m.baidu.com/ala/c/www.ctolib.com/mip/yangwenmai-ratelimit.html</a></p>
+<p> 2019/9/9 2:45:09<br><a href="https://blog.csdn.net/zl1zl2zl3/article/details/84631824" target="_blank" rel="noopener">https://blog.csdn.net/zl1zl2zl3/article/details/84631824</a></p>
+<p> 2019/9/9 2:45:43<br><a href="https://m.baidu.com/from=1086k/s?pn=10&amp;usm=1&amp;word=go%20mysql%E7%86%94%E6%96%AD%20%E9%87%8D%E8%AF%95&amp;sa=np&amp;rsv_pq=11803037333493205139&amp;rsv_t=3ea7JsYxVbYW7lu%252FE6dxTZvVi5EKj8sHCcLXcEzp9siuPt8wtz8yy6OiKZY&amp;rqid=11803037333493205139" target="_blank" rel="noopener">https://m.baidu.com/from=1086k/s?pn=10&amp;usm=1&amp;word=go%20mysql%E7%86%94%E6%96%AD%20%E9%87%8D%E8%AF%95&amp;sa=np&amp;rsv_pq=11803037333493205139&amp;rsv_t=3ea7JsYxVbYW7lu%252FE6dxTZvVi5EKj8sHCcLXcEzp9siuPt8wtz8yy6OiKZY&amp;rqid=11803037333493205139</a></p>
+<p> 2019/9/9 2:46:04<br><a href="https://www.lbbniu.com/6240.html" target="_blank" rel="noopener">https://www.lbbniu.com/6240.html</a></p>
+<p> 2019/9/9 12:33:03<br><a href="https://blog.csdn.net/weixin_33841503/article/details/91447175" target="_blank" rel="noopener">https://blog.csdn.net/weixin_33841503/article/details/91447175</a></p>
+<p> 2019/9/11 22:06:49<br><a href="https://github.com/Hadopire/ws2tcp" target="_blank" rel="noopener">https://github.com/Hadopire/ws2tcp</a></p>
+<p> 2019/9/11 23:01:45<br><a href="https://github.com/sarimoly/gameserver-1" target="_blank" rel="noopener">https://github.com/sarimoly/gameserver-1</a></p>
+<p> 2019/9/11 23:09:13<br><a href="https://github.com/dyzdyz010/GameServer/blob/master/console/console.go" target="_blank" rel="noopener">https://github.com/dyzdyz010/GameServer/blob/master/console/console.go</a></p>
+<p> 2019/9/11 23:15:18<br><a href="https://github.com/davyxu/cellmesh" target="_blank" rel="noopener">https://github.com/davyxu/cellmesh</a></p>
+<p> 2019/9/12 0:27:01<br><a href="https://study.163.com/course/courseMain.htm?courseId=1005164022&amp;_trace_c_p_k2_=427bab11114345e99a681f020e4fe044" target="_blank" rel="noopener">https://study.163.com/course/courseMain.htm?courseId=1005164022&amp;_trace_c_p_k2_=427bab11114345e99a681f020e4fe044</a></p>
+<p> 2019/9/12 0:30:32<br><a href="https://study.163.com/course/courseMain.htm?courseId=1006521005&amp;_trace_c_p_k2_=020813f66bfc440e9afd27cb2929b5a8" target="_blank" rel="noopener">https://study.163.com/course/courseMain.htm?courseId=1006521005&amp;_trace_c_p_k2_=020813f66bfc440e9afd27cb2929b5a8</a></p>
+<p> 2019/9/12 0:31:12<br><a href="https://study.163.com/course/introduction/1209318815.htm" target="_blank" rel="noopener">https://study.163.com/course/introduction/1209318815.htm</a></p>
+<p> 2019/9/12 0:33:03<br><a href="https://study.163.com/course/introduction/1004720008.htm?share=1&amp;shareId=1018712305" target="_blank" rel="noopener">https://study.163.com/course/introduction/1004720008.htm?share=1&amp;shareId=1018712305</a></p>
+<p> 2019/9/12 0:37:46<br><a href="http://www.eimhe.com/thread-146949-1-1.html" target="_blank" rel="noopener">http://www.eimhe.com/thread-146949-1-1.html</a></p>
+<p> 2019/9/13 1:55:28<br><a href="https://studygolang.com/articles/17405" target="_blank" rel="noopener">https://studygolang.com/articles/17405</a></p>
+<p> 2019/9/13 2:02:46<br><a href="https://blog.csdn.net/axuan_k/article/details/93363778" target="_blank" rel="noopener">https://blog.csdn.net/axuan_k/article/details/93363778</a></p>
+<p> 2019/9/13 2:03:45<br><a href="https://blog.csdn.net/matchvs/article/details/80230159" target="_blank" rel="noopener">https://blog.csdn.net/matchvs/article/details/80230159</a></p>
+<p> 2019/9/13 2:12:12<br><a href="https://gameinstitute.qq.com/community/detail/128992" target="_blank" rel="noopener">https://gameinstitute.qq.com/community/detail/128992</a></p>
+<p> 2019/9/13 2:20:51<br><a href="https://github.com/simonidf" target="_blank" rel="noopener">https://github.com/simonidf</a></p>
+<p> 2019/9/13 2:39:00<br><a href="https://github.com/BaiPingg/TankGameServer" target="_blank" rel="noopener">https://github.com/BaiPingg/TankGameServer</a></p>
+<p> 9:27:17<br><a href="https://github.com/TheAlgorithms" target="_blank" rel="noopener">https://github.com/TheAlgorithms</a></p>
+<p> 9:27:17<br><a href="https://github.com/jinzhu/gorm" target="_blank" rel="noopener">https://github.com/jinzhu/gorm</a></p>
+<p> 9:27:17<br><a href="https://github.com/sirupsen/logrus" target="_blank" rel="noopener">https://github.com/sirupsen/logrus</a></p>
+<p> 9:27:17<br><a href="https://github.com/unknwon/the-way-to-go_ZH_CN" target="_blank" rel="noopener">https://github.com/unknwon/the-way-to-go_ZH_CN</a></p>
+<p> 9:27:18<br><a href="https://github.com/unknwon/go-study-index" target="_blank" rel="noopener">https://github.com/unknwon/go-study-index</a></p>
+<p> 9:27:18<br><a href="https://www.ctolib.com/go/docs/" target="_blank" rel="noopener">https://www.ctolib.com/go/docs/</a></p>
+<p> 9:27:18<br><a href="https://github.com/mmcgrana/gobyexample" target="_blank" rel="noopener">https://github.com/mmcgrana/gobyexample</a></p>
+<p> 9:27:18<br><a href="https://github.com/yudai/gotty" target="_blank" rel="noopener">https://github.com/yudai/gotty</a></p>
+<p> 9:27:18<br><a href="https://www.ctolib.com/SolarLune-resolv.html" target="_blank" rel="noopener">https://www.ctolib.com/SolarLune-resolv.html</a></p>
+<p> 9:27:18<br><a href="https://github.com/ffhelicopter/Go42" target="_blank" rel="noopener">https://github.com/ffhelicopter/Go42</a></p>
+<p> 9:27:19<br><a href="https://github.com/xcxlegend/tank2d.io" target="_blank" rel="noopener">https://github.com/xcxlegend/tank2d.io</a></p>
+<p> 9:27:19<br><a href="https://github.com/EngoEngine/engo" target="_blank" rel="noopener">https://github.com/EngoEngine/engo</a></p>
+<p> 9:27:19<br><a href="https://www.ctolib.com/go/" target="_blank" rel="noopener">https://www.ctolib.com/go/</a></p>
+<p> 9:27:19<br><a href="https://www.ctolib.com/go/" target="_blank" rel="noopener">https://www.ctolib.com/go/</a></p>
+<p> 9:27:19<br><a href="https://www.ctolib.com/senghoo-golang-design-pattern.html" target="_blank" rel="noopener">https://www.ctolib.com/senghoo-golang-design-pattern.html</a></p>
+<p> 9:27:19<br><a href="https://www.ctolib.com/chai2010-advanced-go-programming-book.html" target="_blank" rel="noopener">https://www.ctolib.com/chai2010-advanced-go-programming-book.html</a></p>
+<p> 9:27:20<br><a href="https://www.ctolib.com/go-astar.html" target="_blank" rel="noopener">https://www.ctolib.com/go-astar.html</a></p>
+<p> 9:27:21<br><a href="https://www.ctolib.com/Humpheh-goboy.html" target="_blank" rel="noopener">https://www.ctolib.com/Humpheh-goboy.html</a></p>
+<p> 9:27:21<br><a href="https://www.ctolib.com/AppsComTr-Spaceship.html" target="_blank" rel="noopener">https://www.ctolib.com/AppsComTr-Spaceship.html</a></p>
+<p> 9:27:21<br><a href="https://www.ctolib.com/dwg255-invest.html" target="_blank" rel="noopener">https://www.ctolib.com/dwg255-invest.html</a></p>
+<p> 9:27:21<br><a href="https://www.ctolib.com/sniperHW-sanguo.html" target="_blank" rel="noopener">https://www.ctolib.com/sniperHW-sanguo.html</a></p>
+<p> 9:27:21<br><a href="https://www.ctolib.com/GoogleCloudPlatform-open-match.html" target="_blank" rel="noopener">https://www.ctolib.com/GoogleCloudPlatform-open-match.html</a></p>
+<p> 9:27:21<br><a href="https://github.com/keyunq/ytguess" target="_blank" rel="noopener">https://github.com/keyunq/ytguess</a></p>
+<p> 9:27:21<br><a href="https://www.ctolib.com/lonnng-nano.html" target="_blank" rel="noopener">https://www.ctolib.com/lonnng-nano.html</a></p>
+<p> 9:27:22<br><a href="https://www.ctolib.com/kcp-go.html" target="_blank" rel="noopener">https://www.ctolib.com/kcp-go.html</a></p>
+<p> 9:27:22<br><a href="https://www.ctolib.com/magicsea-ga_server.html" target="_blank" rel="noopener">https://www.ctolib.com/magicsea-ga_server.html</a></p>
+<p> 9:27:22<br><a href="https://www.ctolib.com/kcptun.html" target="_blank" rel="noopener">https://www.ctolib.com/kcptun.html</a></p>
+<p> 9:27:22<br><a href="https://www.ctolib.com/ankur-anand-simple-go-rpc.html" target="_blank" rel="noopener">https://www.ctolib.com/ankur-anand-simple-go-rpc.html</a></p>
+<p> 9:27:22<br><a href="https://www.ctolib.com/Unknwon-the-way-to-go_ZH_CN.html" target="_blank" rel="noopener">https://www.ctolib.com/Unknwon-the-way-to-go_ZH_CN.html</a></p>
+<p> 9:27:22<br><a href="https://www.ctolib.com/quii-learn-go-with-tests.html" target="_blank" rel="noopener">https://www.ctolib.com/quii-learn-go-with-tests.html</a></p>
+<p> 9:27:23<br><a href="https://github.com/chanxuehong/wechat" target="_blank" rel="noopener">https://github.com/chanxuehong/wechat</a></p>
+<p> 9:27:23<br><a href="https://github.com/silenceper/wechat" target="_blank" rel="noopener">https://github.com/silenceper/wechat</a></p>
+<p> 9:27:23<br><a href="https://github.com/guidao/gopay" target="_blank" rel="noopener">https://github.com/guidao/gopay</a></p>
+<p> 9:27:23<br><a href="https://github.com/193Eric/go-wechat" target="_blank" rel="noopener">https://github.com/193Eric/go-wechat</a></p>
+<p> 9:27:23<br><a href="https://github.com/milkbobo/gopay" target="_blank" rel="noopener">https://github.com/milkbobo/gopay</a></p>
+<p> 9:27:23<br><a href="https://github.com/gochenzl/chess" target="_blank" rel="noopener">https://github.com/gochenzl/chess</a></p>
+<p> 9:27:23<br><a href="https://github.com/medivhzhan/weapp" target="_blank" rel="noopener">https://github.com/medivhzhan/weapp</a></p>
+<h2 id="-4"><a href="#-4" class="headerlink" title></a></h2><ul>
+<li><a href="https://studygolang.com/articles/6739" target="_blank" rel="noopener">[thinking] 基于 golang interface 特性衍生的插件化处理思维</a></li>
+<li><a href="https://blog.csdn.net/bingxuefenggu/article/details/80958747" target="_blank" rel="noopener">golang如何实现插件化编程</a></li>
+<li><a href="https://studygolang.com/articles/17182?fr=sidebar" target="_blank" rel="noopener">Golang:Golang生成动态库及调用</a></li>
+<li><a href="https://www.imooc.com/article/48340?block_id=tuijian_wz" target="_blank" rel="noopener">Golang笔记-Plugin初探</a></li>
+</ul>
+<h2 id="go-静态库-动态库"><a href="#go-静态库-动态库" class="headerlink" title="go 静态库 动态库"></a>go 静态库 动态库</h2><p>插件中定义的 struct 无法暴露出来，可以让主程序和插件程序import公共的 package 来解决<br>私有方法、变量不会被暴露出来</p>
+<p><a href="https://blog.csdn.net/m0_38132420/article/details/84999887" target="_blank" rel="noopener">golang插件plugin从使用到放弃</a></p>
+<p><a href="https://github.com/vladimirvivien/go-plugin-example" target="_blank" rel="noopener">vladimirvivien/go-plugin-example</a><br><a href="https://github.com/campoy/golang-plugins" target="_blank" rel="noopener">campoy/golang-plugins</a><br><a href="https://github.com/natefinch/pie" target="_blank" rel="noopener">natefinch/pie</a><br><a href="https://github.com/dullgiulio/pingo" target="_blank" rel="noopener">dullgiulio/pingo</a><br><a href="https://github.com/wendigo/go-bind-plugin" target="_blank" rel="noopener">wendigo/go-bind-plugin</a><br><a href="https://cloud.tencent.com/developer/news/355774" target="_blank" rel="noopener">chain33开发随记</a><br><a href="https://github.com/33cn/plugin" target="_blank" rel="noopener">chain33 官方插件系统</a><br><a href="https://github.com/potix/plugger" target="_blank" rel="noopener">potix/plugger</a></p>
+<ul>
+<li><a href="https://github.com/fananchong/go-xserver" target="_blank" rel="noopener">基于插件的服务器框架</a></li>
+<li><a href="https://github.com/fananchong/go-xserver/blob/master/doc/ISSUE-%E6%8F%92%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%8B%AC%E7%AB%8B%E5%BB%BA%E5%BA%93%E9%97%AE%E9%A2%98.md" target="_blank" rel="noopener">插件工程独立建库问题</a></li>
+</ul>
+<h2 id="go-mod"><a href="#go-mod" class="headerlink" title="go mod"></a>go mod</h2><ul>
+<li><a href="https://www.jianshu.com/p/6293503522bc" target="_blank" rel="noopener">解决vscode中golang插件依赖安装失败问题</a></li>
+</ul>
+<h2 id="-5"><a href="#-5" class="headerlink" title></a></h2><ul>
+<li><a href="https://blog.csdn.net/huangshulang1234/article/details/78725967" target="_blank" rel="noopener">Go 语言构建高并发分布式系统实践</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2020-04-12T09:43:47.328Z" itemprop="dateUpdated">2020-04-12 17:43:47</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/posts/24b6fe22.html" target="_blank" rel="external">https://jinzt.github.io/posts/24b6fe22.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://jinzt.github.io">
+            <img src="/img/avatar.jpg" alt="金振涛">
+            金振涛
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/24b6fe22.html&title=《编程语言/golang/收集》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/24b6fe22.html&title=《编程语言/golang/收集》 — 金振涛个人主页&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/24b6fe22.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《编程语言/golang/收集》 — 金振涛个人主页&url=https://jinzt.github.io/posts/24b6fe22.html&via=https://jinzt.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/24b6fe22.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/posts/f9385b7.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">运维/linux收集</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "PDQy3GUbNJ9CEqhuP8G0kDvc-gzGzoHsz",
+            appKey: "yaOTf2Bsv3ecv889uVD4wlAj",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>金振涛 &copy; 2015 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://jinzt.github.io/posts/24b6fe22.html&title=《编程语言/golang/收集》 — 金振涛个人主页&pic=https://jinzt.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jinzt.github.io/posts/24b6fe22.html&title=《编程语言/golang/收集》 — 金振涛个人主页&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jinzt.github.io/posts/24b6fe22.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《编程语言/golang/收集》 — 金振涛个人主页&url=https://jinzt.github.io/posts/24b6fe22.html&via=https://jinzt.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://jinzt.github.io/posts/24b6fe22.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNUlEQVR42u3aQY4CMQxE0b7/pRuJFQsSqspppDi/V2hAJI9FjRP7uuTnfj/6u6PP3x/P6PPztUoPDBgwtmXc00fZaLYtZS1lbzBgwDiHMY/R0VfrjHnU6j/f8O8wYMCAMVhgTq38TDBgwIBRCVx3Yb28++v/DRgwYGzIUEq0VXd7bnAvPovDgAFjQ0a28H9eP9jfgAEDxiaMO3qyItKNdWM/MGDAaM2YD0Bk5V22xaz9IM1xwIABoxFDGYN4esDLPax+CVwYMGC0ZszDTmkk6EGsf0/YGIABA0Y7hltfVca83Ibog2UiDBgwNmHoUZiNR+iv3Qu7S3kbBgwY7RhuFFYKO2VzxgAZDBgwjmFko1pzUhajbnkKAwaM3oz6ZZneHtCbmouv22DAgNGO4UZepampb9ptr8KAAaMTwy0Bs+IvC3fjCA0DBozWjGwITC/aKoWd/QPBgAGjNUMJwbWtx2wIw3hgwIDRiFFpXuphmpWMxjUfDBgwWjOyoYrKsJd7TFVKVRgwYJzA0I+jypLuYIQRpvOwhgEDxgGMyniEG6bKuvrlHQwYME5gVO7n6hGsj1kYjUwYMGA0YmTLZM1FZaTMPe7CgAHjBEYWrNLtnRnH9Ys/GDBg9GZkIbs2jvVo/tEYgAEDRmuGfeo1A7rybfaYBQwYMGCY7QRlK/qx1r4vhAEDxmEM5cJLCVZ9LMwoK2HAgHEAQzmaKu9WwjccCIMBA8YBjGzEIdt09nn3Mg4GDBiNGC9iPCLgpEeA0gAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

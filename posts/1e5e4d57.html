@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     
 
     
@@ -22,17 +22,17 @@
     
     <meta name="keywords" content="源码分析">
     <meta name="description" content="网络版本房间消息room    获取房间列表    创建房间    加入房间    退出房间战斗消息battle    基本单元消息同步        坦克            位置xyz            旋转xyz        坦克炮塔（只能基于坦克y旋转）        坦克炮管 (只能基于炮塔x旋转)    同步策略        只有玩家在控制坦克时才同步        同步要有">
-<meta name="keywords" content="源码分析">
 <meta property="og:type" content="article">
 <meta property="og:title" content="unity坦克">
 <meta property="og:url" content="https://jinzt.github.io/posts/1e5e4d57.html">
 <meta property="og:site_name" content="金振涛个人主页">
 <meta property="og:description" content="网络版本房间消息room    获取房间列表    创建房间    加入房间    退出房间战斗消息battle    基本单元消息同步        坦克            位置xyz            旋转xyz        坦克炮塔（只能基于坦克y旋转）        坦克炮管 (只能基于炮塔x旋转)    同步策略        只有玩家在控制坦克时才同步        同步要有">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-12T17:33:22.141Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-12T09:21:46.332Z">
+<meta property="article:modified_time" content="2020-04-11T16:30:31.550Z">
+<meta property="article:author" content="金振涛">
+<meta property="article:tag" content="源码分析">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="unity坦克">
-<meta name="twitter:description" content="网络版本房间消息room    获取房间列表    创建房间    加入房间    退出房间战斗消息battle    基本单元消息同步        坦克            位置xyz            旋转xyz        坦克炮塔（只能基于坦克y旋转）        坦克炮管 (只能基于炮塔x旋转)    同步策略        只有玩家在控制坦克时才同步        同步要有">
     
         <link rel="alternate" type="application/atom+xml" title="金振涛个人主页" href="/atom.xml">
     
@@ -43,7 +43,7 @@
     <!-- custom head -->
     
 
-</head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
     <div id="loading" class="active"></div>
@@ -68,7 +68,7 @@
       <ul class="nav">
         
             <li class="waves-block waves-effect">
-              <a href="/"  >
+              <a href="/about"  >
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
@@ -82,16 +82,16 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags"  >
-                <i class="icon icon-lg icon-tags"></i>
-                标签
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/categories"  >
-                <i class="icon icon-lg icon-th-list"></i>
-                分类
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
               </a>
             </li>
         
@@ -152,12 +152,12 @@
         <h1 class="title">unity坦克</h1>
         <h5 class="subtitle">
             
-                <time datetime="2019-07-12T14:55:03.384Z" itemprop="datePublished" class="page-time">
-  2019-07-12
+                <time datetime="2020-04-12T09:21:46.332Z" itemprop="datePublished" class="page-time">
+  2020-04-12
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/源码分析/">源码分析</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">源码分析</a></li></ul>
 
             
         </h5>
@@ -179,16 +179,16 @@
     </aside>
 
 
-<article id="post-源码分析/unity坦克大战分析"
+<article id="post-游戏开发/源码分析/unity坦克大战分析"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
         <h1 class="post-card-title">unity坦克</h1>
         <div class="post-meta">
-            <time class="post-time" title="2019-07-12 22:55:03" datetime="2019-07-12T14:55:03.384Z"  itemprop="datePublished">2019-07-12</time>
+            <time class="post-time" title="2020-04-12 17:21:46" datetime="2020-04-12T09:21:46.332Z"  itemprop="datePublished">2020-04-12</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/源码分析/">源码分析</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">源码分析</a></li></ul>
 
 
 
@@ -209,7 +209,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-07-12T17:33:22.141Z" itemprop="dateUpdated">2019-07-13 01:33:22</time>
+    最后更新时间：<time datetime="2020-04-11T16:30:31.550Z" itemprop="dateUpdated">2020-04-12 00:30:31</time>
 </span><br>
 
 
@@ -235,7 +235,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/源码分析/">源码分析</a></li></ul>
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" rel="tag">源码分析</a></li></ul>
 
 
             
@@ -293,9 +293,9 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/posts/8c7a4343.html" id="post-prev" class="post-nav-link">
+      <a href="/posts/c11120a3.html" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">游戏音效</h4>
+        <h4 class="title">暗黑战神</h4>
       </a>
     </div>
   
@@ -304,7 +304,7 @@
     <div class="waves-block waves-effect next">
       <a href="/posts/0.html" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">[no title]</h4>
+        <h4 class="title">游戏开发/games/chess/桌球</h4>
       </a>
     </div>
   
@@ -406,7 +406,7 @@
             
                 <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
@@ -500,6 +500,27 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
 
 
